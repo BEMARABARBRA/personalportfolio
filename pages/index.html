@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <meta
       name="description"
       content="Barbra Bemara is a results-driven Brand Manager and International Business Developer with over 8 years of experience in remote team leadership, customer service, and global market expansion. Explore her portfolio to see how she builds brands, leads remote projects, and drives digital success across borders."
@@ -34,9 +35,31 @@
         color: black !important;
       }
     </style>
-  </head>
+
+
+    <!-- Custom CSS for the page -->
+    <style>
+      body {
+        background-color: rgb(153, 235, 151); /* Light background for contrast */
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .navbar-brand {
+        font-family: 'Arial', sans-serif;
+      }
+
+      .language-bar {
+        background-color: #085f1e; /* Google blue */
+      }
+    </style>
 
   <body>
+    
     <!-------------------- HEADER SECTION --------------->
     <header>
       <!-- Main navigation bar -->
@@ -44,11 +67,11 @@
         <div class="container-fluid">
           <!-- Brand logo (this won't change) -->
           <!-- test shadow the 3 layers make it 3d letter logo -->
-          <a class="navbar-brand text-white fw-bold" href="index.html"  style=" font-size: 2rem;
-          text-shadow:
-            1px 1px 0 #0f9d58, 
-            2px 2px 0 #0b8043, 
-            3px 3px 2px #0a662d;" fs>BEMARA BARBRA</a>
+                <a class="navbar-brand text-white fw-bold" href="index.html" translate="no"
+        style="font-size: 2rem; text-shadow: 1px 1px 0 #0f9d58, 2px 2px 0 #0b8043, 3px 3px 2px #0a662d;">
+        BEMARA BARBRA
+      </a>
+
     
           <!-- Toggle button for small screens -->
           <button
@@ -113,8 +136,8 @@
         </div>
       </nav>
     
-      <!-- Language selector bar below the navbar -->
-      <div class="language-bar py-2 border-top" style="background-color: rgb(67, 126, 67);">
+        <!-- Language selector bar below the navbar -->
+      <div class="language-bar py-2 border-top" style="background-color: #348147;">
         <div class="container d-flex justify-content-end align-items-center">
           <label for="language-select" class="me-2 mb-0 text-white">🌐 Language:</label>
           <select id="language-select" class="form-select w-auto" style="border: none;">
@@ -138,29 +161,77 @@
     <!---------------------- MAIN CONTENT SECTION ----------------->
     <main>
 
-      <div class="container">
-        <div class="row" style="margin-top: 20px; ;">
-          <div class="col" style="background-color: #21a507de; padding-left: 40px;">
-            <h3 class="languages" style="margin-top: 60px;">HTML | CSS | BOOTSTRAP </h3>
-            
+     <!-- Main container with background color and font styling -->
+<div class="container" style="background-color: #348147; margin-top: 20px; font-family: 'Times New Roman', Times, serif;">
+  <div class="row align-items-center">
 
-            <h1>BEMARA BARBRA</h1>
-            <p>Junior Web-deveopler | Graphics Designer</p>
-           <ul>
-            <li>Canva</li>
-            <li>Photoshop</li>
-           </ul>
-          
-          <div class="col">
-            <img src="/images/barb" alt="">
-          </div>
-        </div>
-      </div>
+    <!-- LEFT COLUMN: Text + button at bottom -->
+    <div class="col-md-6 text-start" style="padding-left: 80px; color: rgb(170, 247, 168); margin-top: 20px;">
+
+      <!-- Name and role -->
+      <h1 class="h1" style="font-size: 50px;">Bemara Barbra</h1>
+      <h4 class="h4" style="font-size: 26px;">Web Developer | Junior Graphics Designer</h4><br>
+
+      <!-- Intro text -->
+      <p class="p" style="font-size: 20px;">
+        I build websites that perform and designs that captivate. More than visuals and code, 
+        I create digital experiences that connect, inspire, and convert.
+      </p>
+
+      <!-- Tagline -->
+      <p class="slogan" style="font-size: 18px; font-weight: bolder; font-style: italic;">Clean code, Bold visuals, Real Impact</p>
+
+      <!-- Skills -->
+      <p class="tools" style="font-size: 20px; white-space: nowrap;"><b>Tools & Technologies:</b> HTML | CSS | Bootstrap | Canva | Photoshop</p><br>
+
+      <!-- Container for button and icons -->
+<div style="display: flex; align-items: center; gap: 20px; margin-top: 15px;">
+  
+  <!-- Button -->
+  <button type="button" class="btn btn-dark" style="background-color: black; color: white; font-weight: bolder; font-size: large;">Let’s Connect</button>
+  
+  <!-- Icons list without bullets -->
+  <ul style="list-style: none; display: flex; gap: 15px; margin: 0; padding: 0;">
+    <li>
+      <img src="/images/Whatsapp.jpeg" alt="whatsapp logo" style="width: 40px; height: 40px; border-radius: 10px;">
+    </li>
+    <li>
+      <img src="/images/Linkedin.jpeg" alt="Linkedin logo" style="width: 40px; height: 40px; border-radius: 10px;">
+    </li>
+  </ul>
+  
+</div>
+
+      
+    </div>
+
+    <!-- RIGHT COLUMN: Image -->
+    <div class="col-md-6 text-center" style="padding-top: 40px;">
+      <img 
+        src="/images/barbra-passport.png" 
+        alt="Barbra Photo" 
+        class="img-fluid shadow-success" 
+        style="
+          max-height: 650px; 
+          width: 480px; 
+          margin-bottom: 20px;
+          border-radius: 50%; 
+          border: 6px solid #2b6e39;
+          object-fit: cover;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        ">
+    </div>
+
+  </div>
+</div>
 
 
 
 
 
+      
     </main>
 
     <!----------------------- FOOTER SECTION ------------------------->
@@ -173,165 +244,164 @@
 
 <!-- ====================================== JAVASCRIPT STYLING ============================================ -->
 
+    <!------------------------- Separate Popper and Bootstrap JS ----------------------------->
+    <script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-b0cwMfvT6gMkcHgHDW30NP57mKs0mtDwX0PaGSSn1dKpCmpeN4w0jOOn1u9n0kFO"
+  crossorigin="anonymous"
+></script>
+
+<!------------------------- JS for languages ----------------------------->
+
 <!-- ------------- JavaScript to Handle Language Switching --------------------------->
 <!--   Dictionary of translations for all supported languages
   //  Each language code (e.g., 'en', 'fr', 'sw') maps to a set of text labels -->
 
-<script>
-  const translations = {
-    en: {
-      navAbout: "About Me",
-      navProjects: "Projects",
-      navServices: "Services",
-      navResume: "My Resume",
-      navTestimonials: "Testimonials",
-      navContact: "Contact Me",
-      dropdownWebDev: "Website Development",
-      dropdownPortfolio: "Portfolio Design",
-      dropdownBrand: "Brand Management",
-      dropdownConsult: "Business Development | Consultancy",
-      dropdownRemote: "Remote Work Support"
-    },
-    fr: {
-      navAbout: "À propos de moi",
-      navProjects: "Projets",
-      navServices: "Services",
-      navResume: "Mon CV",
-      navTestimonials: "Témoignages",
-      navContact: "Contactez-moi",
-      dropdownWebDev: "Développement Web",
-      dropdownPortfolio: "Conception de Portfolio",
-      dropdownBrand: "Gestion de Marque",
-      dropdownConsult: "Développement | Conseil",
-      dropdownRemote: "Support de Travail à Distance"
-    },
-    sw: {
-      navAbout: "Kuhusu Mimi",
-      navProjects: "Miradi",
-      navServices: "Huduma",
-      navResume: "Wasifu Wangu",
-      navTestimonials: "Ushuhuda",
-      navContact: "Wasiliana Nami",
-      dropdownWebDev: "Uundaji wa Tovuti",
-      dropdownPortfolio: "Ubunifu wa Portfolio",
-      dropdownBrand: "Usimamizi wa Chapa",
-      dropdownConsult: "Maendeleo ya Biashara | Ushauri",
-      dropdownRemote: "Msaada wa Kazi ya Mbali"
-    },
-    es: {
-      navAbout: "Sobre mí",
-      navProjects: "Proyectos",
-      navServices: "Servicios",
-      navResume: "Mi Currículum",
-      navTestimonials: "Testimonios",
-      navContact: "Contáctame",
-      dropdownWebDev: "Desarrollo Web",
-      dropdownPortfolio: "Diseño de Portafolio",
-      dropdownBrand: "Gestión de Marca",
-      dropdownConsult: "Desarrollo de Negocios | Consultoría",
-      dropdownRemote: "Soporte de Trabajo Remoto"
-    },
-    de: {
-      navAbout: "Über mich",
-      navProjects: "Projekte",
-      navServices: "Dienstleistungen",
-      navResume: "Mein Lebenslauf",
-      navTestimonials: "Referenzen",
-      navContact: "Kontaktiere mich",
-      dropdownWebDev: "Webentwicklung",
-      dropdownPortfolio: "Portfolio-Design",
-      dropdownBrand: "Markenmanagement",
-      dropdownConsult: "Geschäftsentwicklung | Beratung",
-      dropdownRemote: "Unterstützung für Remote-Arbeit"
-    },
-    zh: {
-      navAbout: "关于我",
-      navProjects: "项目",
-      navServices: "服务",
-      navResume: "我的简历",
-      navTestimonials: "客户推荐",
-      navContact: "联系我",
-      dropdownWebDev: "网站开发",
-      dropdownPortfolio: "作品集设计",
-      dropdownBrand: "品牌管理",
-      dropdownConsult: "业务发展 | 咨询",
-      dropdownRemote: "远程工作支持"
-    },
-    ar: {
-      navAbout: "نبذة عني",
-      navProjects: "المشاريع",
-      navServices: "الخدمات",
-      navResume: "السيرة الذاتية",
-      navTestimonials: "الشهادات",
-      navContact: "اتصل بي",
-      dropdownWebDev: "تطوير المواقع",
-      dropdownPortfolio: "تصميم الحافظة",
-      dropdownBrand: "إدارة العلامة التجارية",
-      dropdownConsult: "تطوير الأعمال | استشارات",
-      dropdownRemote: "دعم العمل عن بعد"
-    },
-    pt: {
-      navAbout: "Sobre mim",
-      navProjects: "Projetos",
-      navServices: "Serviços",
-      navResume: "Meu Currículo",
-      navTestimonials: "Depoimentos",
-      navContact: "Fale comigo",
-      dropdownWebDev: "Desenvolvimento de Sites",
-      dropdownPortfolio: "Design de Portfólio",
-      dropdownBrand: "Gestão de Marca",
-      dropdownConsult: "Desenvolvimento de Negócios | Consultoria",
-      dropdownRemote: "Suporte ao Trabalho Remoto"
-    }
-  };
-
-  // -------------------------------
-  // Get reference to the language selector <select> element
-  // -------------------------------
-  const languageSelect = document.getElementById("language-select");
-
-  // -------------------------------
-  // Add an event listener that runs when the language is changed
-  // -------------------------------
-  languageSelect.addEventListener("change", function () {
-    const lang = this.value;       // Get the selected language (e.g., 'fr')
-    const t = translations[lang];  // Fetch the matching translation set
-
-    // Exit if translation is not available
-    if (!t) return;
-
+  <script>
+    const translations = {
+      en: {
+        navAbout: "About Me",
+        navProjects: "Projects",
+        navServices: "Services",
+        navResume: "My Resume",
+        navTestimonials: "Testimonials",
+        navContact: "Contact Me",
+        dropdownWebDev: "Website Development",
+        dropdownPortfolio: "Portfolio Design",
+        dropdownBrand: "Brand Management",
+        dropdownConsult: "Business Development | Consultancy",
+        dropdownRemote: "Remote Work Support"
+      },
+      fr: {
+        navAbout: "À propos de moi",
+        navProjects: "Projets",
+        navServices: "Services",
+        navResume: "Mon CV",
+        navTestimonials: "Témoignages",
+        navContact: "Contactez-moi",
+        dropdownWebDev: "Développement Web",
+        dropdownPortfolio: "Conception de Portfolio",
+        dropdownBrand: "Gestion de Marque",
+        dropdownConsult: "Développement | Conseil",
+        dropdownRemote: "Support de Travail à Distance"
+      },
+      sw: {
+        navAbout: "Kuhusu Mimi",
+        navProjects: "Miradi",
+        navServices: "Huduma",
+        navResume: "Wasifu Wangu",
+        navTestimonials: "Ushuhuda",
+        navContact: "Wasiliana Nami",
+        dropdownWebDev: "Uundaji wa Tovuti",
+        dropdownPortfolio: "Ubunifu wa Portfolio",
+        dropdownBrand: "Usimamizi wa Chapa",
+        dropdownConsult: "Maendeleo ya Biashara | Ushauri",
+        dropdownRemote: "Msaada wa Kazi ya Mbali"
+      },
+      es: {
+        navAbout: "Sobre mí",
+        navProjects: "Proyectos",
+        navServices: "Servicios",
+        navResume: "Mi Currículum",
+        navTestimonials: "Testimonios",
+        navContact: "Contáctame",
+        dropdownWebDev: "Desarrollo Web",
+        dropdownPortfolio: "Diseño de Portafolio",
+        dropdownBrand: "Gestión de Marca",
+        dropdownConsult: "Desarrollo de Negocios | Consultoría",
+        dropdownRemote: "Soporte de Trabajo Remoto"
+      },
+      de: {
+        navAbout: "Über mich",
+        navProjects: "Projekte",
+        navServices: "Dienstleistungen",
+        navResume: "Mein Lebenslauf",
+        navTestimonials: "Referenzen",
+        navContact: "Kontaktiere mich",
+        dropdownWebDev: "Webentwicklung",
+        dropdownPortfolio: "Portfolio-Design",
+        dropdownBrand: "Markenmanagement",
+        dropdownConsult: "Geschäftsentwicklung | Beratung",
+        dropdownRemote: "Unterstützung für Remote-Arbeit"
+      },
+      zh: {
+        navAbout: "关于我",
+        navProjects: "项目",
+        navServices: "服务",
+        navResume: "我的简历",
+        navTestimonials: "客户推荐",
+        navContact: "联系我",
+        dropdownWebDev: "网站开发",
+        dropdownPortfolio: "作品集设计",
+        dropdownBrand: "品牌管理",
+        dropdownConsult: "业务发展 | 咨询",
+        dropdownRemote: "远程工作支持"
+      },
+      ar: {
+        navAbout: "نبذة عني",
+        navProjects: "المشاريع",
+        navServices: "الخدمات",
+        navResume: "السيرة الذاتية",
+        navTestimonials: "الشهادات",
+        navContact: "اتصل بي",
+        dropdownWebDev: "تطوير المواقع",
+        dropdownPortfolio: "تصميم الحافظة",
+        dropdownBrand: "إدارة العلامة التجارية",
+        dropdownConsult: "تطوير الأعمال | استشارات",
+        dropdownRemote: "دعم العمل عن بعد"
+      },
+      pt: {
+        navAbout: "Sobre mim",
+        navProjects: "Projetos",
+        navServices: "Serviços",
+        navResume: "Meu Currículo",
+        navTestimonials: "Depoimentos",
+        navContact: "Fale comigo",
+        dropdownWebDev: "Desenvolvimento de Sites",
+        dropdownPortfolio: "Design de Portfólio",
+        dropdownBrand: "Gestão de Marca",
+        dropdownConsult: "Desenvolvimento de Negócios | Consultoria",
+        dropdownRemote: "Suporte ao Trabalho Remoto"
+      }
+    };
+  
     // -------------------------------
-    // Update top-level navbar links
+    // Get reference to the language selector <select> element
     // -------------------------------
-    document.getElementById("nav-about").textContent = t.navAbout;
-    document.getElementById("nav-projects").textContent = t.navProjects;
-    document.getElementById("nav-services").textContent = t.navServices;
-    document.getElementById("nav-resume").textContent = t.navResume;
-    document.getElementById("nav-testimonials").textContent = t.navTestimonials;
-    document.getElementById("nav-contact").textContent = t.navContact;
-
+    const languageSelect = document.getElementById("language-select");
+  
     // -------------------------------
-    // Update dropdown menu items
+    // Add an event listener that runs when the language is changed
     // -------------------------------
-    document.getElementById("dropdown-webdev").textContent = t.dropdownWebDev;
-    document.getElementById("dropdown-portfolio").textContent = t.dropdownPortfolio;
-    document.getElementById("dropdown-brand").textContent = t.dropdownBrand;
-    document.getElementById("dropdown-consult").textContent = t.dropdownConsult;
-    document.getElementById("dropdown-remote").textContent = t.dropdownRemote;
-  });
-</script>
+    languageSelect.addEventListener("change", function () {
+      const lang = this.value;       // Get the selected language (e.g., 'fr')
+      const t = translations[lang];  // Fetch the matching translation set
+  
+      // Exit if translation is not available
+      if (!t) return;
+  
+      // -------------------------------
+      // Update top-level navbar links
+      // -------------------------------
+      document.getElementById("nav-about").textContent = t.navAbout;
+      document.getElementById("nav-projects").textContent = t.navProjects;
+      document.getElementById("nav-services").textContent = t.navServices;
+      document.getElementById("nav-resume").textContent = t.navResume;
+      document.getElementById("nav-testimonials").textContent = t.navTestimonials;
+      document.getElementById("nav-contact").textContent = t.navContact;
+  
+      // -------------------------------
+      // Update dropdown menu items
+      // -------------------------------
+      document.getElementById("dropdown-webdev").textContent = t.dropdownWebDev;
+      document.getElementById("dropdown-portfolio").textContent = t.dropdownPortfolio;
+      document.getElementById("dropdown-brand").textContent = t.dropdownBrand;
+      document.getElementById("dropdown-consult").textContent = t.dropdownConsult;
+      document.getElementById("dropdown-remote").textContent = t.dropdownRemote;
+    });
+  </script>
 
+<!-- --------------------------------------------------------------------- -->
 
-    <!------------------------- Separate Popper and Bootstrap JS ----------------------------->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
