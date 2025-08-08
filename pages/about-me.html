@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta
+      name="description"
+      content="Barbra Bemara is a results-driven Brand Manager and International Business Developer with over 8 years of experience in remote team leadership, customer service, and global market expansion. Explore her portfolio to see how she builds brands, leads remote projects, and drives digital success across borders."
+    />
+    <meta
+      name="keywords"
+      content="Barbra Bemara, brand manager, customer service expert, remote work specialist, international business developer, global brand strategist, digital marketing, CRM expert, remote team management, virtual onboarding, social media strategist, remote recruitment, Uganda tech talent, software engineering, global customer experience, African women in tech, remote project leader"
+    />
+    <meta name="author" content="Bemara Barbra" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <title>
+      Barbra Bemara Portfolio | Web Developer | Brand & Business Development Expert
+    </title>
+
+    <style>
+      body {
+        background-color: rgb(153, 235, 151);
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .navbar-brand {
+        font-family: 'Arial', sans-serif;
+      }
+
+      .language-bar {
+        background-color: #085f1e;
+      }
+
+      /* Hover effect on dropdown menu */
+      .dropdown-menu.bg-success .dropdown-item:hover {
+        background-color: rgb(241, 225, 182) !important;
+        color: black !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-------------------- HEADER SECTION --------------->
+    <header>
+      <!-- Main navigation bar -->
+      <nav class="navbar navbar-expand-lg bg-dark py-3">
+        <div class="container-fluid">
+          <a
+            class="navbar-brand text-white fw-bold"
+            href="index.html"
+            translate="no"
+            style="
+              font-size: 2rem;
+              text-shadow: 1px 1px 0 #0f9d58, 2px 2px 0 #0b8043,
+                3px 3px 2px #0a662d;
+            "
+          >
+            BEMARA BARBRA
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-white fw-bold">
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-white fw-bold"
+                  id="nav-about"
+                  href="#"
+                  >About Me</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white fw-bold" id="nav-projects" href="#"
+                  >Projects</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-white fw-bold"
+                  id="nav-services"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Services
+                </a>
+                <ul class="dropdown-menu bg-success" aria-labelledby="nav-services">
+                  <li>
+                    <a
+                      class="dropdown-item fw-bold text-white"
+                      id="dropdown-webdev"
+                      href="#"
+                      >Website Development</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item fw-bold text-white"
+                      id="dropdown-portfolio"
+                      href="#"
+                      >Portfolio Design</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a
+                      class="dropdown-item fw-bold text-white"
+                      id="dropdown-brand"
+                      href="#"
+                      >Brand Management</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item fw-bold text-white"
+                      id="dropdown-consult"
+                      href="#"
+                      >Business Development | Consultancy</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item fw-bold text-white"
+                      id="dropdown-remote"
+                      href="#"
+                      >Remote Work Support</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white fw-bold" id="nav-resume" href="#"
+                  >My Resume</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white fw-bold"
+                  id="nav-testimonials"
+                  href="#"
+                  >Testimonials</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white fw-bold" id="nav-contact" href="#"
+                  >Contact Me</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Language selector bar -->
+      <div
+        class="language-bar py-2 border-top"
+        style="background-color: #348147; box-shadow: 0 4px 10px rgba(2, 83, 29, 0.3)"
+      >
+        <div class="container d-flex justify-content-end align-items-center">
+          <label
+            id="language-select-label"
+            for="language-select"
+            class="me-2 mb-0 text-white"
+            >🌐 Language:</label
+          >
+          <select
+            id="language-select"
+            class="form-select w-auto"
+            style="border: none"
+          >
+            <option value="en" selected>English</option>
+            <option value="fr">Français</option>
+            <option value="sw">Kiswahili</option>
+            <option value="es">Español</option>
+            <option value="de">Deutsch</option>
+            <option value="zh">中文</option>
+            <option value="ar">العربية</option>
+            <option value="pt">Português</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <!----------------------- MAIN CONTENT SECTION ------------------------->
+    <div class="container py-2" style="height: 100vh;">
+      <div
+        class="row justify-content-center align-items-center"
+        style="height: 100%;"
+      >
+        <div
+          class="col-md-10 d-flex"
+          style="
+            font-family: 'Times New Roman', serif;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            height: 100%;
+          "
+        >
+          <!-- Image container -->
+          <div
+            class="flex-shrink-0 rounded-start shadow"
+            style="
+              width: 48%;
+              aspect-ratio: 4 / 5;
+              overflow: hidden;
+              position: relative;
+              height: 95%;
+              max-height: 95%;
+            "
+          >
+            <img
+              src="/images/bbsheratonfull.jpeg"
+              alt="Barbra"
+              class="w-100 h-100"
+              style="object-fit: cover; transition: transform 0.3s ease;"
+              onmouseover="this.style.transform='scale(1.05)'"
+              onmouseout="this.style.transform='scale(1)'"
+              loading="lazy"
+            />
+          </div>
+    
+          <!-- Text container -->
+          <div
+            class="flex-grow-1 ps-3 pe-3 d-flex flex-column justify-content-start"
+            style="
+              max-width: 52%;
+              min-width: 280px;
+              text-align: left;
+              color: #3a3a3a;
+              height: 100%;
+              max-height: 100%;
+              overflow-y: auto;
+              padding-top: 70px;
+              padding-bottom: 0;
+            "
+          >
+            <h1
+              class="fw-bold mb-2"
+              style="font-size: 2.5rem; color: #1e3c1a; line-height: 1.2;"
+            >
+              About Me
+            </h1>
+            <h4
+              class="mb-3"
+              style="font-weight: 600; color: #2b6e39; font-size: 1.25rem; margin-bottom: 0.8rem;"
+            >
+              Tech Strategist | Digital Creator | Global Brand Leader
+            </h4>
+    
+            <p style="font-size: 1rem; line-height: 1.4; margin-bottom: 0.8rem;">
+              I create digital experiences that inspire and deliver results. With over 8 years in tech, business, and design, I combine coding, strategy, and visuals to drive impact and connect people.
+            </p>
+    
+            <p style="font-size: 1rem; line-height: 1.4; margin-bottom: 0.8rem;">
+              A tech-driven strategist with expertise in global business, customer service, and marketing. I now add web development and graphic design to my toolkit. From launching brands to leading remote teams, I blend creativity and technology to craft lasting solutions.
+            </p>
+    
+            <p
+              style="
+                font-size: 1.1rem;
+                font-weight: 600;
+                font-style: italic;
+                color: #2b6e39;
+                margin-top: 1rem;
+                line-height: 1.3;
+              "
+            >
+              "Innovation, passion, and leadership delivered beyond expectations."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+
+    <!----------------------- FOOTER SECTION ------------------------->
+    <footer>
+      <!-- Currently empty footer -->
+    </footer>
+
+    <!-- Bootstrap JS Bundle (with Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b0cwMfvT6gMkcHgHDW30NP57mKs0mtDwX0PaGSSn1dKpCmpeN4w0jOOn1u9n0kFO"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Language translation JS (optional, as in your original) -->
+    <!------------------------- JS for languages ----------------------------->
+    <script>
+      // Your existing translations object, fully defined here for all text on your page
+      const translations = {
+        en: {
+          navAbout: "About Me",
+          navProjects: "Projects",
+          navServices: "Services",
+          navResume: "My Resume",
+          navTestimonials: "Testimonials",
+          navContact: "Contact Me",
+          dropdownWebDev: "Website Development",
+          dropdownPortfolio: "Portfolio Design",
+          dropdownBrand: "Brand Management",
+          dropdownConsult: "Business Development | Consultancy",
+          dropdownRemote: "Remote Work Support",
+          languageLabel: "🌐 Language:",
+          headingName: "Bemara Barbra",
+          headingRole: "Web Developer | Junior Graphics Designer",
+          introText: "I build websites that perform and designs that captivate. More than visuals and code, I create digital experiences that connect, inspire, and convert.",
+          slogan: "Clean code, Bold visuals, Real Impact",
+          tools: "Tools & Technologies: HTML | CSS | Bootstrap | Canva | Photoshop",
+          buttonConnect: "Let’s Connect",
+          ongoingProjects: "Ongoing Projects",
+          project1Title: "Website Development",
+          project1Desc1: "Herad Intercontinental Services Ltd - Website Development",
+          project1Desc2: "Herad Spas - Website Development",
+          project2Title: "Portfolio Development",
+          project2Desc1: "Barbra Bemara - Portfolio Design",
+          project3Title: "Graphics Design",
+          project3Desc1: "Herad flyer Designs - Herad Exports"
+        },
+        fr: {
+          navAbout: "À propos de moi",
+          navProjects: "Projets",
+          navServices: "Services",
+          navResume: "Mon CV",
+          navTestimonials: "Témoignages",
+          navContact: "Contactez-moi",
+          dropdownWebDev: "Développement de site Web",
+          dropdownPortfolio: "Conception de portefeuille",
+          dropdownBrand: "Gestion de marque",
+          dropdownConsult: "Développement des affaires | Conseil",
+          dropdownRemote: "Support de travail à distance",
+          languageLabel: "🌐 Langue:",
+          headingName: "Bemara Barbra",
+          headingRole: "Développeur Web | Graphiste Junior",
+          introText: "Je crée des sites Web performants et des designs captivants. Plus que des visuels et du code, je crée des expériences numériques qui connectent, inspirent et convertissent.",
+          slogan: "Code propre, Visuels audacieux, Impact réel",
+          tools: "Outils & Technologies : HTML | CSS | Bootstrap | Canva | Photoshop",
+          buttonConnect: "Entrons en contact",
+          ongoingProjects: "Projets en cours",
+          project1Title: "Développement Web",
+          project1Desc1: "Herad Intercontinental Services Ltd - Développement Web",
+          project1Desc2: "Herad Spas - Développement Web",
+          project2Title: "Développement de portefeuille",
+          project2Desc1: "Barbra Bemara - Conception de portefeuille",
+          project3Title: "Conception graphique",
+          project3Desc1: "Conceptions de flyers Herad - Herad Exports"
+        },
+        // Add more languages (sw, es, de, zh, ar, pt) here as needed following the same pattern
+      };
+    
+      // Function to translate all page elements based on selected language
+      function translatePage(lang) {
+        // Map element IDs to translation keys
+        const elementsToTranslate = {
+          "nav-about": "navAbout",
+          "nav-projects": "navProjects",
+          "nav-services": "navServices",
+          "nav-resume": "navResume",
+          "nav-testimonials": "navTestimonials",
+          "nav-contact": "navContact",
+          "dropdown-webdev": "dropdownWebDev",
+          "dropdown-portfolio": "dropdownPortfolio",
+          "dropdown-brand": "dropdownBrand",
+          "dropdown-consult": "dropdownConsult",
+          "dropdown-remote": "dropdownRemote",
+          "language-select-label": "languageLabel",
+          "heading-name": "headingName",
+          "heading-role": "headingRole",
+          "intro-text": "introText",
+          "slogan-text": "slogan",
+          "tools-text": "tools",
+          "btn-connect": "buttonConnect",
+          "ongoing-projects-title": "ongoingProjects",
+          "project1-title": "project1Title",
+          "project1-desc1": "project1Desc1",
+          "project1-desc2": "project1Desc2",
+          "project2-title": "project2Title",
+          "project2-desc1": "project2Desc1",
+          "project3-title": "project3Title",
+          "project3-desc1": "project3Desc1"
+        };
+    
+        for (const id in elementsToTranslate) {
+          const el = document.getElementById(id);
+          if (el && translations[lang] && translations[lang][elementsToTranslate[id]]) {
+            el.textContent = translations[lang][elementsToTranslate[id]];
+          }
+        }
+      }
+    
+      // Add a label element ID to your language selector label in HTML for translation
+      // For example, update your language label like this:
+      // <label id="language-select-label" for="language-select" class="me-2 mb-0 text-white">🌐 Language:</label>
+    
+      // Listen for changes in language select dropdown
+      document.getElementById("language-select").addEventListener("change", (e) => {
+        translatePage(e.target.value);
+      });
+    
+      // Translate page on initial load based on selected option
+      window.addEventListener("DOMContentLoaded", () => {
+        const langSelect = document.getElementById("language-select");
+        translatePage(langSelect.value);
+      });
+    </script>
+  </body>
+</html>
