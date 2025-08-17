@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- ----------------- BASIC META TAGS ------------- -->
+    <!-- ================= BASIC META TAGS ================= -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- -------------- SEO META TAGS -------------------- -->
+    <!-- ================= SEO META TAGS ================= -->
     <meta
       name="description"
       content="Barbra Bemara is a results-driven Brand Manager and International Business Developer with over 8 years of experience in remote team leadership, customer service, and global market expansion. Explore her portfolio to see how she builds brands, leads remote projects, and drives digital success across borders."
@@ -16,7 +16,7 @@
     />
     <meta name="author" content="Barbra Bemara" />
 
-    <!-- ------------- BOOTSTRAP CSS ------------- -->
+    <!-- ================= BOOTSTRAP CSS ================= -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -24,13 +24,13 @@
       crossorigin="anonymous"
     />
 
-    <!-- --------------- PAGE TITLE ---------------- -->
+    <!-- ================= PAGE TITLE ================= -->
     <title>Barbra Bemara Portfolio | Web Developer | Brand & Business Development Expert</title>
 
-    <!-- ------------------- INLINE STYLES ------------------ -->
+    <!-- ================= INLINE STYLES ================= -->
     <style>
       /* Body background */
-      body { background-color: rgb(153, 235, 151); }
+      body { background-color: rgb(97, 163, 97); }
 
       /* Sticky header to keep navbar visible on scroll */
       header { position: sticky; top: 0; z-index: 1000; }
@@ -77,69 +77,35 @@
       .projects-scroller {
         overflow-x: auto; padding: 10px 40px; justify-content: center; max-width: 1200px; margin: 0 auto;
       }
-      
-      
-      </style>
+      .project-card {
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 900;
+        border: 1px solid green;
+        border-radius: 10px;
+        background-color: #348147;
+        color: #99EB97;
+        padding: 8px 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        min-width: 250px;
+        max-width: 350px;
+        flex: 0 0 auto;
+        display: flex; flex-direction: column;
+        cursor: pointer;
+      }
+      .project-card h3 {
+        border: 1px solid #99EB97;
+        border-radius: 8px;
+        padding: 6px 8px;
+        background-color: rgba(202, 181, 181, 0.05);
+        text-align: center;
+        font-size: 1.3rem;
+        margin: 6px 0 8px 0;
+      }
+    </style>
 
-    <!-- ------------------- styling ------------------ -->
-    <style>
-      .custom-section {
-    position: relative;
-    background-image: url('images/background.jpg'); /* replace with your image path */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding: 40px 20px;
-    color: #99EB97;
-    overflow: hidden;
-  }
+      <!-- --------------------------- main content STYLES ------------------------------ -->
 
-  /* Gradient overlay */
-  .custom-section::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)); /* dark-to-light gradient */
-    z-index: 1;
-  }
-
-  /* Text above overlay */
-  .custom-section > * {
-    position: relative;
-    z-index: 2;
-  }
-
-  .custom-section h1,
-  .custom-section h3,
-  .custom-section h4,
-  .custom-section h5 {
-    color: white;
-  }
-
-  /* box shadow for the main page content */
-  .cv-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-  background: #0e0d0d;
-  border-radius: 8px;
-  box-shadow: 12px 16px 24px black; /* subtle shadow */
-}
-
-</style>
-
-<!-- for downloading the cv page  -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-<script>
-  function downloadPDF() {
-    const element = document.body; // capture the whole page
-    html2pdf().from(element).save("MyWebpage.pdf");
-  }
-</script>
-
-</head>
+  </head>
 
   <body>
     <!-- ================= HEADER NAVBAR ================= -->
@@ -184,13 +150,13 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white fw-bold" id="nav-resume" href="resume.html">My Resume</a>
+                <a class="nav-link text-white fw-bold" id="nav-resume" href="#">My Resume</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white fw-bold" id="nav-testimonials" href="testimonials.html">Testimonials</a>
+                <a class="nav-link text-white fw-bold" id="nav-testimonials" href="#">Testimonials</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white fw-bold" id="nav-contact" href="contact.html">Contact Me</a>
+                <a class="nav-link text-white fw-bold" id="nav-contact" href="#">Contact Me</a>
               </li>
             </ul>
           </div>
@@ -220,146 +186,52 @@
     
     <!-- ================= MAIN CONTENT ================= -->
 
-<div id="cvContent">
-    <div class="container">
-      <div class="row" style="font-family: 'Times New Roman', Times, serif;">
-        
-        <!-- Fixed extra space in opening div tag -->
-        <div class="col-12 custom-section" style="background-color: #348147; margin-top: 40px; margin-bottom: 40px; color: rgb(223, 235, 221); padding: 40px;">
-          
-          <!-- Header Section -->
-          <h1 style="color: white;">CURRICULUM VITAE.</h1>
-          <h3 style="color: whitesmoke;">Bemara Barbra</h3>
-          <h5 style="color: rgb(205, 252, 205);">Web Developer | Tech Leader | Business Development Expert</h5>
-          <p>Plot 443, Akright Estate, Uganda | +256753044293 | barbarabemara@gmail.com</p>
-          <p>linkedin.com/in/barbrabemara</p>
-          <br>
-    
-          <!-- Professional Profile -->
-          <h4 style="color: white;">Professional Profile</h4>
-          <p>
-            Passionate Web Developer certified by Women in Technology Uganda (WITU) with 8+ years of
-            experience combining technology, international business development, and creative marketing. Skilled
-            in building functional, responsive websites using HTML, CSS, Bootstrap, and graphic design
-            (Photoshop, Canva) to create visually compelling digital experiences.
-            Experienced in launching user-centric websites, designing impactful marketing visuals, and
-            collaborating effectively in remote, cross-cultural teams. A results-driven professional eager to leverage
-            web development skills and diverse industry experience to contribute meaningfully to innovative
-            projects.
-          </p>
-          <br>
-    
-          <!-- Core Competencies -->
-          <h4 style="color: white;">Core Competencies</h4>
-          <ul>
-            <li>Web Development: HTML5, CSS, Bootstrap, Responsive Design</li>
-            <li>Graphic Design: Photoshop, Canva</li>
-            <li>Remote Team Management & Virtual Collaboration</li>
-            <li>Customer Relationship Management (CRM)</li>
-            <li>Digital Marketing & Social Media Strategy</li>
-            <li>Cross-Cultural Communication</li>
-            <li>Project & Client Onboarding Management</li>
-            <li>Business Development & Market Expansion</li>
-          </ul><br>
-    
-          <!-- Relevant Projects & Technical Experience -->
-          <h4 style="color: white;">Relevant Projects & Technical Experience</h4>
-          <ul>
-            <li>Designed and launched a website and a personal portfolio showcasing professional web
-            development capabilities.</li>
-            <li>Created marketing flyers and digital visuals for clients including Herad Export and Interlon
-            Technologies and Qube Designs (U) ltd using Photoshop and Canva.</li>
-            <li>Developed responsive web pages optimized for usability across devices, combining clean code
-            with creative design.</li>
-            <li>Integrated digital marketing strategies with web efforts to boost engagement and expand brand
-            presence.</li>
-          </ul><br>
-    
-          <!-- Professional Experience -->
-          <h3 style="color: white;">Professional Experience</h3>
-    
-          <h5>Brand Manager</h5>
-          <h6>BILLIONEAR SPIRITS — Remote, London, UK</h6>
-          <p><i>Jan 2024 – Present</i></p>
-          <ul>
-            <li>Developed and executed remote brand strategies for premium alcoholic beverage brands across East Africa, integrating digital marketing with custom web and visual design assets.</li>
-            <li>Designed and launched responsive landing pages and promotional microsites using HTML, CSS, and Bootstrap, alongside marketing visuals in Photoshop and Canva, boosting engagement by 30%.</li>
-            <li>Led virtual product launches, influencer partnerships, and online events, contributing to a 20% increase in brand visibility and 15% sales growth.</li>
-            <li>Managed vendor relationships and coordinated cross-channel brand messaging for consistent online and offline presence.</li>
-          </ul>
-    
-          <h5 style="color: white;">Business Development Manager</h5>
-          <h6>Herad Intercontinental Services — Kampala, Uganda (Hybrid)</h6>
-          <p><i>Jun 2022 – Apr 2025</i></p>
-          <ul>
-            <li>Directed cross-functional operations spanning exports, spa management, and hospitality services.</li>
-            <li>Led targeted digital outreach initiatives that increased brand exposure by 30%.</li>
-            <li>Managed a remote team to build strategic partnerships and expand market presence across East Africa and international markets, driving significant business growth and operational efficiency.</li>
-            <li>Coordinated export logistics and spa service operations, effectively integrating technology with core business processes.</li>
-          </ul>
-    
-          <h5 style="color: white;">Recruitment & Compliance Officer</h5>
-          <h6>London Recruitment Agency — Remote, Harrow, UK</h6>
-          <p><i>Jan 2021 – Dec 2022</i></p>
-          <ul>
-            <li>Managed virtual recruitment, onboarding, and compliance for over 150 healthcare professionals across the UK, improving placement efficiency by 30%.</li>
-            <li>Designed user-friendly digital onboarding materials and branded recruitment assets using Canva and Photoshop to enhance candidate experience and employer branding.</li>
-            <li>Created and maintained online application and compliance tracking forms using web-based tools, streamlining documentation and reducing reporting time by 25%.</li>
-            <li>Utilized ATS platforms and CRM systems to manage applicant pipelines and coordinate remote interviews across multiple time zones.</li>
-          </ul><br>
-    
-          <!-- Additional Experience -->
-          <h4 style="color: white;">Additional Experience</h4>
-          <h6>Hospitality Industry | Data Entry Sector</h6>
-          <ul>
-            <li>Managed spa operations, marketing, and client relations across multiple establishments, improving bookings, client retention, and customer satisfaction.</li>
-            <li>Designed and executed digital campaigns and social media content using Photoshop and Canva, boosting online engagement by up to 30%.</li>
-            <li>Implemented CRM systems and client tracking tools to streamline communication, follow-ups, and loyalty programs, increasing rebooking rates by 25%.</li>
-            <li>Coordinated remote and on-site teams, vendor relationships, and event planning to ensure smooth operational workflows.</li>
-            <li>Delivered high-volume, accurate data entry for financial clients, digitizing over 200,000 data points while maintaining 99% accuracy and meeting tight deadlines.</li>
-          </ul><br>
-    
-          <!-- Education & Certifications -->
-          <h4 style="color: white;">Education & Certifications</h4>
-          <ul>
-            <li>Certificate in Web Development, Women in Technology Uganda (WITU), Completed 2025</li>
-            <li>BSc in Software Engineering, Uganda Technology and Management University, 2018</li>
-            <li>Certificate in Marketing and Brand Management, Herad Intercontinental Services, 2024</li>
-            <li>Certificate in CRM, Soothing Spot Spa, 2017</li>
-          </ul><br>
-    
-          <!-- Volunteer Experience -->
-          <h4 style="color: white;">Volunteer Experience</h4>
-          <h6>Her and Beyond Women's Group (2015 – Present)</h6>
-          <ul>
-            <li>Organized virtual financial literacy webinars and global empowerment events attracting 500+ participants.</li>
-            <li>Collaborated remotely on community initiatives, growing membership by 50% via social media outreach.</li>
-          </ul><br>
-    
-          <!-- Languages -->
-          <h4 style="color: white;">Languages</h4>
-          <ul>
-            <h5>International Languages</h5>
-            <li>English (Fluent)</li><br>
-            <h5>Local Languages</h5>
-            <li>Runyankore (Fluent)</li>
-            <li>Luganda (Fluent)</li>
-          </ul><br>
+    <main class="container my-5" style="
+    position: relative;
+    background-image: url('/images/businessdevelopment2.jpeg');
+    background-size: cover;
+    background-position: center;
+    min-height: 600px; /* adjust height as needed */
+    padding: 30px;
+">
 
-          <!-- for the dowmload cv button -->
-          <a href="mywebpage.html" download="MyWebpage.html"></a>
-          <button onclick="downloadPDF()" style="background-color: #99EB97; font-weight: 900; font-size: larger; color: #043f1b;">Download as PDF</button>
+  <!-- Semi-transparent overlay -->
+  <div style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(63, 56, 46, 0.8); /* adjust 0.5 for opacity */
+      z-index: 1;
+  "></div>
 
-        </div>
-      </div>
+  <!-- Content -->
+  <div class="row" style="position: relative; z-index: 2;">
+    <div class="col" style="font-family: 'Times New Roman', Times, serif; padding-left: 20px; color: white; text-align: center;">
+      <h1 style="font-size: 60px;">Business Development That Delivers 100%</h1>
+      <h4 style="text-align: center; font-size: 30px;"><i>Identity. Influence. Growth.</i></h4> <hr><br>
+      <p style="font-size: 18px;"><strong>Growth starts with strategy, insight, and execution.</strong> I help businesses <strong>expand, increase revenue, and thrive </strong>by integrating <strong>strategic planning, marketing, customer satisfaction, and operational excellence.</strong> Every action is designed to deliver measurable results.</p>
+      <i style="font-size: 16px; text-align: center;">From Identity to Influence</i> <br><br><hr>
+      <p style="font-size: 18px;">I ensure every part of your business works together to<strong> maximize impact, revenue, and long-term success.</strong> Every visual, message, and digital touchpoint tells your story and strengthens your influence.</p>
+      <i style="font-size: 16px; text-align: center;">Brand Strategically. Grow Tangibly.</i> <br><br><hr>
+      
+      <h3>How I Drive Business Development:</h3>
+      <ul style="list-style: none;">
+        <li>Custom growth strategies & market expansion</li>
+        <li>Revenue-driven marketing & lead generation</li>
+        <li>Scalable operations & continuous optimization</li>
+        </ul>
     </div>
-    
-</div>
 
-
+    <!-- <div class="col">
+      <img src="/images/billionaer3bottles.jpeg" alt="photo" style="height: 400px; width: 600px; margin-top: 150px; padding-left: 30px; ">
+    </div> -->
+  </div>
+</main>
 
     <!----------------------- FOOTER SECTION ------------------------->
-<footer class="text-center py-4" style="background-color: #212529; border-top: 4px solid #235630; color: white;">
+<footer class="text-center py-4" style="background-color: #212529; border-top: 4px solid #2b6e39; color: white;">
   <p>&copy; 2025 Barbra Bemara. All rights reserved.</p>
 </footer>
 
@@ -693,14 +565,6 @@
         applyTranslations(initial);  // translate immediately on load
       });
     </script>
-
-    <!------------- DOWNLOAD FORMAT FOR THE CV PAGE ----------------->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
-
-
-
-
-
 
   </body>
 </html>

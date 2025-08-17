@@ -102,9 +102,29 @@
         margin: 6px 0 8px 0;
       }
     </style>
-  </head>
+
+    <!-- ================= main content styles ================= -->
+    <!--  CSS for row shadow and hover -->
+  <style>
+    /* Apply green shadow and hover effect to the whole row */
+    .project-row {
+      background-color: #30c58070;  /* Keep your original background */
+      box-shadow: 0 4px 15px rgba(5, 143, 5, 0.5); /* Green shadow */
+      border-radius: 10px; /* Rounded corners */
+      margin: 20px 0; /* Spacing between rows */
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    }
+
+    .project-row:hover {
+      transform: translateY(-5px); /* Slight lift on hover */
+      box-shadow: 0 8px 25px #348147; /* Stronger green shadow on hover */
+    }
+  </style>
+
+</head>
 
   <body>
+    <!-- ================= HEADER NAVBAR ================= -->
     <!-- ================= HEADER NAVBAR ================= -->
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
@@ -134,26 +154,26 @@
               </li>
               <!-- Services dropdown -->
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white fw-bold" id="nav-services" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle text-white fw-bold" id="nav-services" href="websitedevelopment.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Services
                 </a>
                 <ul class="dropdown-menu bg-success" aria-labelledby="nav-services">
-                  <li><a class="dropdown-item fw-bold text-white" id="dropdown-webdev" href="#">Website Development</a></li>
-                  <li><a class="dropdown-item fw-bold text-white" id="dropdown-portfolio" href="#">Portfolio Design</a></li>
+                  <li><a class="dropdown-item fw-bold text-white" id="dropdown-webdev" href="websitedevelopment.html">Website Development</a></li>
+                  <li><a class="dropdown-item fw-bold text-white" id="dropdown-portfolio" href="portfoliodevelopment.html">Portfolio Design</a></li>
                   <li><hr class="dropdown-divider" /></li>
-                  <li><a class="dropdown-item fw-bold text-white" id="dropdown-brand" href="#">Brand Management</a></li>
-                  <li><a class="dropdown-item fw-bold text-white" id="dropdown-consult" href="#">Business Development | Consultancy</a></li>
-                  <li><a class="dropdown-item fw-bold text-white" id="dropdown-remote" href="#">Remote Work Support</a></li>
+                  <li><a class="dropdown-item fw-bold text-white" id="dropdown-brand" href="brandmanagement.html">Brand Management</a></li>
+                  <li><a class="dropdown-item fw-bold text-white" id="dropdown-consult" href="businessdevelopment.html">Business Development | Consultancy</a></li>
+                  <li><a class="dropdown-item fw-bold text-white" id="dropdown-remote" href="remotework.html">Remote Work Support</a></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white fw-bold" id="nav-resume" href="#">My Resume</a>
+                <a class="nav-link text-white fw-bold" id="nav-resume" href="resume.html">My Resume</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white fw-bold" id="nav-testimonials" href="#">Testimonials</a>
+                <a class="nav-link text-white fw-bold" id="nav-testimonials" href="testimonials.html">Testimonials</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white fw-bold" id="nav-contact" href="#">Contact Me</a>
+                <a class="nav-link text-white fw-bold" id="nav-contact" href="contact.html">Contact Me</a>
               </li>
             </ul>
           </div>
@@ -183,91 +203,87 @@
     
     <!-- ================= MAIN CONTENT ================= -->
     <div class="container">
-        <!-- project one -->
-        <div class="row" style="font-family: 'Times New Roman', Times, serif; background-color: #53af8470; margin: 20px; ">
-  
-            <!-- Left Column -->
-        <div class="col-sm-8" style="padding: 20px;">
-            <h1>Website Design - Herad Intercontinental Services Ltd</h1>
-            <!-- herad website  -->
-            <h4 class="mb-3"> 
-                Project: 
-                <a href="https://bemarabarbra.github.io/Herad-Website/" target="_blank">
-                  Herad Website
-                </a> 
-                | Languages: HTML, CSS
-              </h4>
-              
-            <ul>
-            <li>Developed a fully responsive website for Herad, a diversified Ugandan company in agricultural exports, meats & poultry, imported spirits, consultancy, and tour & travel.</li>
-            <li>Created intuitive navigation and a clear content structure to showcase multiple business lines.</li>
-            <li>Applied SEO and branding strategies to strengthen online presence.</li>
-            <li>Optimized user experience with fast-loading pages and clear call-to-action elements.</li>
-            </ul>
-        </div>
-  
-          
-            <!-- Right Column -->
-            <div class="col-sm-4">
-                <img src="/images/herad-logo.jpg" alt="Herad Logo" style="width: 350px; margin-top:100px ; padding-right: 20px;">
-            </div>
 
-          </div>
-          
+      <!-- ------------ Project One ----------- -->
+  <div class="row project-row" style="font-family: 'Times New Roman', Times, serif;">
+    <!-- Left Column -->
+    <div class="col-sm-8" style="padding: 20px;">
+      <h1>Website Design - Herad Intercontinental Services Ltd</h1>
+      <h4 class="mb-3">
+        Project: 
+        <a href="https://bemarabarbra.github.io/Herad-Website/" target="_blank">Herad Website</a>
+        | Languages: HTML, CSS
+      </h4>
+      <ul>
+        <li>Developed a fully responsive website for Herad, a diversified Ugandan company in agricultural exports, meats & poultry, imported spirits, consultancy, and tour & travel.</li>
+        <li>Created intuitive navigation and a clear content structure to showcase multiple business lines.</li>
+        <li>Applied SEO and branding strategies to strengthen online presence.</li>
+        <li>Optimized user experience with fast-loading pages and clear call-to-action elements.</li>
+      </ul>
+    </div>
 
-          <!-- project two -->
-        <div class="row" style="font-family: 'Times New Roman', Times, serif; background-color: #53af8470; margin: 20px; ">
-  
-            <!-- Left Column -->
-        <div class="col-sm-8" style="padding: 20px;">
-            <h1>Upcoming Project: Website Design (Herad Spas)</h1>
-            <!-- herad spa website  -->
-            <h4 class="mb-3"> 
-                Project: Herad Spas Website | Languages/Technologies: HTML, CSS, Bootstrap
-              </h4>
-              
-            <ul>
-            <li>Developing a fully responsive website for Herad Spas, featuring massage, skincare, therapeutic, lymphatic, and relaxation services.</li>
-            <li>Designing intuitive navigation, clear content structure, and optimized user experience.</li>
-            <li>Implementing SEO and branding strategies to enhance online visibility.</li>
-            </ul>
-        </div>
-  
-            <!-- Right Column -->
-            <div class="col-sm-4">
-                <img src="/images/spa-logo-redwords.png" alt="Herad Logo" style="width: 350px; height: 220px; margin-top:80px ; padding-left: 40px;">
-            </div>
-            
-          </div>
+    <!-- Right Column -->
+    <div class="col-sm-4 d-flex justify-content-center align-items-center">
+      <img src="/images/herad-logo.jpg" alt="Herad Logo" style="width: 320px; margin-top:0px; padding-right: 20px;">
+    </div>
+  </div>
 
+  <!-- ------- Project Two -------- -->
+  <div class="row project-row" style="font-family: 'Times New Roman', Times, serif;">
+    <div class="col-sm-8" style="padding: 20px;">
+      <h1>Upcoming Project: Website Design (Herad Spas)</h1>
+      <h4 class="mb-3">Project: Herad Spas Website | Languages/Technologies: HTML, CSS, Bootstrap</h4>
+      <ul>
+        <li>Developing a fully responsive website for Herad Spas, featuring massage, skincare, therapeutic, lymphatic, and relaxation services.</li>
+        <li>Designing intuitive navigation, clear content structure, and optimized user experience.</li>
+        <li>Implementing SEO and branding strategies to enhance online visibility.</li>
+      </ul>
+    </div>
+    <div class="col-sm-4 d-flex justify-content-center align-items-center">
+      <img src="/images/spa-logo-redwords.png" alt="Herad Spa Logo" style="width: 350px; height: 220px; margin-top:0px; padding-left: 40px;">
+    </div>
+  </div>
 
-          <!-- project three -->
-        <div class="row" style="font-family: 'Times New Roman', Times, serif; background-color: #53af8470; margin: 20px; ">
-  
-          <!-- Left Column -->
-      <div class="col-sm-8" style="padding: 20px;">
-          <h1>Portfolio Website Development</h1>
-          <!-- portfolio website  -->
-          <h4 class="mb-3"> 
-              Project: Bemara Barbra Portfolio Website | Languages: Bootstrap, CSS
-            </h4>
-            
-          <ul>
-          <li>Developing a fully responsive website for Herad Spas, featuring massage, skincare, therapeutic, lymphatic, and relaxation services.</li>
-          <li>Designing intuitive navigation, clear content structure, and optimized user experience.</li>
-          <li>Implementing SEO and branding strategies to enhance online visibility.</li>
-          </ul>
-      </div>
+  <!-- ================= Project Three ================= -->
+  <div class="row project-row" style="font-family: 'Times New Roman', Times, serif;">
+    <div class="col-sm-8" style="padding: 20px;">
+      <h1>Portfolio Website Development</h1>
+      <h4 class="mb-3">
+        Project: 
+        <a href="https://bemarabarbra.github.io/personalportfolio/" target="_blank">Bemara Barbra Portfolio Website</a> 
+        | Technologies: Bootstrap, CSS
+      </h4>
+      <ul>
+        <li>Developing a responsive personal portfolio website to showcase my skills, projects, and professional achievements with intuitive navigation and cohesive content structure.</li>
+        <li>Implementing SEO, branding strategies, and optimized user experience to enhance online visibility, engagement, and visual appeal.</li>
+      </ul>
+    </div>
+    <div class="col-sm-4 d-flex justify-content-center align-items-center">
+      <img src="/images/barbra-afro.jpeg" alt="Barbra Photo" style="border-radius: 50%; height: 250px; width: 260px;">
+    </div>
+  </div>
 
-          <!-- Right Column -->
-          <div class="col-sm-4">
-              <img src="/images/spa-logo-redwords.png" alt="Herad Logo" style="width: 350px; height: 220px; margin-top:80px ; padding-left: 40px;">
-          </div>
-          
-        </div>
+  <!-- ================= Project Four ================= -->
+  <div class="row project-row" style="font-family: 'Times New Roman', Times, serif;">
+    <div class="col-sm-8" style="padding: 20px;">
+      <h1>Graphics Design & Logo Development</h1>
+      <h4 class="mb-3">
+        Project: 
+        <a href="YOUR_HERAD_DRIVE_LINK" target="_blank">Herad Graphics & Logos</a> 
+        | Technologies: Canva, Photoshop
+      </h4>
+      <ul>
+        <li>Designed logos, branding materials, and promotional graphics for Herad Intercontinental Services, ensuring visual consistency across multiple business lines.</li>
+        <li>Created engaging marketing visuals to enhance brand recognition and support both digital and print media campaigns.</li>
+      </ul>
+    </div>
+    <div class="col-sm-4 d-flex justify-content-center align-items-center">
+      <img src="/images/graphics-image.jpeg" alt="Graphics photo" style="border-radius: 10%; height: 200px; width: 230px;">
+    </div>
+    </div>
 
+</div>
 
-        </div>
 
     <!----------------------- FOOTER SECTION ------------------------->
 <footer class="text-center py-4" style="background-color: #212529; border-top: 4px solid #2b6e39; color: white;">
