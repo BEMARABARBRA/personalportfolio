@@ -17,12 +17,8 @@
     <meta name="author" content="Barbra Bemara" />
 
     <!-- ================= BOOTSTRAP CSS ================= -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
 
     <!-- ================= PAGE TITLE ================= -->
     <title>Barbra Bemara Portfolio | Web Developer | Brand & Business Development Expert</title>
@@ -108,11 +104,10 @@
           </a>
 
           <!-- Navbar toggler for mobile -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                  aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
           <!-- Collapsible navbar items -->
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -153,23 +148,14 @@
       </nav>
 
       <!-- Language selection bar -->
+      <!-- ================= LANGUAGE TRANSLATOR ================= -->
       <div class="language-bar py-2 border-top">
         <div class="container d-flex justify-content-end align-items-center">
-          <!-- Label for translation -->
-          <label id="language-select-label" for="language-select" class="me-2 mb-0 text-white">🌐 Language:</label>
-          <!-- Dropdown for selecting language -->
-          <select id="language-select" class="form-select w-auto" style="border: none;">
-            <option value="en" selected>English</option>
-            <option value="fr">Français</option>
-            <option value="sw">Kiswahili</option>
-            <option value="es">Español</option>
-            <option value="de">Deutsch</option>
-            <option value="zh">中文</option>
-            <option value="ar">العربية</option>
-            <option value="pt">Português</option>
-          </select>
+            <!-- Google Translate widget -->
+            <div id="google_translate_element"></div>
         </div>
-      </div>
+    </div>
+
     </header>
     
     <!-- ================= MAIN CONTENT ================= -->
@@ -243,334 +229,18 @@
 
 
     <!-- ================= BOOTSTRAP JS ================= -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-b0cwMfvT6gMkcHgHDW30NP57mKs0mtDwX0PaGSSn1dKpCmpeN4w0jOOn1u9n0kFO"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Bootstrap JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
 
     <!-- ================= LANGUAGE TRANSLATION SCRIPT ================= -->
-    <script>
-      /**
-       * 1) Define all copy per language.
-       * 2) Map element IDs to translation keys.
-       * 3) Apply on load (remember last chosen language) + on change.
-       * 4) Update <html lang> and direction (dir="rtl") for Arabic.
-       * 5) Use innerHTML for strings that contain markup (e.g., bold labels).
-       */
-
-      /* ---- 1) Translations ---- */
-      const translations = {
-        en: {
-          navAbout: "About Me",
-          navProjects: "Projects",
-          navServices: "Services",
-          navResume: "My Resume",
-          navTestimonials: "Testimonials",
-          navContact: "Contact Me",
-          dropdownWebDev: "Website Development",
-          dropdownPortfolio: "Portfolio Design",
-          dropdownBrand: "Brand Management",
-          dropdownConsult: "Business Development | Consultancy",
-          dropdownRemote: "Remote Work Support",
-          languageLabel: "🌐 Language:",
-          headingName: "Bemara Barbra",
-          headingRole: "Web Developer | Junior Graphics Designer",
-          introText: "I build websites that perform and designs that captivate. More than visuals and code, I create digital experiences that connect, inspire, and convert.",
-          slogan: "Clean code, Bold visuals, Real Impact",
-          toolsHTML: "<b>Tools &amp; Technologies:</b> HTML | CSS | Bootstrap | Canva | Photoshop",
-          buttonConnect: "Let’s Connect",
-          ongoingProjects: "Ongoing Projects",
-          project1Title: "Website Development",
-          project1Desc1: "Herad Intercontinental Services Ltd - Website Development",
-          project1Desc2: "Herad Spas - Website Development",
-          project2Title: "Portfolio Development",
-          project2Desc1: "Barbra Bemara - Portfolio Design",
-          project3Title: "Graphics Design",
-          project3Desc1: "Herad flyer Designs - Herad Exports",
-        },
-
-        fr: {
-          navAbout: "À propos de moi",
-          navProjects: "Projets",
-          navServices: "Services",
-          navResume: "Mon CV",
-          navTestimonials: "Témoignages",
-          navContact: "Contactez-moi",
-          dropdownWebDev: "Développement de site Web",
-          dropdownPortfolio: "Conception de portfolio",
-          dropdownBrand: "Gestion de marque",
-          dropdownConsult: "Développement des affaires | Conseil",
-          dropdownRemote: "Support de travail à distance",
-          languageLabel: "🌐 Langue :",
-          headingName: "Bemara Barbra",
-          headingRole: "Développeuse Web | Graphiste Junior",
-          introText: "Je crée des sites Web performants et des designs captivants. Au-delà des visuels et du code, je conçois des expériences numériques qui connectent, inspirent et convertissent.",
-          slogan: "Code propre, visuels audacieux, impact réel",
-          toolsHTML: "<b>Outils &amp; Technologies :</b> HTML | CSS | Bootstrap | Canva | Photoshop",
-          buttonConnect: "Entrons en contact",
-          ongoingProjects: "Projets en cours",
-          project1Title: "Développement Web",
-          project1Desc1: "Herad Intercontinental Services Ltd - Développement Web",
-          project1Desc2: "Herad Spas - Développement Web",
-          project2Title: "Développement de portfolio",
-          project2Desc1: "Barbra Bemara - Conception de portfolio",
-          project3Title: "Conception graphique",
-          project3Desc1: "Flyers Herad - Herad Exports",
-        },
-
-        sw: {
-          navAbout: "Kuhusu Mimi",
-          navProjects: "Miradi",
-          navServices: "Huduma",
-          navResume: "Wasifu Wangu",
-          navTestimonials: "Ushuhuda",
-          navContact: "Wasiliana Nami",
-          dropdownWebDev: "Uundaji Tovuti",
-          dropdownPortfolio: "Ubunifu wa Wasifu",
-          dropdownBrand: "Usimamizi wa Chapa",
-          dropdownConsult: "Maendeleo ya Biashara | Ushauri",
-          dropdownRemote: "Msaada wa Kazi ya Mbali",
-          languageLabel: "🌐 Lugha:",
-          headingName: "Bemara Barbra",
-          headingRole: "Msanidi Wavuti | Mbunifu wa Picha Chipukizi",
-          introText: "Ninatengeneza tovuti bora na miundo inayo vutia. Zaidi ya picha na msimbo, naunda uzoefu wa kidijitali unaounganisha, kuhamasisha, na kubadilisha.",
-          slogan: "Msimbo safi, picha kali, athari halisi",
-          toolsHTML: "<b>Zana &amp; Teknolojia:</b> HTML | CSS | Bootstrap | Canva | Photoshop",
-          buttonConnect: "Tuwasiliane",
-          ongoingProjects: "Miradi Inayoendelea",
-          project1Title: "Uundaji Tovuti",
-          project1Desc1: "Herad Intercontinental Services Ltd - Uundaji Tovuti",
-          project1Desc2: "Herad Spas - Uundaji Tovuti",
-          project2Title: "Ubunifu wa Wasifu",
-          project2Desc1: "Barbra Bemara - Ubunifu wa Wasifu",
-          project3Title: "Ubunifu wa Picha",
-          project3Desc1: "Vipeperushi vya Herad - Herad Exports",
-        },
-
-        es: {
-          navAbout: "Sobre mí",
-          navProjects: "Proyectos",
-          navServices: "Servicios",
-          navResume: "Mi CV",
-          navTestimonials: "Testimonios",
-          navContact: "Contáctame",
-          dropdownWebDev: "Desarrollo de Sitios Web",
-          dropdownPortfolio: "Diseño de Portafolio",
-          dropdownBrand: "Gestión de Marca",
-          dropdownConsult: "Desarrollo de Negocios | Consultoría",
-          dropdownRemote: "Soporte de Trabajo Remoto",
-          languageLabel: "🌐 Idioma:",
-          headingName: "Bemara Barbra",
-          headingRole: "Desarrolladora Web | Diseñadora Gráfica Junior",
-          introText: "Construyo sitios web que rinden y diseños que cautivan. Más que visuales y código, creo experiencias digitales que conectan, inspiran y convierten.",
-          slogan: "Código limpio, visuales audaces, impacto real",
-          toolsHTML: "<b>Herramientas y Tecnologías:</b> HTML | CSS | Bootstrap | Canva | Photoshop",
-          buttonConnect: "Conectemos",
-          ongoingProjects: "Proyectos en curso",
-          project1Title: "Desarrollo Web",
-          project1Desc1: "Herad Intercontinental Services Ltd - Desarrollo Web",
-          project1Desc2: "Herad Spas - Desarrollo Web",
-          project2Title: "Desarrollo de Portafolio",
-          project2Desc1: "Barbra Bemara - Diseño de Portafolio",
-          project3Title: "Diseño Gráfico",
-          project3Desc1: "Diseños de volantes de Herad - Herad Exports",
-        },
-
-        de: {
-          navAbout: "Über mich",
-          navProjects: "Projekte",
-          navServices: "Leistungen",
-          navResume: "Mein Lebenslauf",
-          navTestimonials: "Referenzen",
-          navContact: "Kontakt",
-          dropdownWebDev: "Webseiten-Entwicklung",
-          dropdownPortfolio: "Portfolio-Design",
-          dropdownBrand: "Markenmanagement",
-          dropdownConsult: "Business Development | Beratung",
-          dropdownRemote: "Remote-Work-Support",
-          languageLabel: "🌐 Sprache:",
-          headingName: "Bemara Barbra",
-          headingRole: "Webentwicklerin | Junior-Grafikdesignerin",
-          introText: "Ich erstelle leistungsstarke Websites und fesselnde Designs. Mehr als nur Visuals und Code: Ich kreiere digitale Erlebnisse, die verbinden, inspirieren und konvertieren.",
-          slogan: "Sauberer Code, mutige Visuals, echte Wirkung",
-          toolsHTML: "<b>Tools &amp; Technologien:</b> HTML | CSS | Bootstrap | Canva | Photoshop",
-          buttonConnect: "Lass uns vernetzen",
-          ongoingProjects: "Laufende Projekte",
-          project1Title: "Webentwicklung",
-          project1Desc1: "Herad Intercontinental Services Ltd - Webentwicklung",
-          project1Desc2: "Herad Spas - Webentwicklung",
-          project2Title: "Portfolio-Entwicklung",
-          project2Desc1: "Barbra Bemara - Portfolio-Design",
-          project3Title: "Grafikdesign",
-          project3Desc1: "Herad Flyer-Designs - Herad Exports",
-        },
-
-        zh: {
-          navAbout: "关于我",
-          navProjects: "项目",
-          navServices: "服务",
-          navResume: "我的简历",
-          navTestimonials: "评价",
-          navContact: "联系我",
-          dropdownWebDev: "网站开发",
-          dropdownPortfolio: "作品集设计",
-          dropdownBrand: "品牌管理",
-          dropdownConsult: "业务发展 | 咨询",
-          dropdownRemote: "远程工作支持",
-          languageLabel: "🌐 语言：",
-          headingName: "Bemara Barbra",
-          headingRole: "网页开发者 | 初级平面设计师",
-          introText: "我打造高性能网站与吸引人的设计。不止于视觉与代码，我创造能连接、启发并转化的数字体验。",
-          slogan: "干净代码，醒目视觉，真实影响",
-          toolsHTML: "<b>工具与技术：</b> HTML | CSS | Bootstrap | Canva | Photoshop",
-          buttonConnect: "联系我",
-          ongoingProjects: "进行中的项目",
-          project1Title: "网站开发",
-          project1Desc1: "Herad Intercontinental Services Ltd - 网站开发",
-          project1Desc2: "Herad Spas - 网站开发",
-          project2Title: "作品集开发",
-          project2Desc1: "Barbra Bemara - 作品集设计",
-          project3Title: "平面设计",
-          project3Desc1: "Herad 传单设计 - Herad Exports",
-        },
-
-        ar: {
-          navAbout: "عنّي",
-          navProjects: "المشاريع",
-          navServices: "الخدمات",
-          navResume: "سيرتي الذاتية",
-          navTestimonials: "الشهادات",
-          navContact: "اتصل بي",
-          dropdownWebDev: "تطوير مواقع الويب",
-          dropdownPortfolio: "تصميم الملف التعريفي",
-          dropdownBrand: "إدارة العلامة التجارية",
-          dropdownConsult: "تطوير الأعمال | استشارات",
-          dropdownRemote: "دعم العمل عن بُعد",
-          languageLabel: "🌐 اللغة:",
-          headingName: "بيمارا بربرا",
-          headingRole: "مطوّرة ويب | مصممة جرافيك مبتدئة",
-          introText: "أبني مواقع فعّالة وتصاميم جذّابة. أكثر من مجرد مرئيات وكود، أصنع تجارب رقمية تُلهم وتحوّل.",
-          slogan: "برمجة نظيفة، مرئيات جريئة، تأثير حقيقي",
-          toolsHTML: "<b>الأدوات والتقنيات:</b> HTML | CSS | Bootstrap | Canva | Photoshop",
-          buttonConnect: "لنتواصل",
-          ongoingProjects: "المشاريع الجارية",
-          project1Title: "تطوير الويب",
-          project1Desc1: "Herad Intercontinental Services Ltd - تطوير موقع",
-          project1Desc2: "Herad Spas - تطوير موقع",
-          project2Title: "تطوير الملف التعريفي",
-          project2Desc1: "بيمارا بربرا - تصميم ملف تعريفي",
-          project3Title: "التصميم الجرافيكي",
-          project3Desc1: "تصاميم منشورات Herad - Herad Exports",
-        },
-
-        pt: {
-          navAbout: "Sobre mim",
-          navProjects: "Projetos",
-          navServices: "Serviços",
-          navResume: "Meu Currículo",
-          navTestimonials: "Depoimentos",
-          navContact: "Fale comigo",
-          dropdownWebDev: "Desenvolvimento de Sites",
-          dropdownPortfolio: "Design de Portfólio",
-          dropdownBrand: "Gestão de Marca",
-          dropdownConsult: "Desenvolvimento de Negócios | Consultoria",
-          dropdownRemote: "Suporte a Trabalho Remoto",
-          languageLabel: "🌐 Idioma:",
-          headingName: "Bemara Barbra",
-          headingRole: "Desenvolvedora Web | Designer Gráfica Júnior",
-          introText: "Crio sites que performam e designs que cativam. Mais do que visuais e código, crio experiências digitais que conectam, inspiram e convertem.",
-          slogan: "Código limpo, visuais ousados, impacto real",
-          toolsHTML: "<b>Ferramentas &amp; Tecnologias:</b> HTML | CSS | Bootstrap | Canva | Photoshop",
-          buttonConnect: "Vamos conversar",
-          ongoingProjects: "Projetos em andamento",
-          project1Title: "Desenvolvimento Web",
-          project1Desc1: "Herad Intercontinental Services Ltd - Desenvolvimento Web",
-          project1Desc2: "Herad Spas - Desenvolvimento Web",
-          project2Title: "Desenvolvimento de Portfólio",
-          project2Desc1: "Barbra Bemara - Design de Portfólio",
-          project3Title: "Design Gráfico",
-          project3Desc1: "Designs de panfletos Herad - Herad Exports",
-        },
-      };
-
-      /* ---- 2) Map element IDs to translation keys ----
-         Having this in one place avoids repeating getElementById lines.
-      */
-      const elementsToTranslate = {
-        "nav-about": "navAbout",
-        "nav-projects": "navProjects",
-        "nav-services": "navServices",
-        "nav-resume": "navResume",
-        "nav-testimonials": "navTestimonials",
-        "nav-contact": "navContact",
-        "dropdown-webdev": "dropdownWebDev",
-        "dropdown-portfolio": "dropdownPortfolio",
-        "dropdown-brand": "dropdownBrand",
-        "dropdown-consult": "dropdownConsult",
-        "dropdown-remote": "dropdownRemote",
-        "language-select-label": "languageLabel",
-        "heading-name": "headingName",
-        "heading-role": "headingRole",
-        "intro-text": "introText",
-        "slogan-text": "slogan",
-        "tools-text": "toolsHTML",                 // contains <b>...</b> so we use innerHTML
-        "btn-connect": "buttonConnect",
-        "ongoing-projects-title": "ongoingProjects",
-        "project1-title": "project1Title",
-        "project1-desc1": "project1Desc1",
-        "project1-desc2": "project1Desc2",
-        "project2-title": "project2Title",
-        "project2-desc1": "project2Desc1",
-        "project3-title": "project3Title",
-        "project3-desc1": "project3Desc1"
-      };
-
-      /* ---- Helper: detect if a given key should be applied as HTML ---- */
-      function isHTMLKey(key) {
-        return key === "toolsHTML";
-      }
-
-      /* ---- 3) Apply translations for a given language ---- */
-      function applyTranslations(langCode) {
-        const pack = translations[langCode] || translations.en; // fallback to English
-        // Update <html lang=".."> and direction for accessibility + screen readers
-        document.documentElement.lang = langCode;
-        document.documentElement.dir = (langCode === "ar") ? "rtl" : "ltr";
-
-        // Loop through each element id and set its text
-        Object.entries(elementsToTranslate).forEach(([id, key]) => {
-          const el = document.getElementById(id);
-          if (!el) return; // silently skip if element not on page
-
-          // If translation missing in selected language, fallback to EN key
-          const value = (pack[key] !== undefined) ? pack[key] : translations.en[key];
-
-          // Preserve markup where intended (e.g., bold label in tools line)
-          if (isHTMLKey(key)) {
-            el.innerHTML = value;
-          } else {
-            el.textContent = value;
-          }
-        });
-      }
-
-      /* ---- 4) Persist + restore last chosen language ---- */
-      const langSelect = document.getElementById("language-select");
-      langSelect.addEventListener("change", (e) => {
-        const chosen = e.target.value;
-        localStorage.setItem("preferredLang", chosen);
-        applyTranslations(chosen);
-      });
-
-      // Initialize on first paint
-      window.addEventListener("DOMContentLoaded", () => {
-        const saved = localStorage.getItem("preferredLang");
-        const initial = saved && translations[saved] ? saved : langSelect.value;
-        langSelect.value = initial;  // reflect restored value in the UI
-        applyTranslations(initial);  // translate immediately on load
-      });
-    </script>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+  }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   </body>
 </html>

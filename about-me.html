@@ -11,9 +11,8 @@
   <meta name="author" content="Barbra Bemara" />
 
   <!-- ================= BOOTSTRAP CSS ================= -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-    crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
 
   <!-- ================= PAGE TITLE ================= -->
   <title>Barbra Bemara Portfolio | Web Developer | Brand & Business Development Expert</title>
@@ -51,10 +50,11 @@
       <a class="navbar-brand text-white fw-bold" href="index.html" translate="no"
         style="font-size: 2rem; text-shadow: 1px 1px 0 #0f9d58, 2px 2px 0 #0b8043, 3px 3px 2px #0a662d;"> BEMARA BARBRA </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        <!-- toogle  -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
+    </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-white fw-bold">
@@ -79,22 +79,15 @@
     </div>
   </nav>
 
-  <!-- Language bar -->
-  <div class="language-bar py-2 border-top">
-    <div class="container d-flex justify-content-end align-items-center">
-      <label id="language-select-label" for="language-select" class="me-2 mb-0 text-white">🌐 Language:</label>
-      <select id="language-select" class="form-select w-auto" style="border: none;">
-        <option value="en" selected>English</option>
-        <option value="fr">Français</option>
-        <option value="sw">Kiswahili</option>
-        <option value="es">Español</option>
-        <option value="de">Deutsch</option>
-        <option value="zh">中文</option>
-        <option value="ar">العربية</option>
-        <option value="pt">Português</option>
-      </select>
+  <!-- Language selection bar -->
+      <!-- ================= LANGUAGE TRANSLATOR ================= -->
+      <div class="language-bar py-2 border-top">
+        <div class="container d-flex justify-content-end align-items-center">
+            <!-- Google Translate widget -->
+            <div id="google_translate_element"></div>
+        </div>
     </div>
-  </div>
+
 </header>
 
 <!----------------------- MAIN CONTENT ------------------------->
@@ -135,76 +128,18 @@
 </footer>
 
 <!-- ================= BOOTSTRAP JS ================= -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-b0cwMfvT6gMkcHgHDW30NP57mKs0mtDwX0PaGSSn1dKpCmpeN4w0jOOn1u9n0kFO"
-  crossorigin="anonymous"></script>
+    <!-- Bootstrap JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
 
 <!-- ================= LANGUAGE TRANSLATION SCRIPT ================= -->
-<script>
-/* ---------------- TRANSLATION SCRIPT ----------------
-   1) Define translation strings per language.
-   2) Map element IDs to translation keys.
-   3) Update elements on language change or page load.
-   4) Save user preference in localStorage.
-   5) Support RTL for Arabic.
------------------------------------------------------ */
-
-// 1) Translation strings
-const translations = {
-  en: { navAbout:"About Me", navProjects:"Projects", navServices:"Services", navResume:"My Resume", navTestimonials:"Testimonials", navContact:"Contact Me", dropdownWebDev:"Website Development", dropdownPortfolio:"Portfolio Design", dropdownBrand:"Brand Management", dropdownConsult:"Business Development | Consultancy", dropdownRemote:"Remote Work Support", languageLabel:"🌐 Language:", aboutHeader:"About Me", aboutSubheader:"Tech Strategist | Digital Creator | Global Brand Leader", aboutParagraph1:"I create digital experiences that inspire and deliver results. With over 8 years in Business development and recent entry in Web-development and Graphics design, I combine coding, strategy, and visuals to drive impact and connect people.", aboutParagraph2:"A tech-driven strategist with expertise in global business, customer service, and marketing. I now add web development and graphic design to my toolkit. From launching brands to leading remote teams, I blend creativity and technology to craft lasting solutions.", aboutQuote:"\"Innovation, passion, and leadership delivered beyond expectations.\"" },
-  fr: { navAbout:"À propos de moi", navProjects:"Projets", navServices:"Services", navResume:"Mon CV", navTestimonials:"Témoignages", navContact:"Contactez-moi", dropdownWebDev:"Développement de site Web", dropdownPortfolio:"Conception de portfolio", dropdownBrand:"Gestion de marque", dropdownConsult:"Développement des affaires | Conseil", dropdownRemote:"Support de travail à distance", languageLabel:"🌐 Langue :", aboutHeader:"À propos de moi", aboutSubheader:"Stratège Tech | Créatrice Digitale | Leader de Marque Globale", aboutParagraph1:"Je crée des expériences numériques qui inspirent et donnent des résultats. Avec plus de 8 ans en développement commercial et une entrée récente en développement web et conception graphique, je combine code, stratégie et visuels pour créer de l’impact et connecter les gens.", aboutParagraph2:"Une stratège axée sur la technologie avec une expertise en affaires globales, service client et marketing. J'ajoute maintenant le développement web et la conception graphique à ma boîte à outils. Du lancement de marques à la direction d'équipes à distance, je mêle créativité et technologie pour concevoir des solutions durables.", aboutQuote:"\"Innovation, passion et leadership délivrés au-delà des attentes.\"" },
-  sw: { navAbout:"Kuhusu Mimi", navProjects:"Miradi", navServices:"Huduma", navResume:"Wasifu Wangu", navTestimonials:"Ushuhuda", navContact:"Wasiliana Nami", dropdownWebDev:"Uundaji Tovuti", dropdownPortfolio:"Ubunifu wa Wasifu", dropdownBrand:"Usimamizi wa Chapa", dropdownConsult:"Maendeleo ya Biashara | Ushauri", dropdownRemote:"Msaada wa Kazi ya Mbali", languageLabel:"🌐 Lugha:", aboutHeader:"Kuhusu Mimi", aboutSubheader:"Mtaalamu wa Teknolojia | Mundaaji wa Kidijitali | Kiongozi wa Chapa wa Ulimwengu", aboutParagraph1:"Ninatengeneza uzoefu wa kidijitali unaohamasisha na kutoa matokeo. Kwa zaidi ya miaka 8 katika maendeleo ya biashara na kuingia hivi majuzi katika uendelezaji wavuti na usanifu wa picha, ninaunganisha usimbaji, mkakati, na maonyesho kuleta athari na kuunganisha watu.", aboutParagraph2:"Mtaalamu ambaye anaendeshwa na teknolojia mwenye utaalam katika biashara za kimataifa, huduma kwa wateja, na masoko. Sasa naongeza uendelezaji wa wavuti na usanifu wa picha kwenye vifaa vyangu. Kuanzia kuzindua chapa hadi kuongoza timu za mbali, ninachanganya ubunifu na teknolojia kutengeneza suluhisho za kudumu.", aboutQuote:"\"Ubunifu, shauku, na uongozi vilivyoletwa zaidi ya matarajio.\"" }
-};
-
-// 2) Map element IDs to translation keys
-const elementsToTranslate = {
-  "nav-about":"navAbout",
-  "nav-projects":"navProjects",
-  "nav-services":"navServices",
-  "nav-resume":"navResume",
-  "nav-testimonials":"navTestimonials",
-  "nav-contact":"navContact",
-  "dropdown-webdev":"dropdownWebDev",
-  "dropdown-portfolio":"dropdownPortfolio",
-  "dropdown-brand":"dropdownBrand",
-  "dropdown-consult":"dropdownConsult",
-  "dropdown-remote":"dropdownRemote",
-  "language-select-label":"languageLabel",
-  "about-header":"aboutHeader",
-  "about-subheader":"aboutSubheader",
-  "about-paragraph1":"aboutParagraph1",
-  "about-paragraph2":"aboutParagraph2",
-  "about-quote":"aboutQuote"
-};
-
-// 3) Apply translation
-function applyTranslations(langCode) {
-  const pack = translations[langCode] || translations.en;
-  document.documentElement.lang = langCode;
-  document.documentElement.dir = langCode === "ar" ? "rtl" : "ltr";
-
-  Object.entries(elementsToTranslate).forEach(([id, key]) => {
-    const el = document.getElementById(id);
-    if(!el) return;
-    el.textContent = pack[key] || translations.en[key] || "";
-  });
-}
-
-// 4) Event listener for language selector
-document.getElementById("language-select").addEventListener("change", e => {
-  const lang = e.target.value;
-  localStorage.setItem("preferredLang", lang);
-  applyTranslations(lang);
-});
-
-// 5) On page load: apply saved language or default to English
-window.addEventListener("DOMContentLoaded", () => {
-  const savedLang = localStorage.getItem("preferredLang") || "en";
-  const langSelect = document.getElementById("language-select");
-  langSelect.value = savedLang;
-  applyTranslations(savedLang);
-});
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+  }
 </script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 
 </body>
 </html>
