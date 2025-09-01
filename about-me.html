@@ -13,19 +13,15 @@
   <!-- ================= BOOTSTRAP CSS ================= -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
-
   <!-- ================= PAGE TITLE ================= -->
-  <title>Barbra Bemara Portfolio | Web Developer | Brand & Business Development Expert</title>
+  <title>Barbra Bemara Portfolio | About Me</title>
 
   <!-- ================= INLINE STYLES ================= -->
   <style>
-    body { background-color: rgb(153, 235, 151); }
-
+    body { background-color: rgb(243, 231, 231); }
     header { position: sticky; top: 0; z-index: 1000; }
-
     .navbar-brand { font-family: 'Arial', sans-serif; }
-
-    .language-bar { background-color: #348147; box-shadow: 0 4px 10px rgba(2, 83, 29, 0.3); }
+    .language-bar { background-color: #348147; box-shadow: 0 4px 10px rgba(122, 7, 7, 0.9); }
 
     @media (min-width: 992px) {
       .nav-item.dropdown:hover .dropdown-menu { display: block; margin-top: 0; }
@@ -35,10 +31,27 @@
     .dropdown-menu .dropdown-item { color: white !important; }
     .dropdown-menu .dropdown-item:hover { background-color: #145c32 !important; color: white !important; }
 
+    .profile-img { 
+      width: 100%; 
+      height: auto; 
+      max-width: 500px; 
+      border-radius: 10px; 
+      border-right: 9px solid #6d0805; 
+      border-left: 9px solid #6d0805; 
+      box-shadow: 0 10px 20px rgba(112, 7, 7, 0.3); 
+    }
 
-    .shadow-success { box-shadow: 0 12px 24px rgba(25, 135, 84, 0.45); }
+    /* Responsive text sizing */
+    h1 { font-size: clamp(2rem, 4vw, 2.5rem); }
+    h4 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
+    p { font-size: clamp(0.95rem, 1.5vw, 1rem); }
 
-    .profile-img { width: 100%; max-width: 480px; max-height: 650px; object-fit: cover; border-radius: 50%; border: 6px solid #2b6e39; margin: 0 auto 20px; display: block; }
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      .about-section { flex-direction: column !important; text-align: center; }
+      .about-section img { margin-bottom: 20px; max-height: 350px; }
+      .about-text { padding: 0 15px; max-width: 100%; }
+    }
   </style>
 </head>
 <body>
@@ -48,76 +61,70 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
     <div class="container-fluid">
       <a class="navbar-brand text-white fw-bold" href="index.html" translate="no"
-        style="font-size: 2rem; text-shadow: 1px 1px 0 #0f9d58, 2px 2px 0 #0b8043, 3px 3px 2px #0a662d;"> BEMARA BARBRA </a>
+        style="font-size: 2rem; text-shadow: 1px 1px 0 #0f9d58, 2px 2px 0 #0b8043, 3px 3px 2px #6D0805;"> 
+        BEMARA BARBRA 
+      </a>
 
-        <!-- toogle  -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      <!-- toogle  -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-    </button>
+      </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-white fw-bold">
-          <li class="nav-item"><a class="nav-link active text-white fw-bold" id="nav-about" href="about-me.html">About Me</a></li>
-          <li class="nav-item"><a class="nav-link text-white fw-bold" id="nav-projects" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link active text-white fw-bold" href="about-me.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-bold" href="projects.html">Projects</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white fw-bold" id="nav-services" href="websitedevelopment.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-            <ul class="dropdown-menu bg-success" aria-labelledby="nav-services">
-              <li><a class="dropdown-item fw-bold text-white" id="dropdown-webdev" href="websitedevelopment.html">Website Development</a></li>
-              <li><a class="dropdown-item fw-bold text-white" id="dropdown-portfolio" href="portfoliodevelopment.html">Portfolio Design</a></li>
+            <a class="nav-link dropdown-toggle text-white fw-bold" href="websitedevelopment.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+            <ul class="dropdown-menu bg-success">
+              <li><a class="dropdown-item fw-bold text-white" href="websitedevelopment.html">Website Development</a></li>
+              <li><a class="dropdown-item fw-bold text-white" href="portfoliodevelopment.html">Portfolio Design</a></li>
               <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item fw-bold text-white" id="dropdown-brand" href="brandmanagement.html">Brand Management</a></li>
-              <li><a class="dropdown-item fw-bold text-white" id="dropdown-consult" href="businessdevelopment.html">Business Development | Consultancy</a></li>
-              <li><a class="dropdown-item fw-bold text-white" id="dropdown-remote" href="remotework.html">Remote Work Support</a></li>
+              <li><a class="dropdown-item fw-bold text-white" href="brandmanagement.html">Brand Management</a></li>
+              <li><a class="dropdown-item fw-bold text-white" href="businessdevelopment.html">Business Development | Consultancy</a></li>
+              <li><a class="dropdown-item fw-bold text-white" href="remotework.html">Remote Work Support</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a class="nav-link text-white fw-bold" id="nav-resume" href="resume.html">My Resume</a></li>
-          <li class="nav-item"><a class="nav-link text-white fw-bold" id="nav-testimonials" href="testimonials.html">Testimonials</a></li>
-          <li class="nav-item"><a class="nav-link text-white fw-bold" id="nav-contact" href="contact.html">Contact Me</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-bold" href="resume.html">My Resume</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-bold" href="testimonials.html">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-bold" href="contact.html">Contact Me</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- Language selection bar -->
-      <!-- ================= LANGUAGE TRANSLATOR ================= -->
-      <div class="language-bar py-2 border-top">
-        <div class="container d-flex justify-content-end align-items-center">
-            <!-- Google Translate widget -->
-            <div id="google_translate_element"></div>
-        </div>
+  <div class="language-bar py-2 border-top">
+    <div class="container d-flex justify-content-end align-items-center">
+      <div id="google_translate_element"></div>
     </div>
-
+  </div>
 </header>
 
 <!----------------------- MAIN CONTENT ------------------------->
-<div class="container py-2" style="height: 100vh;">
-  <div class="row justify-content-center align-items-center" style="height: 100%;">
-    <div class="col-md-10 d-flex" style="font-family: 'Times New Roman', serif; flex-wrap: nowrap; flex-direction: row; height: 100%;">
-      
-      <!-- Image container -->
-      <div class="flex-shrink-0 rounded-start shadow" style="width: 48%; aspect-ratio: 4 / 5; overflow: hidden; position: relative; height: 95%; max-height: 95%;">
-        <img src="images/bbsheratonfull.jpeg" alt="Barbra" class="w-100 h-100" style="object-fit: cover; transition: transform 0.3s ease;"
-          onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" />
-      </div>
+<div class="container py-5">
+  <div class="row about-section align-items-center">
+    <!-- Image -->
+    <div class="col-md-6 text-center">
+      <img src="images/bbsheratonfull.jpeg" alt="Barbra" class="img-fluid profile-img" loading="lazy">
+    </div>
 
-      <!-- Text container -->
-      <div class="flex-grow-1 ps-3 pe-3 d-flex flex-column justify-content-start"
-        style="max-width: 52%; min-width: 280px; text-align: left; color: #3a3a3a; height: 100%; max-height: 100%; overflow-y: auto; padding-top: 70px; padding-bottom: 0;">
-        <h1 id="about-header" class="fw-bold mb-2" style="font-size: 2.5rem; color: #183312; line-height: 1.2;">About Me</h1>
-        <h4 id="about-subheader" class="mb-3" style="font-weight: 600; color: #2b6e39; font-size: 1.25rem; margin-bottom: 0.8rem;">
-          Tech Strategist | Digital Creator | Global Brand Leader
-        </h4>
-        <p id="about-paragraph1" style="font-size: 1rem; line-height: 1.4; margin-bottom: 0.8rem;">
-          I create digital experiences that inspire and deliver results. With over 8 years in Business development and recent entry in Web-development and Graphics design, I combine coding, strategy, and visuals to drive impact and connect people.
-        </p>
-        <p id="about-paragraph2" style="font-size: 1rem; line-height: 1.4; margin-bottom: 0.8rem;">
-          A tech-driven strategist with expertise in global business, customer service, and marketing. I now add web development and graphic design to my toolkit. From launching brands to leading remote teams, I blend creativity and technology to craft lasting solutions.
-        </p>
-        <p id="about-quote" style="font-size: 1.1rem; font-weight: 600; font-style: italic; color: #2b6e39; margin-top: 1rem; line-height: 1.3;">
-          "Innovation, passion, and leadership delivered beyond expectations."
-        </p>
-      </div>
+    <!-- Text -->
+    <div class="col-md-6 about-text mt-4 mt-md-0">
+      <h1 class="fw-bold mb-2" style="color: #183312;">About Me</h1>
+      <h4 class="mb-3" style="font-weight: 600; color: #2b6e39;">
+        Tech Strategist | Digital Creator | Global Brand Leader
+      </h4>
+      <p>
+        I create digital experiences that inspire and deliver results. With over 8 years in Business Development and recent entry into Web Development and Graphics Design, I combine coding, strategy, and visuals to drive impact and connect people.
+      </p>
+      <p>
+        A tech-driven strategist with expertise in global business, customer service, and marketing. I now add web development and graphic design to my toolkit. From launching brands to leading remote teams, I blend creativity and technology to craft lasting solutions.
+      </p>
+      <p class="fw-bold fst-italic" style="color: #2b6e39;">
+        "Innovation, passion, and leadership delivered beyond expectations."
+      </p>
     </div>
   </div>
 </div>
@@ -128,9 +135,7 @@
 </footer>
 
 <!-- ================= BOOTSTRAP JS ================= -->
-    <!-- Bootstrap JS Bundle (includes Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- ================= LANGUAGE TRANSLATION SCRIPT ================= -->
 <script type="text/javascript">
@@ -139,7 +144,5 @@
   }
 </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-
 </body>
 </html>

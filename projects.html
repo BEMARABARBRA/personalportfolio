@@ -17,102 +17,113 @@
     <meta name="author" content="Barbra Bemara" />
 
     <!-- ================= BOOTSTRAP CSS ================= -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+          rel="stylesheet" crossorigin="anonymous" />
 
     <!-- ================= PAGE TITLE ================= -->
     <title>Barbra Bemara Portfolio | Web Developer | Brand & Business Development Expert</title>
 
     <!-- ================= INLINE STYLES ================= -->
     <style>
-      /* Body background */
-      body { background-color: rgb(153, 235, 151); }
+      /* Body background color */
+      body { background-color: rgb(238, 227, 227); }
 
-      /* Sticky header to keep navbar visible on scroll */
+      /* Sticky header to keep navbar visible during scroll */
       header { position: sticky; top: 0; z-index: 1000; }
 
-      /* Brand font override */
+      /* Navbar brand font */
       .navbar-brand { font-family: 'Arial', sans-serif; }
 
-      /* Language selection bar aesthetic */
-      .language-bar { background-color: #348147; box-shadow: 0 4px 10px rgba(2, 83, 29, 0.3); }
+      /* Language selection bar styling */
+      .language-bar { background-color: #348147; box-shadow: 0 4px 10px rgba(83, 2, 2, 0.6); }
 
-      /* Open dropdown on hover for large screens */
+      /* Open dropdown menus on hover for large screens */
       @media (min-width: 992px) {
         .nav-item.dropdown:hover .dropdown-menu { display: block; margin-top: 0; }
       }
 
-      /* Dropdown palette + hover states */
+      /* Dropdown menu theme */
       .dropdown-menu.bg-success { background-color: #198754 !important; }
       .dropdown-menu .dropdown-item { color: white !important; }
       .dropdown-menu .dropdown-item:hover { background-color: #145c32 !important; color: white !important; }
 
-      
+      /* Utility: custom green shadow */
+      .shadow-success { box-shadow: 0 12px 24px rgba(105, 8, 8, 0.45); }
 
-      /* Utility: green shadow for images (Bootstrap doesn't ship `.shadow-success`) */
-      .shadow-success { box-shadow: 0 12px 24px rgba(25, 135, 84, 0.45); }
+      /* Project row styling with shadow + hover animation */
+      .project-row {
+        background-color: #30c58070;   /* semi-transparent green background */
+        box-shadow: 0 4px 15px rgba(1, 31, 1, 0.5); /* subtle green shadow */
+        border-radius: 10px;           /* rounded corners */
+        margin: 20px 0;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .project-row:hover {
+        transform: translateY(-5px);   /* slight lift */
+        box-shadow: 0 8px 25px #348147; /* stronger shadow */
+      }
 
-      /* Image responsiveness tweak: keep it elegant on small screens */
-      .profile-img {
-        width: 100%;         /* scale down on small screens */
-        max-width: 480px;    /* never exceed this width */
-        max-height: 650px;   /* cap height to keep circle nice */
-        object-fit: cover;   /* maintain aspect and crop evenly */
-        border-radius: 50%;
-        border: 6px solid #2b6e39;
-        margin: 0 auto 20px;
+      /* ======= NEW: Live site preview card (replaces logos/images) ======= */
+      .preview-card {
+        position: relative;
+        width: 100%;
+        border: 2px solid #2b6e39;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+        background: #0e381e;
+      }
+      /* Make iframe non-interactive so any click opens the real site */
+      .preview-card iframe.preview-frame {
+        width: 100%;
+        height: 240px;          /* base height for small screens */
+        border: 0;
         display: block;
+        pointer-events: none;   /* ensures the overlay link gets the click */
       }
+      /* Clickable overlay that covers the preview */
+      .preview-card a.preview-overlay {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+      }
+      /* Optional label badge in the corner */
+      .preview-badge {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        z-index: 3;
+        background: rgba(255,255,255,0.9);
+        color: #0e381e;
+        font-weight: 700;
+        font-size: 0.8rem;
+        padding: 4px 8px;
+        border-radius: 999px;
+        border: 1px solid #2b6e39;
+      }
+      /* Responsive heights for larger screens */
+      @media (min-width: 576px) { .preview-card iframe.preview-frame { height: 260px; } }
+      @media (min-width: 768px) { .preview-card iframe.preview-frame { height: 300px; } }
+      @media (min-width: 992px) { .preview-card iframe.preview-frame { height: 320px; } }
+      @media (min-width: 1200px){ .preview-card iframe.preview-frame { height: 360px; } }
 
-      /* Card scroller: prevent overflow on small viewports while preserving design */
-      .projects-scroller {
-        overflow-x: auto; padding: 10px 40px; justify-content: center; max-width: 1200px; margin: 0 auto;
-      }
-      .project-card {
-        font-family: 'Times New Roman', Times, serif;
-        font-weight: 900;
-        border: 1px solid green;
-        border-radius: 10px;
-        background-color: #348147;
-        color: #99EB97;
-        padding: 8px 12px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        min-width: 250px;
-        max-width: 350px;
-        flex: 0 0 auto;
-        display: flex; flex-direction: column;
-        cursor: pointer;
-      }
-      .project-card h3 {
-        border: 1px solid #99EB97;
-        border-radius: 8px;
-        padding: 6px 8px;
-        background-color: rgba(255,255,255,0.05);
-        text-align: center;
-        font-size: 1.3rem;
-        margin: 6px 0 8px 0;
-      }
+
+     /* Smaller preview card */
+.preview-card.small-preview {
+  max-width: 200px;   /* smaller width */
+  border: 2px solid #2b6e39;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Adjust iframe height */
+.preview-card.small-preview iframe.preview-frame {
+  height: 250px;  /* reduce height */
+}
+
     </style>
-
-    <!-- ================= main content styles ================= -->
-    <!--  CSS for row shadow and hover -->
-  <style>
-    /* Apply green shadow and hover effect to the whole row */
-    .project-row {
-      background-color: #30c58070;  /* Keep your original background */
-      box-shadow: 0 4px 15px rgba(5, 143, 5, 0.5); /* Green shadow */
-      border-radius: 10px; /* Rounded corners */
-      margin: 20px 0; /* Spacing between rows */
-      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-    }
-
-    .project-row:hover {
-      transform: translateY(-5px); /* Slight lift on hover */
-      box-shadow: 0 8px 25px #348147; /* Stronger green shadow on hover */
-    }
-  </style>
-
-</head>
+  </head>
 
   <body>
     <!-- ================= HEADER NAVBAR ================= -->
@@ -120,170 +131,167 @@
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
         <div class="container-fluid">
 
-          <!-- Brand logo: excluded from translation via translate="no" -->
+          <!-- Portfolio brand -->
           <a class="navbar-brand text-white fw-bold" href="index.html" translate="no"
              style="font-size: 2rem; text-shadow: 1px 1px 0 #0f9d58, 2px 2px 0 #0b8043, 3px 3px 2px #0a662d;">
             BEMARA BARBRA
           </a>
 
-          <!-- Navbar toggler for mobile -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+          <!-- Mobile toggler -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                  data-bs-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-          <!-- Collapsible navbar items -->
+          <!-- Navbar links -->
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-white fw-bold">
-              <li class="nav-item">
-                <a class="nav-link active text-white fw-bold" id="nav-about" href="about-me.html">About Me</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white fw-bold" id="nav-projects" href="projects.html">Projects</a>
-              </li>
+              <li class="nav-item"><a class="nav-link active text-white fw-bold" id="nav-about" href="about-me.html">About Me</a></li>
+              <li class="nav-item"><a class="nav-link text-white fw-bold" id="nav-projects" href="projects.html">Projects</a></li>
+              
               <!-- Services dropdown -->
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-white fw-bold" id="nav-services" href="websitedevelopment.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Services
                 </a>
                 <ul class="dropdown-menu bg-success" aria-labelledby="nav-services">
-                  <li><a class="dropdown-item fw-bold text-white" id="dropdown-webdev" href="websitedevelopment.html">Website Development</a></li>
-                  <li><a class="dropdown-item fw-bold text-white" id="dropdown-portfolio" href="portfoliodevelopment.html">Portfolio Design</a></li>
+                  <li><a class="dropdown-item fw-bold text-white" href="websitedevelopment.html">Website Development</a></li>
+                  <li><a class="dropdown-item fw-bold text-white" href="portfoliodevelopment.html">Portfolio Design</a></li>
                   <li><hr class="dropdown-divider" /></li>
-                  <li><a class="dropdown-item fw-bold text-white" id="dropdown-brand" href="brandmanagement.html">Brand Management</a></li>
-                  <li><a class="dropdown-item fw-bold text-white" id="dropdown-consult" href="businessdevelopment.html">Business Development | Consultancy</a></li>
-                  <li><a class="dropdown-item fw-bold text-white" id="dropdown-remote" href="remotework.html">Remote Work Support</a></li>
+                  <li><a class="dropdown-item fw-bold text-white" href="brandmanagement.html">Brand Management</a></li>
+                  <li><a class="dropdown-item fw-bold text-white" href="businessdevelopment.html">Business Development | Consultancy</a></li>
+                  <li><a class="dropdown-item fw-bold text-white" href="remotework.html">Remote Work Support</a></li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link text-white fw-bold" id="nav-resume" href="resume.html">My Resume</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white fw-bold" id="nav-testimonials" href="testimonials.html">Testimonials</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white fw-bold" id="nav-contact" href="contact.html">Contact Me</a>
-              </li>
+
+              <!-- Other pages -->
+              <li class="nav-item"><a class="nav-link text-white fw-bold" id="nav-resume" href="resume.html">My Resume</a></li>
+              <li class="nav-item"><a class="nav-link text-white fw-bold" id="nav-testimonials" href="testimonials.html">Testimonials</a></li>
+              <li class="nav-item"><a class="nav-link text-white fw-bold" id="nav-contact" href="contact.html">Contact Me</a></li>
             </ul>
           </div>
-
         </div>
       </nav>
 
-      <!-- Language selection bar -->
       <!-- ================= LANGUAGE TRANSLATOR ================= -->
       <div class="language-bar py-2 border-top">
         <div class="container d-flex justify-content-end align-items-center">
-            <!-- Google Translate widget -->
-            <div id="google_translate_element"></div>
+          <div id="google_translate_element"></div>
         </div>
-    </div>
-
+      </div>
     </header>
     
     <!-- ================= MAIN CONTENT ================= -->
     <div class="container">
 
-      <!-- ------------ Project One ----------- -->
-  <div class="row project-row" style="font-family: 'Times New Roman', Times, serif;">
-    <!-- Left Column -->
-    <div class="col-sm-8" style="padding: 20px;">
-      <h1>Website Design - Herad Intercontinental Services Ltd</h1>
-      <h4 class="mb-3">
-        Project: 
-        <a href="https://bemarabarbra.github.io/Herad-Website/" target="_blank">Herad Website</a>
-        | Languages: HTML, CSS
-      </h4>
-      <ul>
-        <li>Developed a fully responsive website for Herad, a diversified Ugandan company in agricultural exports, meats & poultry, imported spirits, consultancy, and tour & travel.</li>
-        <li>Created intuitive navigation and a clear content structure to showcase multiple business lines.</li>
-        <li>Applied SEO and branding strategies to strengthen online presence.</li>
-        <li>Optimized user experience with fast-loading pages and clear call-to-action elements.</li>
-      </ul>
+      <!-- PROJECT 1: Herad Website -->
+      <div class="row project-row" style="font-family: 'Times New Roman', Times, serif;">
+        <div class="col-sm-8" style="padding: 20px;">
+          <h1>Website Design - Herad Intercontinental Services Ltd</h1>
+          <h4 class="mb-3">
+            Project: 
+            <a href="https://bemarabarbra.github.io/Herad-Website/" target="_blank" rel="noopener">Herad Website</a> |
+            Languages: HTML, CSS
+          </h4>
+          <ul>
+            <li>Developed a fully responsive website for Herad, a diversified Ugandan company.</li>
+            <li>Created intuitive navigation and clear content structure.</li>
+            <li>Applied SEO and branding strategies.</li>
+            <li>Optimized for fast-loading and user experience.</li>
+          </ul>
+        </div>
+
+        <div class="col-sm-4 d-flex justify-content-center align-items-center p-3">
+          <div class="preview-card small-preview">
+            <span class="preview-badge">Live Preview</span>
+            <iframe class="preview-frame" src="https://bemarabarbra.github.io/Herad-Website/" title="Herad Website Preview"></iframe>
+            <a class="preview-overlay" href="https://bemarabarbra.github.io/Herad-Website/" target="_blank" rel="noopener"></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 2: Herad Spas Website -->
+      <div class="row project-row" style="font-family: 'Times New Roman', Times, serif;">
+        <div class="col-sm-8" style="padding: 20px;">
+          <h1>Website Design - Herad Spas</h1>
+          <h4 class="mb-3">
+            Project: 
+            <a href="https://bemarabarbra.github.io/spa-website/" target="_blank" rel="noopener">Herad Spas Website</a> |
+            Languages: HTML, CSS, Bootstrap
+          </h4>
+          <ul>
+            <li>Developed a responsive website for Herad Spas (massage & wellness services).</li>
+            <li>Designed intuitive navigation and clear content structure.</li>
+            <li>Implemented SEO and branding strategies.</li>
+          </ul>
+        </div>
+        <div class="col-sm-4 d-flex justify-content-center align-items-center p-3">
+          <div class="preview-card small-preview">
+            <span class="preview-badge">Live Preview</span>
+            <iframe class="preview-frame" src="https://bemarabarbra.github.io/spa-website/" title="Herad Spas Website Preview"></iframe>
+            <a class="preview-overlay" href="https://bemarabarbra.github.io/spa-website/" target="_blank" rel="noopener"></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 3: Personal Portfolio Website -->
+      <div class="row project-row" style="font-family: 'Times New Roman', Times, serif;">
+        <div class="col-sm-8" style="padding: 20px;">
+          <h1>Portfolio Website Development</h1>
+          <h4 class="mb-3">
+            Project: 
+            <a href="https://bemarabarbra.github.io/personalportfolio/" target="_blank" rel="noopener">Bemara Barbra Portfolio Website</a> |
+            Technologies: Bootstrap, CSS
+          </h4>
+          <ul>
+            <li>Developing a responsive personal portfolio to showcase skills and projects.</li>
+            <li>Implementing SEO, branding, and optimized UX.</li>
+          </ul>
+        </div>
+        <div class="col-sm-4 d-flex justify-content-center align-items-center p-3">
+          <div class="preview-card small-preview">
+            <span class="preview-badge">Live Preview</span>
+            <iframe class="preview-frame" src="https://bemarabarbra.github.io/personalportfolio/" title="Portfolio Website Preview"></iframe>
+            <a class="preview-overlay" href="https://bemarabarbra.github.io/personalportfolio/" target="_blank" rel="noopener"></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 4: Graphics & Logos -->
+      <div class="row project-row" style="font-family: 'Times New Roman', Times, serif;">
+        <div class="col-sm-8" style="padding: 20px;">
+          <h1>Graphics Design & Logo Development</h1>
+          <h4 class="mb-3">
+            Project: 
+            <a href="YOUR_HERAD_DRIVE_LINK" target="_blank" rel="noopener">Herad Graphics & Logos</a> |
+            Tools: Canva, Photoshop
+          </h4>
+          <ul>
+            <li>Designed logos, branding, and promotional graphics.</li>
+            <li>Created marketing visuals for digital & print campaigns.</li>
+          </ul>
+        </div>
+        <div class="col-sm-4 d-flex justify-content-center align-items-center">
+          <img src="images/graphics-image.jpeg" alt="Graphics work" style="border-radius: 10%; height: 200px; width: 230px;">
+        </div>
+      </div>
     </div>
 
-    <!-- Right Column -->
-    <div class="col-sm-4 d-flex justify-content-center align-items-center">
-      <img src="images/herad-logo.jpg" alt="Herad Logo" style="width: 320px; margin-top:0px; padding-right: 20px;">
-    </div>
-  </div>
-
-  <!-- ------- Project Two -------- -->
-  <div class="row project-row" style="font-family: 'Times New Roman', Times, serif;">
-    <div class="col-sm-8" style="padding: 20px;">
-      <h1>Upcoming Project: Website Design (Herad Spas)</h1>
-      <h4 class="mb-3">Project: Herad Spas Website | Languages/Technologies: HTML, CSS, Bootstrap</h4>
-      <ul>
-        <li>Developing a fully responsive website for Herad Spas, featuring massage, skincare, therapeutic, lymphatic, and relaxation services.</li>
-        <li>Designing intuitive navigation, clear content structure, and optimized user experience.</li>
-        <li>Implementing SEO and branding strategies to enhance online visibility.</li>
-      </ul>
-    </div>
-    <div class="col-sm-4 d-flex justify-content-center align-items-center">
-      <img src="images/spa-logo-redwords.png" alt="Herad Spa Logo" style="width: 350px; height: 220px; margin-top:0px; padding-left: 40px;">
-    </div>
-  </div>
-
-  <!-- ================= Project Three ================= -->
-  <div class="row project-row" style="font-family: 'Times New Roman', Times, serif;">
-    <div class="col-sm-8" style="padding: 20px;">
-      <h1>Portfolio Website Development</h1>
-      <h4 class="mb-3">
-        Project: 
-        <a href="https://bemarabarbra.github.io/personalportfolio/" target="_blank">Bemara Barbra Portfolio Website</a> 
-        | Technologies: Bootstrap, CSS
-      </h4>
-      <ul>
-        <li>Developing a responsive personal portfolio website to showcase my skills, projects, and professional achievements with intuitive navigation and cohesive content structure.</li>
-        <li>Implementing SEO, branding strategies, and optimized user experience to enhance online visibility, engagement, and visual appeal.</li>
-      </ul>
-    </div>
-    <div class="col-sm-4 d-flex justify-content-center align-items-center">
-      <img src="images/barbra-afro.jpeg" alt="Barbra Photo" style="border-radius: 50%; height: 250px; width: 260px;">
-    </div>
-  </div>
-
-  <!-- ================= Project Four ================= -->
-  <div class="row project-row" style="font-family: 'Times New Roman', Times, serif;">
-    <div class="col-sm-8" style="padding: 20px;">
-      <h1>Graphics Design & Logo Development</h1>
-      <h4 class="mb-3">
-        Project: 
-        <a href="YOUR_HERAD_DRIVE_LINK" target="_blank">Herad Graphics & Logos</a> 
-        | Technologies: Canva, Photoshop
-      </h4>
-      <ul>
-        <li>Designed logos, branding materials, and promotional graphics for Herad Intercontinental Services, ensuring visual consistency across multiple business lines.</li>
-        <li>Created engaging marketing visuals to enhance brand recognition and support both digital and print media campaigns.</li>
-      </ul>
-    </div>
-    <div class="col-sm-4 d-flex justify-content-center align-items-center">
-      <img src="images/graphics-image.jpeg" alt="Graphics photo" style="border-radius: 10%; height: 200px; width: 230px;">
-    </div>
-    </div>
-
-</div>
-
-
-    <!----------------------- FOOTER SECTION ------------------------->
-<footer class="text-center py-4" style="background-color: #212529; border-top: 4px solid #2b6e39; color: white;">
-  <p>&copy; 2025 Barbra Bemara. All rights reserved.</p>
-</footer>
-
+    <!-- ================= FOOTER ================= -->
+    <footer class="text-center py-4" style="background-color: #212529; border-top: 4px solid #2b6e39; color: white;">
+      <p>&copy; 2025 Barbra Bemara. All rights reserved.</p>
+    </footer>
 
     <!-- ================= BOOTSTRAP JS ================= -->
-    <!-- Bootstrap JS Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
-
-    <!-- ================= LANGUAGE TRANSLATION SCRIPT ================= -->
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-  }
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-
+    <!-- ================= GOOGLE TRANSLATE SCRIPT ================= -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </body>
 </html>

@@ -25,7 +25,7 @@
     <!-- ================= INLINE STYLES ================= -->
     <style>
       /* Body background */
-      body { background-color: rgb(112, 172, 111); }
+      body { background-color: rgb(245, 238, 238); }
 
       /* Sticky header to keep navbar visible on scroll */
       header { position: sticky; top: 0; z-index: 1000; }
@@ -34,7 +34,7 @@
       .navbar-brand { font-family: 'Arial', sans-serif; }
 
       /* Language selection bar aesthetic */
-      .language-bar { background-color: #348147; box-shadow: 0 4px 10px rgba(2, 83, 29, 0.3); }
+      .language-bar { background-color: #348147; box-shadow: 0 4px 10px rgba(119, 3, 3, 0.8); }
 
       /* Open dropdown on hover for large screens */
       @media (min-width: 992px) {
@@ -46,24 +46,28 @@
       .dropdown-menu .dropdown-item { color: white !important; }
       .dropdown-menu .dropdown-item:hover { background-color: #145c32 !important; color: white !important; }
 
-      /* Utility: green shadow for images (Bootstrap doesn't ship `.shadow-success`) */
+      /* Utility: green shadow for images */
       .shadow-success { box-shadow: 0 12px 24px rgba(25, 135, 84, 0.45); }
 
-      /* Image responsiveness tweak: keep it elegant on small screens */
+      /* Image responsiveness tweak */
       .profile-img {
-        width: 100%;         /* scale down on small screens */
-        max-width: 480px;    /* never exceed this width */
-        max-height: 650px;   /* cap height to keep circle nice */
-        object-fit: cover;   /* maintain aspect and crop evenly */
+        width: 100%;
+        max-width: 480px;
+        max-height: 650px;
+        object-fit: cover;
         border-radius: 50%;
         border: 6px solid #2b6e39;
         margin: 0 auto 20px;
         display: block;
       }
 
-      /* Card scroller: prevent overflow on small viewports while preserving design */
+      /* Card scroller */
       .projects-scroller {
-        overflow-x: auto; padding: 10px 40px; justify-content: center; max-width: 1200px; margin: 0 auto;
+        overflow-x: auto;
+        padding: 10px 40px;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
       }
       .project-card {
         font-family: 'Times New Roman', Times, serif;
@@ -89,9 +93,25 @@
         font-size: 1.3rem;
         margin: 6px 0 8px 0;
       }
-    </style>
 
-      <!-- --------------------------- main content STYLES ------------------------------ -->
+      /* ------------------- RESPONSIVE TWEAKS ------------------- */
+      @media (max-width: 991px) {
+        main .row { flex-direction: column; }
+        main .col img { 
+          margin-top: 30px !important; 
+          width: 100% !important; 
+          height: auto !important; 
+          padding-left: 0 !important; 
+        }
+      }
+
+      @media (max-width: 575px) {
+        main { padding: 15px !important; }
+        main h1 { font-size: 36px !important; }
+        main h4 { font-size: 18px !important; }
+        main p, main i { font-size: 14px !important; }
+      }
+    </style>
 
   </head>
 
@@ -101,50 +121,38 @@
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
         <div class="container-fluid">
 
-          <!-- Brand logo: excluded from translation via translate="no" -->
+          <!-- Brand logo -->
           <a class="navbar-brand text-white fw-bold" href="index.html" translate="no"
              style="font-size: 2rem; text-shadow: 1px 1px 0 #0f9d58, 2px 2px 0 #0b8043, 3px 3px 2px #0a662d;">
             BEMARA BARBRA
           </a>
 
-          <!-- Navbar toggler for mobile -->
+          <!-- Navbar toggler -->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-          <!-- Collapsible navbar items -->
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-white fw-bold">
-              <li class="nav-item">
-                <a class="nav-link active text-white fw-bold" id="nav-about" href="about-me.html">About Me</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white fw-bold" id="nav-projects" href="projects.html">Projects</a>
-              </li>
-              <!-- Services dropdown -->
+              <li class="nav-item"><a class="nav-link active text-white fw-bold" href="about-me.html">About Me</a></li>
+              <li class="nav-item"><a class="nav-link text-white fw-bold" href="projects.html">Projects</a></li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white fw-bold" id="nav-services" href="websitedevelopment.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle text-white fw-bold" href="websitedevelopment.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Services
                 </a>
-                <ul class="dropdown-menu bg-success" aria-labelledby="nav-services">
-                  <li><a class="dropdown-item fw-bold text-white" id="dropdown-webdev" href="websitedevelopment.html">Website Development</a></li>
-                  <li><a class="dropdown-item fw-bold text-white" id="dropdown-portfolio" href="portfoliodevelopment.html">Portfolio Design</a></li>
+                <ul class="dropdown-menu bg-success">
+                  <li><a class="dropdown-item fw-bold text-white" href="websitedevelopment.html">Website Development</a></li>
+                  <li><a class="dropdown-item fw-bold text-white" href="portfoliodevelopment.html">Portfolio Design</a></li>
                   <li><hr class="dropdown-divider" /></li>
-                  <li><a class="dropdown-item fw-bold text-white" id="dropdown-brand" href="brandmanagement.html">Brand Management</a></li>
-                  <li><a class="dropdown-item fw-bold text-white" id="dropdown-consult" href="businessdevelopment.html">Business Development | Consultancy</a></li>
-                  <li><a class="dropdown-item fw-bold text-white" id="dropdown-remote" href="remotework.html">Remote Work Support</a></li>
+                  <li><a class="dropdown-item fw-bold text-white" href="brandmanagement.html">Brand Management</a></li>
+                  <li><a class="dropdown-item fw-bold text-white" href="businessdevelopment.html">Business Development | Consultancy</a></li>
+                  <li><a class="dropdown-item fw-bold text-white" href="remotework.html">Remote Work Support</a></li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link text-white fw-bold" id="nav-resume" href="resume.html">My Resume</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white fw-bold" id="nav-testimonials" href="testimonials.html">Testimonials</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white fw-bold" id="nav-contact" href="contact.html">Contact Me</a>
-              </li>
+              <li class="nav-item"><a class="nav-link text-white fw-bold" href="resume.html">My Resume</a></li>
+              <li class="nav-item"><a class="nav-link text-white fw-bold" href="testimonials.html">Testimonials</a></li>
+              <li class="nav-item"><a class="nav-link text-white fw-bold" href="contact.html">Contact Me</a></li>
             </ul>
           </div>
 
@@ -152,72 +160,67 @@
       </nav>
 
       <!-- Language selection bar -->
-      <!-- ================= LANGUAGE TRANSLATOR ================= -->
       <div class="language-bar py-2 border-top">
         <div class="container d-flex justify-content-end align-items-center">
-            <!-- Google Translate widget -->
-            <div id="google_translate_element"></div>
+          <div id="google_translate_element"></div>
         </div>
-    </div>
+      </div>
 
     </header>
     
     <!-- ================= MAIN CONTENT ================= -->
-
     <main class="container my-5" style="
-    position: relative;
-    background-image: url('images/billionaer3bottles.jpeg');
-    background-size: cover;
-    background-position: center;
-    min-height: 600px; /* adjust height as needed */
-    padding: 30px;
-">
+      position: relative;
+      background-image: url('images/billionaer3bottles.jpeg');
+      background-size: cover;
+      background-position: center;
+      min-height: 600px;
+      padding: 30px;
+    ">
 
-  <!-- Semi-transparent overlay -->
-  <div style="
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(5, 6, 80, 0.5); /* adjust 0.5 for opacity */
-      z-index: 1;
-  "></div>
+      <!-- Semi-transparent overlay -->
+      <div style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(5, 6, 80, 0.5);
+        z-index: 1;
+      "></div>
 
-  <!-- Content -->
-  <div class="row" style="position: relative; z-index: 2;">
-    <div class="col" style="font-family: 'Times New Roman', Times, serif; padding-left: 20px; color: whitesmoke;">
-      <h1 style="font-size: 50px;">Brand Management</h1>
-      <h4><i>Strategic Branding, Tangible Growth</i></h4> <hr><br>
-      <p style="font-size: 18px;">In today’s competitive world, a strong brand is essential. I help businesses and professionals <strong>stand out, connect, and grow </strong>with strategies that turn every interaction into opportunity.</p>
-      <i style="font-size: 16px;">From Identity to Influence</i> <br><br><hr>
-      <p style="font-size: 18px;">I craft identities that are <strong>consistent, compelling, and memorable.</strong> Every visual, message, and digital touchpoint tells your story and strengthens your influence.</p>
-      <i style="font-size: 16px;">Your brand is more than a logo. I design strategies that <strong>drive engagement, awareness, and loyalty,</strong>helping your business evolve.</i> <br><br><hr>
-      
-      <h4>Identity. Influence. Growth.</h4>
-      <ul>
-        <li>Tailored brand development aligned with your vision</li>
-        <li>Cohesive identity across all platforms</li>
-        <li>Interactive campaigns that build recognition</li>
-        <li>Mobile-first, responsive digital solutions</li>
-        <li>Ongoing support to adapt and grow</li>
-      </ul>
-    </div>
+      <!-- Content -->
+      <div class="row" style="position: relative; z-index: 2;">
+        <div class="col" style="font-family: 'Times New Roman', Times, serif; padding-left: 20px; color: whitesmoke;">
+          <h1 style="font-size: 50px;">Brand Management</h1>
+          <h4><i>Strategic Branding, Tangible Growth</i></h4> <hr><br>
+          <p style="font-size: 18px;">In today’s competitive world, a strong brand is essential. I help businesses and professionals <strong>stand out, connect, and grow </strong>with strategies that turn every interaction into opportunity.</p>
+          <i style="font-size: 16px;">From Identity to Influence</i> <br><br><hr>
+          <p style="font-size: 18px;">I craft identities that are <strong>consistent, compelling, and memorable.</strong> Every visual, message, and digital touchpoint tells your story and strengthens your influence.</p>
+          <i style="font-size: 16px;">Your brand is more than a logo. I design strategies that <strong>drive engagement, awareness, and loyalty,</strong>helping your business evolve.</i> <br><br><hr>
+          
+          <h4>Identity. Influence. Growth.</h4>
+          <ul>
+            <li>Tailored brand development aligned with your vision</li>
+            <li>Cohesive identity across all platforms</li>
+            <li>Interactive campaigns that build recognition</li>
+            <li>Mobile-first, responsive digital solutions</li>
+            <li>Ongoing support to adapt and grow</li>
+          </ul>
+        </div>
 
-    <div class="col">
-      <img src="images/billionaer3bottles.jpeg" alt="photo" style="height: 400px; width: 600px; margin-top: 150px; padding-left: 30px; ">
-    </div>
-  </div>
-</main>
+        <div class="col">
+          <img src="images/billionaer3bottles.jpeg" alt="photo" style="height: 400px; width: 600px; margin-top: 150px; padding-left: 30px;">
+        </div>
+      </div>
+    </main>
 
-    <!----------------------- FOOTER SECTION ------------------------->
-<footer class="text-center py-4" style="background-color: #212529; border-top: 4px solid #2b6e39; color: white;">
-  <p>&copy; 2025 Barbra Bemara. All rights reserved.</p>
-</footer>
-
+    <!-- ================= FOOTER ================= -->
+    <footer class="text-center py-4" style="background-color: #212529; border-top: 4px solid #2b6e39; color: white;">
+      <p>&copy; 2025 Barbra Bemara. All rights reserved.</p>
+    </footer>
 
     <!-- ================= BOOTSTRAP JS ================= -->
-    <!-- Bootstrap JS Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- ================= LANGUAGE TRANSLATION SCRIPT ================= -->
@@ -227,6 +230,5 @@
       }
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
   </body>
 </html>

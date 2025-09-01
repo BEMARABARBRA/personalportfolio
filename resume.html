@@ -1,237 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- ----------------- BASIC META TAGS ------------- -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <!-- ================= BASIC META TAGS ================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- -------------- SEO META TAGS -------------------- -->
-    <meta
-      name="description"
-      content="Barbra Bemara is a results-driven Brand Manager and International Business Developer with over 8 years of experience in remote team leadership, customer service, and global market expansion. Explore her portfolio to see how she builds brands, leads remote projects, and drives digital success across borders."
-    />
-    <meta
-      name="keywords"
-      content="Barbra Bemara, brand manager, customer service expert, remote work specialist, international business developer, global brand strategist, digital marketing, CRM expert, remote team management, virtual onboarding, social media strategist, remote recruitment, Uganda tech talent, software engineering, global customer experience, African women in tech, remote project leader"
-    />
-    <meta name="author" content="Barbra Bemara" />
+  <!-- ================= SEO META TAGS ================= -->
+  <meta name="description" content="Barbra Bemara is a results-driven Brand Manager and International Business Developer with over 8 years of experience in remote team leadership, customer service, and global market expansion. Explore her portfolio to see how she builds brands, leads remote projects, and drives digital success across borders." />
+  <meta name="keywords" content="Barbra Bemara, brand manager, customer service expert, remote work specialist, international business developer, global brand strategist, digital marketing, CRM expert, remote team management, virtual onboarding, social media strategist, remote recruitment, Uganda tech talent, software engineering, global customer experience, African women in tech, remote project leader" />
+  <meta name="author" content="Barbra Bemara" />
 
-    <!-- ================= BOOTSTRAP CSS ================= -->
+  <!-- ================= BOOTSTRAP CSS ================= -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
-    <!-- --------------- PAGE TITLE ---------------- -->
-    <title>Barbra Bemara Portfolio | Web Developer | Brand & Business Development Expert</title>
+  <!-- ================= PAGE TITLE ================= -->
+  <title>Barbra Bemara Portfolio | Web Developer | Brand & Business Development Expert</title>
 
-    <!-- ------------------- INLINE STYLES ------------------ -->
-    <style>
-      /* Body background */
-      body { background-color: rgb(153, 235, 151); }
+  <!-- ================= INLINE STYLES ================= -->
+  <style>
+    /* Body background */
+    body { background-color: rgb(233, 223, 223); }
 
-      /* Sticky header to keep navbar visible on scroll */
-      header { position: sticky; top: 0; z-index: 1000; }
+    /* Sticky header */
+    header { position: sticky; top: 0; z-index: 1000; }
 
-      /* Brand font override */
-      .navbar-brand { font-family: 'Arial', sans-serif; }
+    /* Brand font override */
+    .navbar-brand { font-family: 'Arial', sans-serif; }
 
-      /* Language selection bar aesthetic */
-      .language-bar { background-color: #348147; box-shadow: 0 4px 10px rgba(2, 83, 29, 0.3); }
+    /* Language bar styling */
+    .language-bar { background-color: #348147; box-shadow: 0 4px 10px rgba(83, 2, 2, 0.8); }
 
-      /* Open dropdown on hover for large screens */
-      @media (min-width: 992px) {
-        .nav-item.dropdown:hover .dropdown-menu { display: block; margin-top: 0; }
-      }
+    /* Dropdown hover for larger screens */
+    @media (min-width: 992px) {
+      .nav-item.dropdown:hover .dropdown-menu { display: block; margin-top: 0; }
+    }
 
-      /* Dropdown palette + hover states */
-      .dropdown-menu.bg-success { background-color: #198754 !important; }
-      .dropdown-menu .dropdown-item { color: white !important; }
-      .dropdown-menu .dropdown-item:hover { background-color: #145c32 !important; color: white !important; }
+    /* Dropdown palette & hover */
+    .dropdown-menu.bg-success { background-color: #198754 !important; }
+    .dropdown-menu .dropdown-item { color: white !important; }
+    .dropdown-menu .dropdown-item:hover { background-color: #145c32 !important; color: white !important; }
 
-  
+    /* Shadow utility for images */
+    .shadow-success { box-shadow: 0 12px 24px rgba(25, 135, 84, 0.45); }
 
-      /* Utility: green shadow for images (Bootstrap doesn't ship `.shadow-success`) */
-      .shadow-success { box-shadow: 0 12px 24px rgba(25, 135, 84, 0.45); }
+    /* Responsive profile image */
+    .profile-img {
+      width: 100%;
+      max-width: 480px;
+      max-height: 650px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid #2b6e39;
+      margin: 0 auto 20px;
+      display: block;
+    }
 
-      /* Image responsiveness tweak: keep it elegant on small screens */
-      .profile-img {
-        width: 100%;         /* scale down on small screens */
-        max-width: 480px;    /* never exceed this width */
-        max-height: 650px;   /* cap height to keep circle nice */
-        object-fit: cover;   /* maintain aspect and crop evenly */
-        border-radius: 50%;
-        border: 6px solid #2b6e39;
-        margin: 0 auto 20px;
-        display: block;
-      }
+    /* Card scroller */
+    .projects-scroller {
+      overflow-x: auto;
+      padding: 10px 40px;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-      /* Card scroller: prevent overflow on small viewports while preserving design */
-      .projects-scroller {
-        overflow-x: auto; padding: 10px 40px; justify-content: center; max-width: 1200px; margin: 0 auto;
-      }
-      
-      
-      </style>
+    /* Custom section for CV / content */
+    .custom-section {
+      position: relative;
+      background-image: url('images/background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 40px 0;
+      padding: 40px 20px;
+      color: #7ebe7e;
+      overflow: hidden;
+    }
 
-    <!-- ------------------- styling ------------------ -->
-    <style>
-      .custom-section {
-    position: relative;
-    background-image: url('images/background.jpg'); /* replace with your image path */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding: 40px 20px;
-    color: #99EB97;
-    overflow: hidden;
-  }
+    /* Gradient overlay */
+    .custom-section::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(rgba(1, 65, 12, 0.8), rgba(20, 1, 1, 0.6));
+      z-index: 1;
+    }
 
-  /* Gradient overlay */
-  .custom-section::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)); /* dark-to-light gradient */
-    z-index: 1;
-  }
+    /* Text above overlay */
+    .custom-section > * { position: relative; z-index: 2; }
 
-  /* Text above overlay */
-  .custom-section > * {
-    position: relative;
-    z-index: 2;
-  }
+    .custom-section h1,
+    .custom-section h3,
+    .custom-section h4,
+    .custom-section h5 { color: white; }
 
-  .custom-section h1,
-  .custom-section h3,
-  .custom-section h4,
-  .custom-section h5 {
-    color: white;
-  }
+    /* Box shadow for main CV container */
+    .cv-container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background: #0e0d0d;
+      border-radius: 8px;
+      box-shadow: 12px 16px 24px black;
+    }
+  </style>
 
-  /* box shadow for the main page content */
-  .cv-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-  background: #0e0d0d;
-  border-radius: 8px;
-  box-shadow: 12px 16px 24px black; /* subtle shadow */
-}
-
-</style>
-
-<!-- for downloading the cv page  -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-<script>
-  function downloadPDF() {
-    const element = document.body; // capture the whole page
-    html2pdf().from(element).save("MyWebpage.pdf");
-  }
-</script>
+  <!-- ================= PDF DOWNLOAD SCRIPT ================= -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script>
+    function downloadPDF() {
+      const element = document.body; // capture whole page
+      html2pdf().from(element).save("MyWebpage.pdf");
+    }
+  </script>
 
 </head>
+<body>
 
-  <body>
-    <!-- ================= HEADER NAVBAR ================= -->
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
-        <div class="container-fluid">
+  <!-- ================= HEADER NAVBAR ================= -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+      <div class="container-fluid">
 
-          <!-- Brand logo: excluded from translation via translate="no" -->
-          <a class="navbar-brand text-white fw-bold" href="index.html" translate="no"
-             style="font-size: 2rem; text-shadow: 1px 1px 0 #0f9d58, 2px 2px 0 #0b8043, 3px 3px 2px #0a662d;">
-            BEMARA BARBRA
-          </a>
+        <!-- Brand logo -->
+        <a class="navbar-brand text-white fw-bold" href="index.html" translate="no"
+           style="font-size: 2rem; text-shadow: 1px 1px 0 #0f9d58, 2px 2px 0 #0b8043, 3px 3px 2px #0a662d;">
+          BEMARA BARBRA
+        </a>
 
-          <!-- Navbar toggler for mobile -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <!-- Mobile toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-          <!-- Collapsible navbar items -->
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-white fw-bold">
-              <li class="nav-item">
-                <a class="nav-link active text-white fw-bold" id="nav-about" href="about-me.html">About Me</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white fw-bold" id="nav-projects" href="projects.html">Projects</a>
-              </li>
-              <!-- Services dropdown -->
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white fw-bold" id="nav-services" href="websitedevelopment.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Services
-                </a>
-                <ul class="dropdown-menu bg-success" aria-labelledby="nav-services">
-                  <li><a class="dropdown-item fw-bold text-white" id="dropdown-webdev" href="websitedevelopment.html">Website Development</a></li>
-                  <li><a class="dropdown-item fw-bold text-white" id="dropdown-portfolio" href="portfoliodevelopment.html">Portfolio Design</a></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li><a class="dropdown-item fw-bold text-white" id="dropdown-brand" href="brandmanagement.html">Brand Management</a></li>
-                  <li><a class="dropdown-item fw-bold text-white" id="dropdown-consult" href="businessdevelopment.html">Business Development | Consultancy</a></li>
-                  <li><a class="dropdown-item fw-bold text-white" id="dropdown-remote" href="remotework.html">Remote Work Support</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white fw-bold" id="nav-resume" href="resume.html">My Resume</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white fw-bold" id="nav-testimonials" href="testimonials.html">Testimonials</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white fw-bold" id="nav-contact" href="contact.html">Contact Me</a>
-              </li>
-            </ul>
-          </div>
-
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-white fw-bold">
+            <li class="nav-item"><a class="nav-link active text-white fw-bold" href="about-me.html">About Me</a></li>
+            <li class="nav-item"><a class="nav-link text-white fw-bold" href="projects.html">Projects</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white fw-bold" href="websitedevelopment.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+              <ul class="dropdown-menu bg-success">
+                <li><a class="dropdown-item fw-bold text-white" href="websitedevelopment.html">Website Development</a></li>
+                <li><a class="dropdown-item fw-bold text-white" href="portfoliodevelopment.html">Portfolio Design</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item fw-bold text-white" href="brandmanagement.html">Brand Management</a></li>
+                <li><a class="dropdown-item fw-bold text-white" href="businessdevelopment.html">Business Development | Consultancy</a></li>
+                <li><a class="dropdown-item fw-bold text-white" href="remotework.html">Remote Work Support</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link text-white fw-bold" href="resume.html">My Resume</a></li>
+            <li class="nav-item"><a class="nav-link text-white fw-bold" href="testimonials.html">Testimonials</a></li>
+            <li class="nav-item"><a class="nav-link text-white fw-bold" href="contact.html">Contact Me</a></li>
+          </ul>
         </div>
-      </nav>
 
-      <!-- Language selection bar -->
-      <!-- ================= LANGUAGE TRANSLATOR ================= -->
-      <div class="language-bar py-2 border-top">
-        <div class="container d-flex justify-content-end align-items-center">
-            <!-- Google Translate widget -->
-            <div id="google_translate_element"></div>
-        </div>
+      </div>
+    </nav>
+
+    <!-- Language selection -->
+    <div class="language-bar py-2 border-top">
+      <div class="container d-flex justify-content-end align-items-center">
+        <div id="google_translate_element"></div>
+      </div>
     </div>
+  </header>
 
-
-    </header>
-    
-    <!-- ================= MAIN CONTENT ================= -->
-
-<div id="cvContent">
+  <!-- ================= MAIN CV CONTENT ================= -->
+  <div id="cvContent">
     <div class="container">
       <div class="row" style="font-family: 'Times New Roman', Times, serif;">
-        
-        <!-- Fixed extra space in opening div tag -->
-        <div class="col-12 custom-section" style="background-color: #348147; margin-top: 40px; margin-bottom: 40px; color: rgb(223, 235, 221); padding: 40px;">
-          
-          <!-- Header Section -->
-          <h1 style="color: white;">CURRICULUM VITAE.</h1>
-          <h3 style="color: whitesmoke;">Bemara Barbra</h3>
-          <h5 style="color: rgb(205, 252, 205);">Web Developer | Tech Leader | Business Development Expert</h5>
+        <div class="col-12 custom-section">
+
+          <!-- Header Info -->
+          <h1>CURRICULUM VITAE</h1>
+          <h3>Bemara Barbra</h3>
+          <h5>Web Developer | Graphics Designer | Business Development Expert</h5>
           <p>Plot 443, Akright Estate, Uganda | +256753044293 | barbarabemara@gmail.com</p>
           <p>linkedin.com/in/barbrabemara</p>
           <br>
-    
+
           <!-- Professional Profile -->
-          <h4 style="color: white;">Professional Profile</h4>
+          <h4>Professional Profile</h4>
           <p>
-            Passionate Web Developer certified by Women in Technology Uganda (WITU) with 8+ years of
-            experience combining technology, international business development, and creative marketing. Skilled
-            in building functional, responsive websites using HTML, CSS, Bootstrap, and graphic design
-            (Photoshop, Canva) to create visually compelling digital experiences.
-            Experienced in launching user-centric websites, designing impactful marketing visuals, and
-            collaborating effectively in remote, cross-cultural teams. A results-driven professional eager to leverage
-            web development skills and diverse industry experience to contribute meaningfully to innovative
-            projects.
+            Passionate Web Developer certified by Women in Technology Uganda (WITU) with 8+ years of experience combining technology, international business development, and creative marketing. Skilled in building functional, responsive websites using HTML, CSS, Bootstrap, and graphic design (Photoshop, Canva) to create visually compelling digital experiences. Experienced in launching user-centric websites, designing impactful marketing visuals, and collaborating effectively in remote, cross-cultural teams. A results-driven professional eager to leverage web development skills and diverse industry experience to contribute meaningfully to innovative projects.
           </p>
           <br>
-    
+
           <!-- Core Competencies -->
-          <h4 style="color: white;">Core Competencies</h4>
+          <h4>Core Competencies</h4>
           <ul>
             <li>Web Development: HTML5, CSS, Bootstrap, Responsive Design</li>
             <li>Graphic Design: Photoshop, Canva</li>
@@ -242,129 +200,110 @@
             <li>Project & Client Onboarding Management</li>
             <li>Business Development & Market Expansion</li>
           </ul><br>
-    
-          <!-- Relevant Projects & Technical Experience -->
-          <h4 style="color: white;">Relevant Projects & Technical Experience</h4>
+
+          <!-- Projects & Experience -->
+          <h4>Relevant Projects & Technical Experience</h4>
           <ul>
-            <li>Designed and launched a website and a personal portfolio showcasing professional web
-            development capabilities.</li>
-            <li>Created marketing flyers and digital visuals for clients including Herad Export and Interlon
-            Technologies and Qube Designs (U) ltd using Photoshop and Canva.</li>
-            <li>Developed responsive web pages optimized for usability across devices, combining clean code
-            with creative design.</li>
-            <li>Integrated digital marketing strategies with web efforts to boost engagement and expand brand
-            presence.</li>
+            <li>Designed and launched a personal portfolio showcasing web development capabilities.</li>
+            <li>Created marketing visuals for Herad Export, Interlon Technologies, and Qube Designs (U) ltd using Photoshop and Canva.</li>
+            <li>Developed responsive web pages optimized for usability across devices.</li>
+            <li>Integrated digital marketing strategies with web efforts to boost engagement and expand brand presence.</li>
           </ul><br>
-    
+
           <!-- Professional Experience -->
-          <h3 style="color: white;">Professional Experience</h3>
-    
+          <h3>Professional Experience</h3>
+
           <h5>Brand Manager</h5>
           <h6>BILLIONEAR SPIRITS — Remote, London, UK</h6>
           <p><i>Jan 2024 – Present</i></p>
           <ul>
-            <li>Developed and executed remote brand strategies for premium alcoholic beverage brands across East Africa, integrating digital marketing with custom web and visual design assets.</li>
-            <li>Designed and launched responsive landing pages and promotional microsites using HTML, CSS, and Bootstrap, alongside marketing visuals in Photoshop and Canva, boosting engagement by 30%.</li>
-            <li>Led virtual product launches, influencer partnerships, and online events, contributing to a 20% increase in brand visibility and 15% sales growth.</li>
-            <li>Managed vendor relationships and coordinated cross-channel brand messaging for consistent online and offline presence.</li>
+            <li>Developed and executed remote brand strategies for premium beverage brands across East Africa.</li>
+            <li>Designed responsive landing pages and promotional microsites using HTML, CSS, and Bootstrap, boosting engagement by 30%.</li>
+            <li>Led virtual product launches and online events, increasing brand visibility by 20% and sales by 15%.</li>
+            <li>Managed vendor relationships and coordinated cross-channel brand messaging.</li>
           </ul>
-    
-          <h5 style="color: white;">Business Development Manager</h5>
+
+          <h5>Business Development Manager</h5>
           <h6>Herad Intercontinental Services — Kampala, Uganda (Hybrid)</h6>
           <p><i>Jun 2022 – Apr 2025</i></p>
           <ul>
-            <li>Directed cross-functional operations spanning exports, spa management, and hospitality services.</li>
-            <li>Led targeted digital outreach initiatives that increased brand exposure by 30%.</li>
-            <li>Managed a remote team to build strategic partnerships and expand market presence across East Africa and international markets, driving significant business growth and operational efficiency.</li>
-            <li>Coordinated export logistics and spa service operations, effectively integrating technology with core business processes.</li>
+            <li>Directed cross-functional operations in exports, spa management, and hospitality services.</li>
+            <li>Led digital outreach initiatives that increased brand exposure by 30%.</li>
+            <li>Managed a remote team to build partnerships and expand market presence internationally.</li>
+            <li>Coordinated export logistics and spa service operations integrating technology with business processes.</li>
           </ul>
-    
-          <h5 style="color: white;">Recruitment & Compliance Officer</h5>
+
+          <h5>Recruitment & Compliance Officer</h5>
           <h6>London Recruitment Agency — Remote, Harrow, UK</h6>
           <p><i>Jan 2021 – Dec 2022</i></p>
           <ul>
-            <li>Managed virtual recruitment, onboarding, and compliance for over 150 healthcare professionals across the UK, improving placement efficiency by 30%.</li>
-            <li>Designed user-friendly digital onboarding materials and branded recruitment assets using Canva and Photoshop to enhance candidate experience and employer branding.</li>
-            <li>Created and maintained online application and compliance tracking forms using web-based tools, streamlining documentation and reducing reporting time by 25%.</li>
-            <li>Utilized ATS platforms and CRM systems to manage applicant pipelines and coordinate remote interviews across multiple time zones.</li>
+            <li>Managed virtual recruitment and compliance for 150+ healthcare professionals, improving placement efficiency by 30%.</li>
+            <li>Created digital onboarding materials and branded assets using Canva and Photoshop.</li>
+            <li>Maintained online application and compliance tracking forms, reducing reporting time by 25%.</li>
+            <li>Utilized ATS and CRM systems to manage applicant pipelines remotely.</li>
           </ul><br>
-    
+
           <!-- Additional Experience -->
-          <h4 style="color: white;">Additional Experience</h4>
-          <h6>Hospitality Industry | Data Entry Sector</h6>
+          <h4>Additional Experience</h4>
+          <h6>Hospitality & Data Entry</h6>
           <ul>
-            <li>Managed spa operations, marketing, and client relations across multiple establishments, improving bookings, client retention, and customer satisfaction.</li>
-            <li>Designed and executed digital campaigns and social media content using Photoshop and Canva, boosting online engagement by up to 30%.</li>
-            <li>Implemented CRM systems and client tracking tools to streamline communication, follow-ups, and loyalty programs, increasing rebooking rates by 25%.</li>
-            <li>Coordinated remote and on-site teams, vendor relationships, and event planning to ensure smooth operational workflows.</li>
-            <li>Delivered high-volume, accurate data entry for financial clients, digitizing over 200,000 data points while maintaining 99% accuracy and meeting tight deadlines.</li>
+            <li>Managed spa operations, marketing, and client relations across multiple establishments.</li>
+            <li>Designed and executed digital campaigns, boosting online engagement by 30%.</li>
+            <li>Implemented CRM systems to streamline client communication and increase rebooking rates by 25%.</li>
+            <li>Coordinated remote/on-site teams, vendor relations, and event planning.</li>
+            <li>Digitized over 200,000 data points with 99% accuracy under tight deadlines.</li>
           </ul><br>
-    
+
           <!-- Education & Certifications -->
-          <h4 style="color: white;">Education & Certifications</h4>
+          <h4>Education & Certifications</h4>
           <ul>
-            <li>Certificate in Web Development, Women in Technology Uganda (WITU), Completed 2025</li>
+            <li>Certificate in Web Development, WITU, 2025</li>
             <li>BSc in Software Engineering, Uganda Technology and Management University, 2018</li>
-            <li>Certificate in Marketing and Brand Management, Herad Intercontinental Services, 2024</li>
+            <li>Certificate in Marketing & Brand Management, Herad Intercontinental Services, 2024</li>
             <li>Certificate in CRM, Soothing Spot Spa, 2017</li>
           </ul><br>
-    
+
           <!-- Volunteer Experience -->
-          <h4 style="color: white;">Volunteer Experience</h4>
+          <h4>Volunteer Experience</h4>
           <h6>Her and Beyond Women's Group (2015 – Present)</h6>
           <ul>
-            <li>Organized virtual financial literacy webinars and global empowerment events attracting 500+ participants.</li>
-            <li>Collaborated remotely on community initiatives, growing membership by 50% via social media outreach.</li>
+            <li>Organized virtual financial literacy webinars and global empowerment events with 500+ participants.</li>
+            <li>Grew community membership by 50% via social media outreach.</li>
           </ul><br>
-    
+
           <!-- Languages -->
-          <h4 style="color: white;">Languages</h4>
+          <h4>Languages</h4>
+          <h5>International</h5>
+          <ul><li>English (Fluent)</li></ul>
+          <h5>Local</h5>
           <ul>
-            <h5>International Languages</h5>
-            <li>English (Fluent)</li><br>
-            <h5>Local Languages</h5>
             <li>Runyankore (Fluent)</li>
             <li>Luganda (Fluent)</li>
           </ul><br>
 
-          <!-- for the dowmload cv button -->
-          <a href="mywebpage.html" download="MyWebpage.html"></a>
+          <!-- Download CV Button -->
           <button onclick="downloadPDF()" style="background-color: #99EB97; font-weight: 900; font-size: larger; color: #043f1b;">Download as PDF</button>
 
         </div>
       </div>
     </div>
-    
-</div>
+  </div>
 
+  <!-- ================= FOOTER ================= -->
+  <footer class="text-center py-4" style="background-color: #212529; border-top: 4px solid #235630; color: white;">
+    <p>&copy; 2025 Barbra Bemara. All rights reserved.</p>
+  </footer>
 
+  <!-- ================= BOOTSTRAP JS ================= -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!----------------------- FOOTER SECTION ------------------------->
-<footer class="text-center py-4" style="background-color: #212529; border-top: 4px solid #235630; color: white;">
-  <p>&copy; 2025 Barbra Bemara. All rights reserved.</p>
-</footer>
+  <!-- ================= LANGUAGE TRANSLATION SCRIPT ================= -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-
-!-- ================= BOOTSTRAP JS ================= -->
-<!-- Bootstrap JS Bundle (includes Popper) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-
-
-    <!-- ================= LANGUAGE TRANSLATION SCRIPT ================= -->
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-  }
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-    <!------------- DOWNLOAD FORMAT FOR THE CV PAGE ----------------->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
-
-
-
-
-
-
-  </body>
+</body>
 </html>

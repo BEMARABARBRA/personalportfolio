@@ -11,91 +11,59 @@
     <meta name="author" content="Barbra Bemara" />
 
     <!-- ================= BOOTSTRAP CSS ================= -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- ================= PAGE TITLE ================= -->
     <title>Barbra Bemara Portfolio | Web Developer | Brand & Business Development Expert</title>
 
-    <!-- ================= INLINE STYLES ================= -->
+    <!-- ================= CUSTOM STYLES ================= -->
     <style>
-        /* Body background */
-        body { background-color: rgb(112, 172, 111); }
+        body { background-color: rgb(247, 238, 238); }
 
-        /* Sticky header */
         header { position: sticky; top: 0; z-index: 1000; }
 
-        /* Brand font */
         .navbar-brand { font-family: 'Arial', sans-serif; }
 
-        /* Language bar design */
-        .language-bar { background-color: #348147; box-shadow: 0 4px 10px rgba(2, 83, 29, 0.3); }
+        .language-bar { background-color: #348147; box-shadow: 0 4px 10px rgb(90, 12, 12); }
 
-        /* Dropdown hover for large screens */
         @media (min-width: 992px) {
             .nav-item.dropdown:hover .dropdown-menu { display: block; margin-top: 0; }
         }
 
-        /* Dropdown palette + hover */
         .dropdown-menu.bg-success { background-color: #198754 !important; }
         .dropdown-menu .dropdown-item { color: white !important; }
-        .dropdown-menu .dropdown-item:hover { background-color: #145c32 !important; color: white !important; }
+        .dropdown-menu .dropdown-item:hover { background-color: #145c32 !important; }
 
-        /* Shadow utility for profile image */
         .shadow-success { box-shadow: 0 12px 24px rgba(25, 135, 84, 0.45); }
 
-        /* Profile image */
-        .profile-img {
+        /* Profile and images */
+        .profile-img, .img-fluid { max-width: 100%; height: auto; }
+
+        /* Responsive font tweaks */
+        main h1 { font-size: 2rem; }
+        main h4 { font-size: 1.1rem; }
+        main p, main i { font-size: 0.95rem; }
+
+        @media (min-width: 768px) {
+            main h1 { font-size: 2.8rem; }
+            main h4 { font-size: 1.5rem; }
+            main p, main i { font-size: 1.1rem; }
+        }
+        @media (min-width: 1200px) {
+            main h1 { font-size: 3.5rem; }
+            main h4 { font-size: 1.8rem; }
+            main p, main i { font-size: 1.2rem; }
+        }
+
+        /* Overlay adjustment */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            max-width: 480px;
-            max-height: 650px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 6px solid #2b6e39;
-            margin: 0 auto 20px;
-            display: block;
-        }
-
-        /* Project scroller */
-        .projects-scroller {
-            overflow-x: auto;
-            padding: 10px 40px;
-            justify-content: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .project-card {
-            font-family: 'Times New Roman', Times, serif;
-            font-weight: 900;
-            border: 1px solid green;
-            border-radius: 10px;
-            background-color: #348147;
-            color: #99EB97;
-            padding: 8px 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            min-width: 250px;
-            max-width: 350px;
-            flex: 0 0 auto;
-            display: flex; flex-direction: column;
-            cursor: pointer;
-        }
-        .project-card h3 {
-            border: 1px solid #99EB97;
-            border-radius: 8px;
-            padding: 6px 8px;
-            background-color: rgba(255,255,255,0.05);
-            text-align: center;
-            font-size: 1.3rem;
-            margin: 6px 0 8px 0;
-        }
-
-        /* Responsive tweaks for main content */
-        @media (max-width: 767px) {
-            main h1 { font-size: 32px !important; }
-            main h4 { font-size: 18px !important; }
-            main p, main i { font-size: 14px !important; }
-            main img { margin-top: 20px !important; max-height: 400px; }
-            main .row { flex-direction: column; }
+            height: 100%;
+            background-color: rgba(166, 238, 178, 0.2);
+            z-index: 1;
         }
     </style>
 </head>
@@ -105,43 +73,38 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
             <div class="container-fluid">
-                <!-- Brand logo -->
                 <a class="navbar-brand text-white fw-bold" href="index.html" translate="no"
                     style="font-size: 2rem; text-shadow: 1px 1px 0 #0f9d58, 2px 2px 0 #0b8043, 3px 3px 2px #0a662d;">
                     BEMARA BARBRA
                 </a>
-
-                <!-- Navbar toggler for mobile -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+                        aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-                <!-- Navbar links -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-white fw-bold">
-                        <li class="nav-item"><a class="nav-link active text-white fw-bold" id="nav-about" href="about-me.html">About Me</a></li>
-                        <li class="nav-item"><a class="nav-link text-white fw-bold" id="nav-projects" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link " href="about-me.html">About Me</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white fw-bold" id="nav-services" href="websitedevelopment.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-                            <ul class="dropdown-menu bg-success" aria-labelledby="nav-services">
-                                <li><a class="dropdown-item fw-bold text-white" id="dropdown-webdev" href="websitedevelopment.html">Website Development</a></li>
-                                <li><a class="dropdown-item fw-bold text-white" id="dropdown-portfolio" href="portfoliodevelopment.html">Portfolio Design</a></li>
+                            <a class="nav-link dropdown-toggle" href="websitedevelopment.html" role="button" data-bs-toggle="dropdown">Services</a>
+                            <ul class="dropdown-menu bg-success">
+                                <li><a class="dropdown-item" href="websitedevelopment.html">Website Development</a></li>
+                                <li><a class="dropdown-item" href="portfoliodevelopment.html">Portfolio Design</a></li>
                                 <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item fw-bold text-white" id="dropdown-brand" href="brandmanagement.html">Brand Management</a></li>
-                                <li><a class="dropdown-item fw-bold text-white" id="dropdown-consult" href="businessdevelopment.html">Business Development | Consultancy</a></li>
-                                <li><a class="dropdown-item fw-bold text-white" id="dropdown-remote" href="remotework.html">Remote Work Support</a></li>
+                                <li><a class="dropdown-item" href="brandmanagement.html">Brand Management</a></li>
+                                <li><a class="dropdown-item" href="businessdevelopment.html">Business Development | Consultancy</a></li>
+                                <li><a class="dropdown-item" href="remotework.html">Remote Work Support</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link text-white fw-bold" id="nav-resume" href="resume.html">My Resume</a></li>
-                        <li class="nav-item"><a class="nav-link text-white fw-bold" id="nav-testimonials" href="testimonials.html">Testimonials</a></li>
-                        <li class="nav-item"><a class="nav-link text-white fw-bold" id="nav-contact" href="contact.html">Contact Me</a></li>
+                        <li class="nav-item"><a class="nav-link" href="resume.html">My Resume</a></li>
+                        <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Me</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <!-- Language selection bar -->
         <div class="language-bar py-2 border-top">
             <div class="container d-flex justify-content-end align-items-center">
                 <div id="google_translate_element"></div>
@@ -156,27 +119,18 @@
         background-position: center;
         min-height: 600px;
     ">
-        <!-- Semi-transparent overlay -->
-        <div style="
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(166, 238, 178, 0.2);
-            z-index: 1;
-        "></div>
+        <!-- Overlay -->
+        <div class="overlay"></div>
 
-        <!-- Content row -->
-        <div class="row g-4" style="position: relative; z-index: 2;">
-            <!-- Text column -->
+        <div class="row g-4 position-relative" style="z-index: 2;">
+            <!-- Text -->
             <div class="col-md-6 col-12 text-white" style="font-family: 'Times New Roman', Times, serif;">
-                <h1 class="fs-2 fs-md-1">Website Development</h1>
+                <h1 class="fw-bold">Website Development</h1>
                 <h4 class="fst-italic">From Idea to Impact. Your Website, Your Growth.</h4>
                 <hr>
-                <p class="fs-6 fs-md-5">Your website is your brand’s first impression. <strong>Let’s make it unforgettable.</strong> I create <strong>professional, responsive, and user-friendly websites</strong> that showcase your business and drive results. From sleek portfolios to powerful e-commerce platforms, every site is tailored to your unique goals.</p>
-                <p class="fs-6 fs-md-5">I combine <strong>clean design, seamless functionality, and modern technology </strong>so your site looks great and performs flawlessly on all devices. With SEO-ready structures, secure integrations, and easy-to-manage content, I deliver websites that <strong>grow your business online.</strong></p>
-                <i class="fs-7 fs-md-6">With ongoing support and maintenance, your website will always stay updated, secure, and aligned with your evolving needs.</i>
+                <p>Your website is your brand’s first impression. <strong>Let’s make it unforgettable.</strong> I create <strong>professional, responsive, and user-friendly websites</strong> that showcase your business and drive results. From sleek portfolios to powerful e-commerce platforms, every site is tailored to your unique goals.</p>
+                <p>I combine <strong>clean design, seamless functionality, and modern technology </strong>so your site looks great and performs flawlessly on all devices. With SEO-ready structures, secure integrations, and easy-to-manage content, I deliver websites that <strong>grow your business online.</strong></p>
+                <i>With ongoing support and maintenance, your website will always stay updated, secure, and aligned with your evolving needs.</i>
                 <br><br><hr>
                 <h4>Key Highlights:</h4>
                 <ul>
@@ -188,10 +142,11 @@
                 </ul>
             </div>
 
-            <!-- Image column -->
-            <div class="col-md-6 col-12 text-center">
-                <img src="images/webdevelopment2.jpeg" alt="photo" class="img-fluid rounded shadow-success" style="max-height: 550px; margin-top: 30px;">
-            </div>
+            <!-- Image -->
+                <div class="col-md-6 col-12 d-flex justify-content-center align-items-center">
+                    <img src="images/webdevelopment2.jpeg" alt="photo" class="img-fluid rounded shadow-success" style="max-height: 550px;">
+                </div>
+
         </div>
     </main>
 
