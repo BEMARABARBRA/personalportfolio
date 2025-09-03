@@ -1,234 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- ================= BASIC META TAGS ================= -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <!-- ================= BASIC META TAGS ================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- ================= SEO META TAGS ================= -->
-    <meta
-      name="description"
-      content="Barbra Bemara is a results-driven Brand Manager and International Business Developer with over 8 years of experience in remote team leadership, customer service, and global market expansion. Explore her portfolio to see how she builds brands, leads remote projects, and drives digital success across borders."
-    />
-    <meta
-      name="keywords"
-      content="Barbra Bemara, brand manager, customer service expert, remote work specialist, international business developer, global brand strategist, digital marketing, CRM expert, remote team management, virtual onboarding, social media strategist, remote recruitment, Uganda tech talent, software engineering, global customer experience, African women in tech, remote project leader"
-    />
-    <meta name="author" content="Barbra Bemara" />
+  <!-- ================= SEO META TAGS ================= -->
+  <meta name="description" content="Barbra Bemara is a results-driven Brand Manager and International Business Developer with over 8 years of experience in remote team leadership, customer service, and global market expansion. Explore her portfolio to see how she builds brands, leads remote projects, and drives digital success across borders." />
+  <meta name="keywords" content="Barbra Bemara, brand manager, customer service expert, remote work specialist, international business developer, global brand strategist, digital marketing, CRM expert, remote team management, virtual onboarding, social media strategist, remote recruitment, Uganda tech talent, software engineering, global customer experience, African women in tech, remote project leader" />
+  <meta name="author" content="Barbra Bemara" />
 
-    <!-- ================= BOOTSTRAP CSS ================= -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+  <!-- ================= BOOTSTRAP CSS ================= -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
-    <!-- ================= PAGE TITLE ================= -->
-    <title>Barbra Bemara Portfolio | Web Developer | Brand & Business Development Expert</title>
+  <!-- ================= PAGE TITLE ================= -->
+  <title>Barbra Bemara Portfolio | Brand Management</title>
 
-    <!-- ================= INLINE STYLES ================= -->
-    <style>
-      /* Body background */
-      body { background-color: rgb(245, 238, 238); }
+  <!-- ================= CUSTOM STYLES ================= -->
+  <style>
+    body {
+      background-color: whitesmoke;
+      font-family: 'Times New Roman', Times, serif;
+    }
 
-      /* Sticky header to keep navbar visible on scroll */
-      header { position: sticky; top: 0; z-index: 1000; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-      /* Brand font override */
-      .navbar-brand { font-family: 'Arial', sans-serif; }
+    .language-bar {
+      background-color: #02782E;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+    }
 
-      /* Language selection bar aesthetic */
-      .language-bar { background-color: #348147; box-shadow: 0 4px 10px rgba(119, 3, 3, 0.8); }
+    /* Dropdown styling */
+    .dropdown-menu.bg-success { background-color: #0a5230 !important; }
+    .dropdown-menu .dropdown-item { color: white !important; }
+    .dropdown-menu .dropdown-item:hover { background-color: #145c32 !important; color: white !important; }
 
-      /* Open dropdown on hover for large screens */
-      @media (min-width: 992px) {
-        .nav-item.dropdown:hover .dropdown-menu { display: block; margin-top: 0; }
-      }
+    /* Card styling */
+    .service-card {
+      border: none;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(6, 85, 19, 0.9);
+      background: #d8d4d4;
+      transition: transform 0.2s ease-in-out;
+    }
+    .service-card:hover { transform: translateY(-5px); }
 
-      /* Dropdown palette + hover states */
-      .dropdown-menu.bg-success { background-color: #198754 !important; }
-      .dropdown-menu .dropdown-item { color: white !important; }
-      .dropdown-menu .dropdown-item:hover { background-color: #145c32 !important; color: white !important; }
+    .service-img {
+      max-height: 250px;
+      object-fit: cover;
+      width: 100%;
+    }
 
-      /* Utility: green shadow for images */
-      .shadow-success { box-shadow: 0 12px 24px rgba(25, 135, 84, 0.45); }
+    .card-body { padding: 2.5rem; }
 
-      /* Image responsiveness tweak */
-      .profile-img {
-        width: 100%;
-        max-width: 480px;
-        max-height: 650px;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 6px solid #2b6e39;
-        margin: 0 auto 20px;
-        display: block;
-      }
+    .card-body h1 {
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: center;
+    }
 
-      /* Card scroller */
-      .projects-scroller {
-        overflow-x: auto;
-        padding: 10px 40px;
-        justify-content: center;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-      .project-card {
-        font-family: 'Times New Roman', Times, serif;
-        font-weight: 900;
-        border: 1px solid green;
-        border-radius: 10px;
-        background-color: #348147;
-        color: #99EB97;
-        padding: 8px 12px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        min-width: 250px;
-        max-width: 350px;
-        flex: 0 0 auto;
-        display: flex; flex-direction: column;
-        cursor: pointer;
-      }
-      .project-card h3 {
-        border: 1px solid #99EB97;
-        border-radius: 8px;
-        padding: 6px 8px;
-        background-color: rgba(255,255,255,0.05);
-        text-align: center;
-        font-size: 1.3rem;
-        margin: 6px 0 8px 0;
-      }
+    .card-body h4 {
+      font-weight: 600;
+      font-size: 1.3rem;
+      color: #097442;
+      margin-bottom: 15px;
+      text-align: left;
+    }
 
-      /* ------------------- RESPONSIVE TWEAKS ------------------- */
-      @media (max-width: 991px) {
-        main .row { flex-direction: column; }
-        main .col img { 
-          margin-top: 30px !important; 
-          width: 100% !important; 
-          height: auto !important; 
-          padding-left: 0 !important; 
-        }
-      }
+    .card-body p, .card-body li {
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: rgb(70, 70, 70);
+    }
 
-      @media (max-width: 575px) {
-        main { padding: 15px !important; }
-        main h1 { font-size: 36px !important; }
-        main h4 { font-size: 18px !important; }
-        main p, main i { font-size: 14px !important; }
-      }
-    </style>
+    /* Italics footer */
+    .card-footer-custom {
+      color: #666;
+      font-weight: 600;
+      font-size: 1rem;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .card-footer-custom hr {
+      width: 100%;
+      margin: 10px auto;
+      border-top: 1px solid #333;
+    }
 
-  </head>
+    /* Footer styling */
+    .footer {
+      background-color: #1b1b1b;
+      padding: 20px 10px;
+      border-top: 2px solid #198754;
+      font-family: 'Times New Roman', Times, serif;
+      color: #f1f1f1;
+    }
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .footer-section {
+      flex: 1;
+      min-width: 180px;
+      margin-bottom: 10px;
+      padding-left: 30px;
+    }
+    .footer-section h3 {
+      color: white;
+      margin-bottom: 8px;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+    .footer-section ul { list-style: none; padding: 0; }
+    .footer-section ul li { margin: 4px 0; }
+    .footer-section ul li a, .footer-section a {
+      color: #8c8f8d;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s;
+    }
+    .footer-section a:hover, .footer-section ul li a:hover { color: #0fa6cc; }
+    .footer-copy {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 0.8rem;
+      color: #aaa;
+    }
 
-  <body>
-    <!-- ================= HEADER NAVBAR ================= -->
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
-        <div class="container-fluid">
+    .image-column img {
+      max-width: 100%;
+      height: auto;
+      max-height: 400px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
+  </style>
+</head>
+<body>
 
-          <!-- Brand logo -->
-          <a class="navbar-brand text-white fw-bold" href="index.html" translate="no"
-             style="font-size: 2rem; text-shadow: 1px 1px 0 #0f9d58, 2px 2px 0 #0b8043, 3px 3px 2px #0a662d;">
-            BEMARA BARBRA
-          </a>
-
-          <!-- Navbar toggler -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-white fw-bold">
-              <li class="nav-item"><a class="nav-link active text-white fw-bold" href="about-me.html">About Me</a></li>
-              <li class="nav-item"><a class="nav-link text-white fw-bold" href="projects.html">Projects</a></li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white fw-bold" href="websitedevelopment.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Services
-                </a>
-                <ul class="dropdown-menu bg-success">
-                  <li><a class="dropdown-item fw-bold text-white" href="websitedevelopment.html">Website Development</a></li>
-                  <li><a class="dropdown-item fw-bold text-white" href="portfoliodevelopment.html">Portfolio Design</a></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li><a class="dropdown-item fw-bold text-white" href="brandmanagement.html">Brand Management</a></li>
-                  <li><a class="dropdown-item fw-bold text-white" href="businessdevelopment.html">Business Development | Consultancy</a></li>
-                  <li><a class="dropdown-item fw-bold text-white" href="remotework.html">Remote Work Support</a></li>
-                </ul>
-              </li>
-              <li class="nav-item"><a class="nav-link text-white fw-bold" href="resume.html">My Resume</a></li>
-              <li class="nav-item"><a class="nav-link text-white fw-bold" href="testimonials.html">Testimonials</a></li>
-              <li class="nav-item"><a class="nav-link text-white fw-bold" href="contact.html">Contact Me</a></li>
+<!-- ================= HEADER ================= -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-2">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white fw-bold" href="index.html" translate="no">BEMARA BARBRA</a>
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-0 fw-bold align-items-center">
+          <li class="nav-item"><a class="nav-link" href="about-me.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+            <ul class="dropdown-menu bg-success">
+              <li><a class="dropdown-item" href="websitedevelopment.html">Website Development</a></li>
+              <li><a class="dropdown-item" href="portfoliodevelopment.html">Portfolio Design</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="brandmanagement.html">Brand Management</a></li>
+              <li><a class="dropdown-item" href="businessdevelopment.html">Business Development</a></li>
+              <li><a class="dropdown-item" href="remotework.html">Remote Work Support</a></li>
             </ul>
-          </div>
-
-        </div>
-      </nav>
-
-      <!-- Language selection bar -->
-      <div class="language-bar py-2 border-top">
-        <div class="container d-flex justify-content-end align-items-center">
-          <div id="google_translate_element"></div>
-        </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="resume.html">My Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Me</a></li>
+        </ul>
       </div>
+    </div>
+  </nav>
+  <div class="language-bar py-2 border-top">
+    <div class="container d-flex justify-content-end align-items-center">
+      <div id="google_translate_element"></div>
+    </div>
+  </div>
+</header>
 
-    </header>
-    
-    <!-- ================= MAIN CONTENT ================= -->
-    <main class="container my-5" style="
-      position: relative;
-      background-image: url('images/billionaer3bottles.jpeg');
-      background-size: cover;
-      background-position: center;
-      min-height: 600px;
-      padding: 30px;
-    ">
-
-      <!-- Semi-transparent overlay -->
-      <div style="
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(5, 6, 80, 0.5);
-        z-index: 1;
-      "></div>
-
-      <!-- Content -->
-      <div class="row" style="position: relative; z-index: 2;">
-        <div class="col" style="font-family: 'Times New Roman', Times, serif; padding-left: 20px; color: whitesmoke;">
-          <h1 style="font-size: 50px;">Brand Management</h1>
-          <h4><i>Strategic Branding, Tangible Growth</i></h4> <hr><br>
-          <p style="font-size: 18px;">In today’s competitive world, a strong brand is essential. I help businesses and professionals <strong>stand out, connect, and grow </strong>with strategies that turn every interaction into opportunity.</p>
-          <i style="font-size: 16px;">From Identity to Influence</i> <br><br><hr>
-          <p style="font-size: 18px;">I craft identities that are <strong>consistent, compelling, and memorable.</strong> Every visual, message, and digital touchpoint tells your story and strengthens your influence.</p>
-          <i style="font-size: 16px;">Your brand is more than a logo. I design strategies that <strong>drive engagement, awareness, and loyalty,</strong>helping your business evolve.</i> <br><br><hr>
+<!-- ================= MAIN CONTENT ================= -->
+<div class="container my-5">
+  <div class="row g-4 justify-content-center">
+    <div class="col-12 col-lg-10">
+      <div class="card service-card">
+        <img src="images/billionaer3bottles.jpeg" alt="Brand Strategy Image" class="service-img">
+        <div class="card-body">
+          <h1>Brand Management</h1>
           
-          <h4>Identity. Influence. Growth.</h4>
-          <ul>
-            <li>Tailored brand development aligned with your vision</li>
-            <li>Cohesive identity across all platforms</li>
-            <li>Interactive campaigns that build recognition</li>
-            <li>Mobile-first, responsive digital solutions</li>
-            <li>Ongoing support to adapt and grow</li>
-          </ul>
-        </div>
-
-        <div class="col">
-          <img src="images/billionaer3bottles.jpeg" alt="photo" style="height: 400px; width: 600px; margin-top: 150px; padding-left: 30px;">
+          <hr>
+          <div class="row align-items-center">
+            <!-- LEFT SIDE -->
+            <div class="col-md-8">
+              <h4 class="text-left">Strategic Branding, Tangible Growth</h4>
+              <p>In today’s competitive world, a strong brand is essential. I help businesses and professionals <strong>stand out, connect, and grow</strong> with strategies that turn every interaction into opportunity.</p>
+              <p>I craft identities that are <strong>consistent, compelling, and memorable.</strong> Every visual, message, and digital touchpoint tells your story and strengthens your influence.</p>
+              <p>Your brand is more than a logo. I design strategies that <strong>drive engagement, awareness, and loyalty</strong>, helping your business evolve.</p>
+            </div>
+            <!-- RIGHT SIDE -->
+            <div class="col-md-4">
+              <h4 class="text-center">Identity. Influence. Growth.</h4>
+              <ul>
+                <li>Tailored brand development aligned with your vision</li>
+                <li>Cohesive identity across all platforms</li>
+                <li>Interactive campaigns that build recognition</li>
+                <li>Mobile-first, responsive digital solutions</li>
+                <li>Ongoing support to adapt and grow</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Italics Footer -->
+          <div class="card-footer-custom">
+            <hr>
+            <i>From Identity to Influence,  
+            I’ll help you build a brand that grows with you.</i>
+          </div>
         </div>
       </div>
-    </main>
+    </div>
+  </div>
+</div>
 
-    <!-- ================= FOOTER ================= -->
-    <footer class="text-center py-4" style="background-color: #212529; border-top: 4px solid #2b6e39; color: white;">
-      <p>&copy; 2025 Barbra Bemara. All rights reserved.</p>
-    </footer>
+<!-- ================= FOOTER ================= -->
+<footer class="footer text-light mt-5">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Services</h3>
+      <ul>
+        <li><a href="websitedevelopment.html">Web Development</a></li>
+        <li><a href="portfoliodevelopment.html">Portfolio Development</a></li>
+        <li><a href="remotework.html">Remote Work Support</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Email | Contacts</h3>
+      <p>Email: <a href="mailto:barbarabemara@gmail.com">barbarabemara@gmail.com</a></p>
+      <p>Whatsapp: <a href="https://wa.me/256753044293" target="_blank">+256 753 044293</a></p>
+    </div>
+    <div class="footer-section">
+      <h3>Github Profile</h3>
+      <a href="https://github.com/BEMARABARBRA" target="_blank">BEMARABARBRA</a>
+    </div>
+  </div>
+  <hr>
+  <p class="footer-copy">&copy; 2025 Barbra Bemara. All rights reserved.</p>
+</footer>
 
-    <!-- ================= BOOTSTRAP JS ================= -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- ================= LANGUAGE TRANSLATION SCRIPT ================= -->
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-      }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-  </body>
+<!-- ================= SCRIPTS ================= -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+  }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
 </html>

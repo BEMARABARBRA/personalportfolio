@@ -18,17 +18,17 @@
 
   <!-- ================= CUSTOM STYLES ================= -->
   <style>
-    body { background-color: rgb(231, 221, 221); }
+    body { background-color: #e7e1e1; font-family: 'Times New Roman', Times, serif; }
 
     header { position: sticky; top: 0; z-index: 1000; }
 
-    .language-bar { background-color: #348147; box-shadow: 0 4px 10px rgba(83, 2, 2, 0.9); }
+    .language-bar { background-color: #02782E; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9); }
 
-    .dropdown-menu.bg-success { background-color: #14da7e !important; }
+    .dropdown-menu.bg-success { background-color: #0a5230 !important; }
     .dropdown-menu .dropdown-item { color: white !important; }
     .dropdown-menu .dropdown-item:hover { background-color: #145c32 !important; color: white !important; }
 
-    .shadow-success { box-shadow: 0 12px 24px rgba(126, 3, 3, 0.973); }
+    .shadow-success { box-shadow: 0 12px 24px rgba(12, 0, 0, 1); }
 
     .profile-img {
       width: 100%;
@@ -49,11 +49,11 @@
     }
 
     .project-card {
-      background-color: #348147;
+      background-color: whitesmoke;
       padding: 15px;
       border-radius: 10px;
-      border-right: 6px solid #4B0000;
-      border-left: 6px solid #4B0000;
+      border-right: 6px solid #348147;
+      border-left: 6px solid #348147;
       flex: 1 1 280px;
       max-width: 350px;
       display: flex;
@@ -66,22 +66,39 @@
     .project-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-      border-color: #05502d;
+      border-color: #8d8686;
     }
 
     .project-card h3 {
+      color: black;
+      border: 1px solid rgba(7, 7, 7, 0.9);
+      border-radius: 8px;
+      padding: 6px 8px;
+      background-color: rgba(255,255,255,0.05);
+      text-align: center;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      color: rgb(97, 91, 91);
       border: 1px solid rgba(233, 224, 224, 0.9);
       border-radius: 8px;
       padding: 6px 8px;
       background-color: rgba(255,255,255,0.05);
       text-align: center;
-      font-size: 1.3rem;
+      font-size: 1.0rem;
       margin-bottom: 10px;
     }
 
+    .btn{
+      background-color: #348147;
+      border: none;
+    }
+    
     /* Responsive typography */
-    h1.display-name { font-size: 2.5rem; }
-    h4.role-title { font-size: 1.25rem; }
+    h1.display-name { font-size: 2.5rem; color: black; }
+    h4.role-title { font-size: 1.25rem; color: gray; }
     @media (min-width: 768px) {
       h1.display-name { font-size: 3.5rem; }
       h4.role-title { font-size: 1.5rem; }
@@ -90,83 +107,214 @@
       h1.display-name { font-size: 4rem; }
       h4.role-title { font-size: 1.75rem; }
     }
-  </style>
-</head>
 
-<body>
-  <!-- ================= HEADER NAVBAR ================= -->
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
-      <div class="container-fluid">
-        <a class="navbar-brand text-white fw-bold" href="index.html" translate="no"
-           style="font-size: 2rem; text-shadow: 1px 1px 0 #0f9d58, 2px 2px 0 #0b8043, 3px 3px 2px #6D0805;">
-          BEMARA BARBRA
-        </a>
+    .navbar-brand img {
+  max-height: 120px; /* Adjust height for desktop */
+  width: auto;
+  padding-left: 10px;
+}
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
-                aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+@media (max-width: 768px) {
+  .navbar-brand img {
+    max-height: 60px; /* Adjust height for mobile */
+  }
+}
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold">
-            <li class="nav-item"><a class="nav-link" href="about-me.html">About Me</a></li>
-            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
-              <ul class="dropdown-menu bg-success">
-                <li><a class="dropdown-item fw-bold" href="websitedevelopment.html">Website Development</a></li>
-                <li><a class="dropdown-item fw-bold" href="portfoliodevelopment.html">Portfolio Design</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item fw-bold" href="brandmanagement.html">Brand Management</a></li>
-                <li><a class="dropdown-item fw-bold" href="businessdevelopment.html">Business Development</a></li>
-                <li><a class="dropdown-item fw-bold" href="remotework.html">Remote Work Support</a></li>
-              </ul>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="resume.html">My Resume</a></li>
-            <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Me</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+.language-bar {
+  font-size: 0.9rem;
+}
+/* ================= FOOTER COMPACT ================= */
+.footer {
+  background-color: #1b1b1b;
+  padding: 20px 10px;
+  border-top: 2px solid #198754;
+  font-family: 'Times New Roman', Times, serif;
+  color: #f1f1f1;
+}
 
-    <div class="language-bar py-2 border-top">
-      <div class="container d-flex justify-content-end align-items-center">
-        <div id="google_translate_element"></div>
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.footer-section {
+  padding-left: 60px;
+  flex: 1;
+  min-width: 180px;
+  margin-bottom: 10px;
+}
+
+.footer-section h3 {
+  color: white;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.footer-section ul li {
+  margin: 4px 0;
+}
+
+.footer-section ul li a,
+.footer-section a {
+  color: #8c8f8d;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+
+.footer-section a {
+  color: #19a7e9;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover,
+.footer-section a:hover {
+  color: #0fa6cc;
+}
+
+.github-link {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 5px 10px;
+  color: #f1f1f1;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.github-link:hover {
+  background-color: #198754;
+  color: #ffffff;
+}
+
+.footer-copy {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+  }
+
+  .footer-section {
+    margin-bottom: 10px;
+  }
+}
+
+
+
+
+</style>
+    
+    <header>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-2">
+    <div class="container-fluid d-flex align-items-center">
+
+      <!-- Logo -->
+      <a class="navbar-brand" href="index.html" translate="no">
+        <img src="images/" 
+             alt="Bemara Barbra Logo">
+      </a>
+
+      <!-- Navbar Toggler -->
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-0 fw-bold align-items-center">
+          <li class="nav-item"><a class="nav-link" href="about-me.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+            <ul class="dropdown-menu bg-success">
+              <li><a class="dropdown-item fw-bold" href="websitedevelopment.html">Website Development</a></li>
+              <li><a class="dropdown-item fw-bold" href="portfoliodevelopment.html">Portfolio Design</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item fw-bold" href="brandmanagement.html">Brand Management</a></li>
+              <li><a class="dropdown-item fw-bold" href="businessdevelopment.html">Business Development</a></li>
+              <li><a class="dropdown-item fw-bold" href="remotework.html">Remote Work Support</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="resume.html">My Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Me</a></li>
+        </ul>
       </div>
     </div>
-  </header>
+  </nav>
+
+  <!-- Language Bar -->
+  <div class="language-bar py-2 border-top ">
+    <div class="container d-flex justify-content-end align-items-center">
+      <div id="google_translate_element"></div>
+    </div>
+  </div>
+</header>
+
+
+  
 
   <!-- ================= MAIN CONTENT ================= -->
   <main class="container my-4">
-    <div class="row align-items-center bg-success text-light rounded p-4">
+    <div class="row align-items-center  text-light rounded p-4" style="background-color: rgb(204, 199, 199);">
       <!-- LEFT COLUMN -->
       <div class="col-md-6 mb-4 mb-md-0">
         <h1 class="display-name">Bemara Barbra</h1>
         <h4 class="role-title text-dark">Web Developer | Junior Graphics Designer</h4>
-        <p>I build websites that perform and designs that captivate. More than visuals and code, I create digital experiences that connect, inspire, and convert.</p>
+        <p style="color: rgb(99, 95, 95);">I build websites that perform and designs that captivate. More than visuals and code, I create digital experiences that connect, inspire, and convert.</p>
         <p class="fw-bold fst-italic text-dark">Clean code, Bold visuals, Real Impact</p>
-        <p><b>Tools & Technologies:</b> HTML | CSS | Bootstrap | Canva | Photoshop</p>
+        <p style="color: rgb(70, 65, 65);"><b>Tools & Technologies:</b> HTML | CSS | Bootstrap | Canva | Photoshop</p>
         <div class="d-flex align-items-center gap-3 mt-3">
           <a href="contact.html" class="btn btn-dark fw-bold">Let’s Connect</a>
-          <div class="d-flex gap-2">
-            <a href="https://web.whatsapp.com/send?phone=256753044293" target="_blank"><img src="/images/Whatsapp.jpeg" alt="WhatsApp" class="rounded" style="width: 40px; height: 40px;"></a>
-            <a href="https://www.linkedin.com/in/barbra-bemara-b63906119" target="_blank"><img src="/images/Linkedin.jpeg" alt="LinkedIn" class="rounded" style="width: 40px; height: 40px;"></a>
+
+          <div class="d-flex gap-2 align-items-center">
+            <a href="https://web.whatsapp.com/send?phone=256753044293" target="_blank">
+              <img src="images/newwhatsapp-removebg-preview.png" alt="WhatsApp" class="rounded" style="width: 50px; height: 50px;">
+            </a>
+          
+            <a href="https://www.linkedin.com/in/barbra-bemara-b63906119" target="_blank">
+              <img src="images/newLINKEDIN-removebg-preview.png" alt="LinkedIn" class="rounded" style="width: 35px; height: 35px;">
+            </a>
           </div>
+          
+
         </div>
       </div>
 
       <!-- RIGHT COLUMN -->
       <div class="col-md-6 text-center">
-        <img src="images/barbra-passport.png" alt="Barbra Photo" class="img-fluid shadow-success profile-img">
+        <img src="images/barbra-passport.png" alt="Barbra Photo" class="img-fluid shadow-success profile-img" style="background-color: #E7DDDD; padding: 20px;">
       </div>
     </div>
 
     <!-- PROJECTS -->
     <div class="text-center mt-5">
-        <h1 class="d-inline-block text-white px-4 py-2 rounded shadow" style="background-color: #4B0000;">
+        <h1 class="d-inline-block text-dark px-4 py-2 " style="background-color: #CCC7C7; font-size: 40px;">
           My Projects
         </h1>
       </div>
@@ -176,33 +324,78 @@
       <a href="projects.html" class="text-decoration-none text-light">
         <div class="project-card">
           <h3>Website Development</h3>
-          <p>Herad Intercontinental Services Ltd - Website Development</p>
+          <p>Heradics Ltd - Website Development</p>
           <p>Herad Spas - Website Development</p>
         </div>
       </a>
       <a href="projects.html" class="text-decoration-none text-light">
         <div class="project-card">
           <h3>Portfolio Development</h3><br>
-          <p>Barbra Bemara - Portfolio Design</p>
-          <p></p>
-          <p></p>
+          <p>Barbra Bemara - Portfolio Development</p>
+          <br>
         </div>
       </a>
       <a href="projects.html" class="text-decoration-none text-light">
         <div class="project-card">
           <h3>Graphics Design</h3><br>
           <p>Herad flyer Designs - Herad Exports</p>
-          <p></p>
-          <p></p>
+          <br>
         </div>
       </a>
     </div>
   </main>
 
   <!-- ================= FOOTER ================= -->
-  <footer class="text-center py-4 bg-dark border-top border-success text-light mt-5">
-    <p>&copy; 2025 Barbra Bemara. All rights reserved.</p>
-  </footer>
+<footer class="footer text-light mt-5">
+  <div class="footer-container">
+    <!-- ------ Logo ------ -->
+        <img src="images/" alt="Logo">
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-section">
+      <h3>Services</h3>
+      <ul>
+        <li><a href="websitedevelopment.html">Web Development</a></li>
+        <li><a href="portfoliodevelopment.html">Portfolio Development | Design</a></li>
+        <li><a href="remotework.html">Remote Work Support</a></li>
+      </ul>
+    </div>
+
+    <!-- Contacts -->
+    <div class="footer-section">
+      <h3>Email | Contacts</h3>
+      <p>Email: <a href="mailto:barbarabemara@gmail.com" target="_blank">barbarabemara@gmail.com</a></p>
+      
+        <p> Whatsapp:
+          <!-- Opens WhatsApp Business app on mobile if installed -->
+          <a href="https://wa.me/256753044293" target="_blank">+256 753 044293</a>
+        </p>
+        
+        
+    </div>
+
+    <!-- GitHub -->
+    <div class="footer-section">
+      <h3>Github Profile</h3>
+      <a href="https://github.com/BEMARABARBRA" target="_blank" class="github-link">BEMARABARBRA</a>
+    </div>
+
+  </div>
+    <hr>
+  <p class="footer-copy">&copy; 2025 Barbra Bemara. All rights reserved.</p>
+</footer>
+
+
+
 
   <!-- ================= BOOTSTRAP JS ================= -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
