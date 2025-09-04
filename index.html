@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- ================= BASIC META TAGS ================= -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- ================= SEO META TAGS ================= -->
-  <meta name="description" content="Barbra Bemara is a results-driven Brand Manager and International Business Developer with over 8 years of experience in remote team leadership, customer service, and global market expansion. Explore her portfolio to see how she builds brands, leads remote projects, and drives digital success across borders." />
-  <meta name="keywords" content="Barbra Bemara, brand manager, customer service expert, remote work specialist, international business developer, global brand strategist, digital marketing, CRM expert, remote team management, virtual onboarding, social media strategist, remote recruitment, Uganda tech talent, software engineering, global customer experience, African women in tech, remote project leader" />
+  <meta name="description" content="Barbra Bemara Portfolio Contact Page - Get in touch for enquiries, collaborations, project designs and business development." />
+  <meta name="keywords" content="Barbra Bemara, contact, email, phone, whatsapp, portfolio, brand management, business development" />
   <meta name="author" content="Barbra Bemara" />
 
-  <!-- ================= BOOTSTRAP CSS ================= -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <title>Contact | Barbra Bemara Portfolio</title>
 
-  <!-- ================= PAGE TITLE ================= -->
-  <title>Barbra Bemara Portfolio | Web Developer | Brand & Business Development Expert</title>
-
-  <!-- ================= CUSTOM STYLES ================= -->
   <style>
     body { background-color: #e7e1e1; font-family: 'Times New Roman', Times, serif; }
 
@@ -24,388 +18,142 @@
 
     .language-bar { background-color: #02782E; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9); }
 
-    .dropdown-menu.bg-success { background-color: #0a5230 !important; }
-    .dropdown-menu .dropdown-item { color: white !important; }
-    .dropdown-menu .dropdown-item:hover { background-color: #145c32 !important; color: white !important; }
-
-    .shadow-success { box-shadow: 0 12px 24px rgba(12, 0, 0, 1); }
-
-    .profile-img {
-      width: 100%;
-      max-width: 350px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: px solid rgba(83, 2, 2, 0.9);
-      margin: 0 auto 20px;
-      display: block;
+    .contact-form {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      margin-top: 20px;
     }
-
-    /* Project section */
-    .projects-scroller {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .project-card {
-      background-color: whitesmoke;
-      padding: 15px;
-      border-radius: 10px;
-      border-right: 6px solid #348147;
-      border-left: 6px solid #348147;
-      flex: 1 1 280px;
-      max-width: 350px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-      cursor: pointer;
-    }
-
-    .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-      border-color: #8d8686;
-    }
-
-    .project-card h3 {
-      color: black;
-      border: 1px solid rgba(7, 7, 7, 0.9);
-      border-radius: 8px;
-      padding: 6px 8px;
-      background-color: rgba(255,255,255,0.05);
-      text-align: center;
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-    }
-
-    .project-card p {
-      color: rgb(97, 91, 91);
-      border: 1px solid rgba(233, 224, 224, 0.9);
-      border-radius: 8px;
-      padding: 6px 8px;
-      background-color: rgba(255,255,255,0.05);
-      text-align: center;
-      font-size: 1.0rem;
-      margin-bottom: 10px;
-    }
-
-    .btn{
-      background-color: #348147;
-      border: none;
-    }
+    .contact-form h2 { font-size: 1.8rem; margin-bottom: 15px; }
+    .contact-form .btn { background-color: #348147; color: #fff; }
+    .contact-form .btn:hover { background-color: #145c32; }
     
-    /* Responsive typography */
-    h1.display-name { font-size: 2.5rem; color: black; }
-    h4.role-title { font-size: 1.25rem; color: gray; }
-    @media (min-width: 768px) {
-      h1.display-name { font-size: 3.5rem; }
-      h4.role-title { font-size: 1.5rem; }
+    /* Footer */
+    .footer {
+      background-color: #1b1b1b;
+      padding: 20px 10px;
+      border-top: 2px solid #198754;
+      color: #f1f1f1;
     }
-    @media (min-width: 1200px) {
-      h1.display-name { font-size: 4rem; }
-      h4.role-title { font-size: 1.75rem; }
-    }
-
-    .navbar-brand img {
-  max-height: 120px; /* Adjust height for desktop */
-  width: auto;
-  padding-left: 10px;
-}
-
-@media (max-width: 768px) {
-  .navbar-brand img {
-    max-height: 60px; /* Adjust height for mobile */
-  }
-}
-
-.language-bar {
-  font-size: 0.9rem;
-}
-/* ================= FOOTER COMPACT ================= */
-.footer {
-  background-color: #1b1b1b;
-  padding: 20px 10px;
-  border-top: 2px solid #198754;
-  font-family: 'Times New Roman', Times, serif;
-  color: #f1f1f1;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 5px;
-}
-
-.footer-section {
-  padding-left: 60px;
-  flex: 1;
-  min-width: 180px;
-  margin-bottom: 10px;
-}
-
-.footer-section h3 {
-  color: white;
-  margin-bottom: 8px;
-  font-size: 1rem;
-  text-transform: uppercase;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 10px;
-}
-
-.footer-section ul li {
-  margin: 4px 0;
-}
-
-.footer-section ul li a,
-.footer-section a {
-  color: #8c8f8d;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.3s;
-}
-
-
-.footer-section a {
-  color: #19a7e9;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.3s;
-}
-
-.footer-section ul li a:hover,
-.footer-section a:hover {
-  color: #0fa6cc;
-}
-
-.github-link {
-  display: inline-block;
-  margin-top: 5px;
-  padding: 5px 10px;
-  color: #f1f1f1;
-  border-radius: 3px;
-  font-size: 0.9rem;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.github-link:hover {
-  background-color: #198754;
-  color: #ffffff;
-}
-
-.footer-copy {
-  text-align: center;
-  margin-top: 10px;
-  font-size: 0.8rem;
-  color: #aaa;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 5px;
-  }
-
-  .footer-section {
-    margin-bottom: 10px;
-  }
-}
-
-
-
-
-</style>
-    
-    <header>
-
+    .footer-container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 5px; }
+    .footer-section { flex: 1; min-width: 180px; margin-bottom: 10px; }
+    .footer-section h3 { color: white; margin-bottom: 8px; font-size: 1rem; text-transform: uppercase; }
+    .footer-section ul { list-style: none; padding: 0; }
+    .footer-section ul li a { color: #8c8f8d; text-decoration: none; font-size: 0.9rem; }
+    .footer-section ul li a:hover { color: #0fa6cc; }
+    .footer-copy { text-align: center; margin-top: 10px; font-size: 0.8rem; color: #aaa; }
+  </style>
+</head>
+<body>
   <!-- ================= NAVBAR ================= -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-2">
-    <div class="container-fluid d-flex align-items-center">
-
-      <!-- Logo -->
-      <a class="navbar-brand" href="index.html" translate="no">
-        <img src="images/" 
-             alt="Bemara Barbra Logo">
-      </a>
-
-      <!-- Navbar Toggler -->
-      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" 
-              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
-              aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Navbar Links -->
-      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <ul class="navbar-nav mb-0 fw-bold align-items-center">
-          <li class="nav-item"><a class="nav-link" href="about-me.html">About Me</a></li>
-          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
-            <ul class="dropdown-menu bg-success">
-              <li><a class="dropdown-item fw-bold" href="websitedevelopment.html">Website Development</a></li>
-              <li><a class="dropdown-item fw-bold" href="portfoliodevelopment.html">Portfolio Design</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item fw-bold" href="brandmanagement.html">Brand Management</a></li>
-              <li><a class="dropdown-item fw-bold" href="businessdevelopment.html">Business Development</a></li>
-              <li><a class="dropdown-item fw-bold" href="remotework.html">Remote Work Support</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="resume.html">My Resume</a></li>
-          <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Me</a></li>
-        </ul>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold text-white" href="index.html">BEMARA BARBRA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto fw-bold">
+            <li class="nav-item"><a class="nav-link text-white" href="about-me.html">About Me</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="projects.html">Projects</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="resume.html">My Resume</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="testimonials.html">Testimonials</a></li>
+            <li class="nav-item"><a class="nav-link text-white active" href="contact.html">Contact Me</a></li>
+          </ul>
+        </div>
       </div>
+    </nav>
+    <div class="language-bar py-2 border-top">
+      <div class="container d-flex justify-content-end"><div id="google_translate_element"></div></div>
     </div>
-  </nav>
+  </header>
 
-  <!-- Language Bar -->
-  <div class="language-bar py-2 border-top ">
-    <div class="container d-flex justify-content-end align-items-center">
-      <div id="google_translate_element"></div>
+  <!-- ================= CONTACT SECTION ================= -->
+  <div class="container py-4">
+    <div class="row align-items-start">
+      <!-- Contact Info -->
+      <div class="col-md-6 mb-4">
+        <h1 class="fw-bold">Get In Touch</h1>
+        <p>For enquiries, collaborations, or project discussions:</p>
+        <h4>Calls | WhatsApp</h4>
+        <p>📞 <a href="tel:+256753044293">+256 753 044293</a></p>
+        <p>📞 <a href="tel:+256777657427">+256 777 657427</a></p>
+        <p>💬 <a href="https://wa.me/256753044293" target="_blank">Chat on WhatsApp</a></p>
+        <h4>Email</h4>
+        <p>📧 <a href="mailto:barbarabemara@gmail.com">barbarabemara@gmail.com</a></p>
+        <h4>Social</h4>
+        <p>🔗 <a href="https://linkedin.com/in/barbrabemara" target="_blank">LinkedIn Profile</a></p>
+        <h4>Location</h4>
+        <p>📍 PLOT 443, Akright Estate, Wakiso, Uganda</p>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-md-6">
+        <div class="contact-form">
+          <h2>Send a Message</h2>
+          <!-- Replace yourFormID after registering at Formspree -->
+          <form action="https://formspree.io/f/yourFormID" method="POST">
+            <div class="mb-3">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Your Email</label>
+              <input type="email" class="form-control" id="email" name="_replyto" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <input type="hidden" name="_subject" value="New Portfolio Contact">
+            <button type="submit" class="btn">Send</button>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
-</header>
-
-
-  
-
-  <!-- ================= MAIN CONTENT ================= -->
-  <main class="container my-4">
-    <div class="row align-items-center  text-light rounded p-4" style="background-color: rgb(204, 199, 199);">
-      <!-- LEFT COLUMN -->
-      <div class="col-md-6 mb-4 mb-md-0">
-        <h1 class="display-name">Bemara Barbra</h1>
-        <h4 class="role-title text-dark">Web Developer | Junior Graphics Designer</h4>
-        <p style="color: rgb(99, 95, 95);">I build websites that perform and designs that captivate. More than visuals and code, I create digital experiences that connect, inspire, and convert.</p>
-        <p class="fw-bold fst-italic text-dark">Clean code, Bold visuals, Real Impact</p>
-        <p style="color: rgb(70, 65, 65);"><b>Tools & Technologies:</b> HTML | CSS | Bootstrap | Canva | Photoshop</p>
-        <div class="d-flex align-items-center gap-3 mt-3">
-          <a href="contact.html" class="btn btn-dark fw-bold">Let’s Connect</a>
-
-          <div class="d-flex gap-2 align-items-center">
-            <a href="https://web.whatsapp.com/send?phone=256753044293" target="_blank">
-              <img src="images/newwhatsapp-removebg-preview.png" alt="WhatsApp" class="rounded" style="width: 50px; height: 50px;">
-            </a>
-          
-            <a href="https://www.linkedin.com/in/barbra-bemara-b63906119" target="_blank">
-              <img src="images/newLINKEDIN-removebg-preview.png" alt="LinkedIn" class="rounded" style="width: 35px; height: 35px;">
-            </a>
-          </div>
-          
-
-        </div>
-      </div>
-
-      <!-- RIGHT COLUMN -->
-      <div class="col-md-6 text-center">
-        <img src="images/barbra-passport.png" alt="Barbra Photo" class="img-fluid shadow-success profile-img" style="background-color: #E7DDDD; padding: 20px;">
-      </div>
-    </div>
-
-    <!-- PROJECTS -->
-    <div class="text-center mt-5">
-        <h1 class="d-inline-block text-dark px-4 py-2 " style="background-color: #CCC7C7; font-size: 40px;">
-          My Projects
-        </h1>
-      </div>
-      
-      
-    <div class="projects-scroller mt-4">
-      <a href="projects.html" class="text-decoration-none text-light">
-        <div class="project-card">
-          <h3>Website Development</h3>
-          <p>Heradics Ltd - Website Development</p>
-          <p>Herad Spas - Website Development</p>
-        </div>
-      </a>
-      <a href="projects.html" class="text-decoration-none text-light">
-        <div class="project-card">
-          <h3>Portfolio Development</h3><br>
-          <p>Barbra Bemara - Portfolio Development</p>
-          <br>
-        </div>
-      </a>
-      <a href="projects.html" class="text-decoration-none text-light">
-        <div class="project-card">
-          <h3>Graphics Design</h3><br>
-          <p>Herad flyer Designs - Herad Exports</p>
-          <br>
-        </div>
-      </a>
-    </div>
-  </main>
 
   <!-- ================= FOOTER ================= -->
-<footer class="footer text-light mt-5">
-  <div class="footer-container">
-    <!-- ------ Logo ------ -->
-        <img src="images/" alt="Logo">
-    <!-- Quick Links -->
-    <div class="footer-section">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+  <footer class="footer mt-5">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="websitedevelopment.html">Web Development</a></li>
+          <li><a href="portfoliodevelopment.html">Portfolio Development</a></li>
+          <li><a href="remotework.html">Remote Work Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Email | Contacts</h3>
+        <p>Email: <a href="mailto:barbarabemara@gmail.com">barbarabemara@gmail.com</a></p>
+        <p>WhatsApp: <a href="https://wa.me/256753044293" target="_blank">+256 753 044293</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>GitHub Profile</h3>
+        <a href="https://github.com/BEMARABARBRA" target="_blank" class="github-link">BEMARABARBRA</a>
+      </div>
     </div>
-
-    <!-- Services -->
-    <div class="footer-section">
-      <h3>Services</h3>
-      <ul>
-        <li><a href="websitedevelopment.html">Web Development</a></li>
-        <li><a href="portfoliodevelopment.html">Portfolio Development | Design</a></li>
-        <li><a href="remotework.html">Remote Work Support</a></li>
-      </ul>
-    </div>
-
-    <!-- Contacts -->
-    <div class="footer-section">
-      <h3>Email | Contacts</h3>
-      <p>Email: <a href="mailto:barbarabemara@gmail.com" target="_blank">barbarabemara@gmail.com</a></p>
-      
-        <p> Whatsapp:
-          <!-- Opens WhatsApp Business app on mobile if installed -->
-          <a href="https://wa.me/256753044293" target="_blank">+256 753 044293</a>
-        </p>
-        
-        
-    </div>
-
-    <!-- GitHub -->
-    <div class="footer-section">
-      <h3>Github Profile</h3>
-      <a href="https://github.com/BEMARABARBRA" target="_blank" class="github-link">BEMARABARBRA</a>
-    </div>
-
-  </div>
     <hr>
-  <p class="footer-copy">&copy; 2025 Barbra Bemara. All rights reserved.</p>
-</footer>
+    <p class="footer-copy">&copy; 2025 Barbra Bemara. All rights reserved.</p>
+  </footer>
 
-
-
-
-  <!-- ================= BOOTSTRAP JS ================= -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- ================= GOOGLE TRANSLATE WIDGET ================= -->
   <script type="text/javascript">
     function googleTranslateElementInit() {
-      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+      new google.translate.TranslateElement({pageLanguage:'en'}, 'google_translate_element');
     }
   </script>
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
