@@ -16,17 +16,18 @@
     .navbar-brand { font-family: 'Times New Roman', Times, serif; }
     .language-bar { background-color: #348147; box-shadow: 0 4px 10px rgba(7,7,7,0.9); }
 
-    .contact-info { background-color: #ebf0ec; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .contact-info {margin-top: 90px; background-color: #d9dfda; padding: 20px; border-radius: 8px; }
     .contact-info h3 { color: #198754; margin-bottom: 15px; }
     .contact-info p, .contact-info a { font-size: 1.0rem; margin-bottom: 8px; color: #333; text-decoration: none; }
-    .contact-info a:hover { color: #0fa6cc; }
+    .contact-info a:hover { color: #3dcff3; }
+    .contact-info a {color: #086b99;}
 
-    .contact-form { background-color: #ebf0ec; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .contact-form { background-color: #d9dfda; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
     .contact-form h3 { color: #198754; margin-bottom: 15px; }
     .contact-form label { font-weight: bold; }
     .contact-form input, .contact-form textarea { border-radius: 8px; border: 1px solid #ccc; padding: 10px; width: 100%; margin-bottom: 15px; }
     .contact-form button { background-color: #198754; color: white; padding: 10px 20px; border: none; border-radius: 8px; transition: background-color 0.3s; }
-    .contact-form button:hover { background-color: #0fa6cc; }
+    .contact-form button:hover { background-color: #035e16; }
 
     /* Footer */
     .footer { background-color: #1b1b1b; padding: 20px 10px; border-top: 2px solid #198754; color: #f1f1f1; font-family: 'Times New Roman', Times, serif; }
@@ -49,41 +50,27 @@
 </head>
 <body>
 
-  <!-- HEADER NAVBAR -->
+  <!-- ================= NAVBAR ================= -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
       <div class="container-fluid">
-        <a class="navbar-brand text-white fw-bold" href="index.html" style="font-size: 2rem;">BEMARA BARBRA</a>
+        <a class="navbar-brand fw-bold text-white" href="index.html">BEMARA BARBRA</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-white fw-bold">
-            <li class="nav-item"><a class="nav-link text-white fw-bold" href="about-me.html">About Me</a></li>
-            <li class="nav-item"><a class="nav-link text-white fw-bold" href="projects.html">Projects</a></li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-white fw-bold" href="#" role="button" data-bs-toggle="dropdown">Services</a>
-              <ul class="dropdown-menu bg-success">
-                <li><a class="dropdown-item fw-bold text-white" href="websitedevelopment.html">Website Development</a></li>
-                <li><a class="dropdown-item fw-bold text-white" href="portfoliodevelopment.html">Portfolio Design</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item fw-bold text-white" href="brandmanagement.html">Brand Management</a></li>
-                <li><a class="dropdown-item fw-bold text-white" href="businessdevelopment.html">Business Development</a></li>
-                <li><a class="dropdown-item fw-bold text-white" href="remotework.html">Remote Work Support</a></li>
-              </ul>
-            </li>
-            <li class="nav-item"><a class="nav-link text-white fw-bold" href="resume.html">My Resume</a></li>
-            <li class="nav-item"><a class="nav-link text-white fw-bold" href="testimonials.html">Testimonials</a></li>
-            <li class="nav-item"><a class="nav-link active text-white fw-bold" href="contact.html">Contact Me</a></li>
+          <ul class="navbar-nav ms-auto fw-bold">
+            <li class="nav-item"><a class="nav-link text-white" href="about-me.html">About Me</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="projects.html">Projects</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="resume.html">My Resume</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="testimonials.html">Testimonials</a></li>
+            <li class="nav-item"><a class="nav-link text-white active" href="contact.html">Contact Me</a></li>
           </ul>
         </div>
       </div>
     </nav>
-
     <div class="language-bar py-2 border-top">
-      <div class="container d-flex justify-content-end align-items-center">
-        <div id="google_translate_element"></div>
-      </div>
+      <div class="container d-flex justify-content-end">< id="google_translate_element"></div></div>
     </div>
   </header>
 
@@ -98,10 +85,8 @@
           <p>For enquiries, collaborations, or project discussions:</p>
           <p>Calls | WhatsApp: <a href="https://wa.me/256753044293" target="_blank">+256 753 044293</a></p>
           <p>Calls | WhatsApp: <a href="https://wa.me/256777657427" target="_blank">+256 777 657427</a></p>
-          
           <p>Email:<a href="mailto:barbarabemara@gmail.com?subject=Enquiry%20from%20Website">barbarabemara@gmail.com</a></p>
-          
-          <p>Social: <a href="https://www.linkedin.com/in/barbarabemara" target="_blank">LinkedIn</a> |<a href="https://github.com/BEMARABARBRA" target="_blank" class="github-link">BEMARABARBRA (GitHub)</a>
+          <p>Social: <a href="https://www.linkedin.com/in/barbarabemara" target="_blank">LinkedIn</a> |<a href="https://github.com/BEMARABARBRA" target="_blank" class="github-link">GitHub</a>
           </p>
           
 
@@ -182,6 +167,8 @@
   </footer>
 <!-- ---------------------- JS ----------------------------- -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ------------------- JS FORM ------------------- -->
   <script>
     const form = document.getElementById("contact-form");
     const status = document.getElementById("form-status");
@@ -209,34 +196,12 @@
       }
     });
   </script>
-  <script>
-    const form = document.getElementById("contact-form");
-    const status = document.getElementById("form-status");
-  
-    form.addEventListener("submit", async function (e) {
-      e.preventDefault();
-      const data = new FormData(form);
-      try {
-        const response = await fetch(form.action, {
-          method: form.method,
-          body: data,
-          headers: { 'Accept': 'application/json' }
-        });
-        if (response.ok) {
-          status.textContent = "✅ Thank you! Your message has been sent.";
-          status.style.color = "green";
-          form.reset();
-        } else {
-          status.textContent = "❌ Oops! Something went wrong.";
-          status.style.color = "red";
-        }
-      } catch (error) {
-        status.textContent = "❌ Network error. Please try again.";
-        status.style.color = "red";
-      }
-    });
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage:'en'}, 'google_translate_element');
+    }
   </script>
-    
   <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
