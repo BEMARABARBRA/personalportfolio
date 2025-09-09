@@ -53,6 +53,11 @@
       .about-text { padding: 0 15px; max-width: 100%; }
     }
 
+    /* Hover effect for nav menu */
+  .navbar-nav .nav-link:hover{
+    color: #1a6f4e !important;   /* Changes color on hover */
+    transform: scale(1.05);      /* Slight zoom effect */
+  }
     /* ================= FOOTER COMPACT ================= */
 .footer {
   background-color: #1b1b1b;
@@ -155,52 +160,49 @@
 </head>
 <body>
 
-<!-------------------- HEADER SECTION --------------->
+<!-- ================== HEADER / NAVBAR ================== -->
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
     <div class="container-fluid">
-      <a class="navbar-brand text-white fw-bold" href="index.html" translate="no"
-        style="font-size: 2rem; text-shadow: 1px 1px 0 #0f9d58, 2px 2px 0 #0b8043, 3px 3px 2px #6D0805;"> 
-        BEMARA BARBRA 
+      <a class="navbar-brand fw-bold text-white " href="index.html" style="padding-left: 40px;">
+        <img src="images/mylogoname-removebg-preview.png" alt="My Logo" height="60" >
       </a>
-
-      <!-- toogle  -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <div class="collapse navbar-collapse" id="navbarNav" style="font-size: 20px;">
+        <ul class="navbar-nav ms-auto fw-bold">
+          <li class="nav-item"><a class="nav-link text-white "  href="about-me.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="projects.html">Projects</a></li>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-white fw-bold">
-          <li class="nav-item"><a class="nav-link active text-white fw-bold" href="about-me.html">About Me</a></li>
-          <li class="nav-item"><a class="nav-link text-white fw-bold" href="projects.html">Projects</a></li>
+          <!-- dropdown for services  -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white fw-bold" href="websitedevelopment.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+            <a class="nav-link dropdown-toggle text-white fw-bold" href="websitedevelopment.html" role="button" data-bs-toggle="dropdown">Services</a>
             <ul class="dropdown-menu bg-success">
               <li><a class="dropdown-item fw-bold text-white" href="websitedevelopment.html">Website Development</a></li>
               <li><a class="dropdown-item fw-bold text-white" href="portfoliodevelopment.html">Portfolio Design</a></li>
-              <li><hr class="dropdown-divider" /></li>
+              <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item fw-bold text-white" href="brandmanagement.html">Brand Management</a></li>
               <li><a class="dropdown-item fw-bold text-white" href="businessdevelopment.html">Business Development | Consultancy</a></li>
               <li><a class="dropdown-item fw-bold text-white" href="remotework.html">Remote Work Support</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a class="nav-link text-white fw-bold" href="resume.html">My Resume</a></li>
-          <li class="nav-item"><a class="nav-link text-white fw-bold" href="testimonials.html">Testimonials</a></li>
-          <li class="nav-item"><a class="nav-link text-white fw-bold" href="contact.html">Contact Me</a></li>
+          <!-- end of dropdown -->
+
+          <li class="nav-item"><a class="nav-link text-white" href="resume.html">My Resume</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="testimonials.html">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link text-white active" href="contact.html">Contact Me</a></li>
         </ul>
       </div>
     </div>
   </nav>
-
-  <!-- Language selection bar -->
   <div class="language-bar py-2 border-top">
-    <div class="container d-flex justify-content-end align-items-center">
+    <div class="container d-flex justify-content-end">
       <div id="google_translate_element"></div>
     </div>
   </div>
 </header>
-
 <!----------------------- MAIN CONTENT ------------------------->
 <div class="container py-5">
   <div class="row about-section align-items-center">
@@ -228,12 +230,17 @@
   </div>
 </div>
 
-<!-- ================= FOOTER ================= -->
-<footer class="footer text-light mt-5">
+<!-- ================== FOOTER ================== -->
+<footer class="footer mt-5">
   <div class="footer-container">
-    <!-- ------ Logo ------ -->
-        <img src="images/" alt="Logo">
-    <!-- Quick Links -->
+
+    <div class="footer-section">
+      <a href="index.html">
+        <img src="images/mylogoname-removebg-preview.png" alt="logo" style="height: 40px; padding-left: 40px;">
+      </a>
+    </div>
+    
+
     <div class="footer-section">
       <h3>Quick Links</h3>
       <ul>
@@ -242,51 +249,37 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
-
-    <!-- Services -->
     <div class="footer-section">
       <h3>Services</h3>
       <ul>
         <li><a href="websitedevelopment.html">Web Development</a></li>
-        <li><a href="portfoliodevelopment.html">Portfolio Development | Design</a></li>
+        <li><a href="portfoliodevelopment.html">Portfolio Development</a></li>
         <li><a href="remotework.html">Remote Work Support</a></li>
       </ul>
     </div>
-
-    <!-- Contacts -->
     <div class="footer-section">
       <h3>Email | Contacts</h3>
-      <p>Email: <a href="mailto:barbarabemara@gmail.com" target="_blank">barbarabemara@gmail.com</a></p>
-      
-        <p> Whatsapp:
-          <!-- Opens WhatsApp Business app on mobile if installed -->
-          <a href="https://wa.me/256753044293" target="_blank">+256 753 044293</a>
-        </p>
-        
-        
+      <p>Email: <a href="mailto:barbarabemara@gmail.com">barbarabemara@gmail.com</a></p>
+      <p>WhatsApp: <a href="https://wa.me/256753044293" target="_blank">+256 753 044293</a></p>
     </div>
-
-    <!-- GitHub -->
     <div class="footer-section">
-      <h3>Github Profile</h3>
+      <h3>GitHub Profile</h3>
       <a href="https://github.com/BEMARABARBRA" target="_blank" class="github-link">BEMARABARBRA</a>
     </div>
-
   </div>
-    <hr>
+  <hr>
   <p class="footer-copy">&copy; 2025 Barbra Bemara. All rights reserved.</p>
 </footer>
 
-
-<!-- ================= BOOTSTRAP JS ================= -->
+<!-- ================== BOOTSTRAP JS ================== -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- ================= LANGUAGE TRANSLATION SCRIPT ================= -->
+<!-- ================== GOOGLE TRANSLATE ================== -->
 <script type="text/javascript">
   function googleTranslateElementInit() {
-    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    new google.translate.TranslateElement({pageLanguage:'en'}, 'google_translate_element');
   }
 </script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
