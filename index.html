@@ -268,6 +268,7 @@
           <ul class="list-unstyled">
             <li>Herad Website</li>
             <li>Herad Spas</li>
+            <li>Compound Care Uganda</li>
           </ul>
           <a href="https://github.com/BEMARABARBRA" target="_blank" class="btn btn-success mt-2 px-4">View More</a>
         </div>
@@ -283,7 +284,7 @@
         <div class="project-item h-100 p-3 border rounded shadow-sm text-center">
           <h3 class="mb-3 text-success">Graphics Design</h3>
           <ul class="list-unstyled">
-            <li>Herad Graphics</li>
+            <li>Creative Designs</li>
           </ul>
           <a href="https://drive.google.com/drive/folders/1-0ogYt9zRPEF51aKWCAYCWeFE2ESHa-w?usp=drive_link" 
              target="_blank" 
@@ -325,12 +326,31 @@
       </div>
       <div class="footer-section">
         <h3>Email | Contacts</h3>
-        <p>Email: <a href="mailto:barbarabemara@gmail.com">barbarabemara@gmail.com</a></p>
-        <p>WhatsApp: <a href="https://wa.me/256753044293" target="_blank">+256 753 044293</a></p>
+      
+        <!-- Email with prefilled subject & body -->
+        <p>
+          Email:
+          <a href="#" onclick="openEmail(event)">
+            barbarabemara@gmail.com
+          </a>
+        </p>
+        
+      
+        <!-- WhatsApp with prefilled welcome message -->
+        <p>
+          WhatsApp:
+          <a
+            href="https://wa.me/256753044293?text=Hello,%0A%0AThank%20you%20for%20visiting%20my%20website.%20I’m%20Barbra%20Bemara,%20and%20I%20appreciate%20you%20taking%20the%20time%20to%20explore%20my%20work.%0A%0AI’d%20be%20happy%20to%20learn%20more%20about%20what%20you’re%20looking%20for%20and%20how%20I%20can%20support%20you.%0A%0ALooking%20forward%20to%20connecting."
+            target="_blank"
+          >
+            +256 753 044293
+          </a>
+        </p>
       </div>
+      
       <div class="footer-section">
         <h3>GitHub Profile</h3>
-        <a href="https://github.com/BEMARABARBRA" target="_blank" class="github-link">BEMARABARBRA</a>
+        <a href="https://github.com/BEMARABARBRA?tab=repositories" target="_blank" class="github-link">BEMARABARBRA</a>
       </div>
     </div>
     <hr>
@@ -347,5 +367,47 @@
     }
   </script>
   <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!--  email function js -->
+  <script>
+    function openEmail(event) {
+      event.preventDefault();
+    
+      const email = "barbarabemara@gmail.com";
+      const subject = "Welcome from Barbra Bemara";
+      const body = `Hello,
+    
+    Thank you for visiting my website. I truly appreciate you taking the time to explore my work.
+    
+    I’d be happy to learn more about what you’re looking for and how I can support you.
+    
+    Looking forward to connecting.
+    
+    Kind regards,
+    Barbra`;
+    
+      // Gmail compose link
+      const gmailURL =
+        "https://mail.google.com/mail/?view=cm&fs=1" +
+        "&to=" + encodeURIComponent(email) +
+        "&su=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+    
+      // Fallback mailto
+      const mailtoURL =
+        "mailto:" + email +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+    
+      // Try Gmail first
+      const win = window.open(gmailURL, "_blank");
+    
+      // If Gmail is blocked or unavailable, fallback
+      if (!win) {
+        window.location.href = mailtoURL;
+      }
+    }
+    </script>
+    
 </body>
 </html>
